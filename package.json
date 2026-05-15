@@ -5,10 +5,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "clean": "rm -rf .next",
+    "dev:clean": "npm run clean && next dev"
   },
   "dependencies": {
-    "next": "15.3.3",
+    "next": "15.3.9",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

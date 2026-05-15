@@ -12,10 +12,13 @@ const dropdowns = [
   {
     id: "leistungen",
     label: "Leistungen",
+    sectionHref: "/#leistungen",
     items: [
-      { label: "Überblick", href: "#" },
-      { label: "Beratung", href: "#" },
-      { label: "Begleitung", href: "#" },
+      { label: "Überblick", href: "/#leistungen" },
+      { label: "Zertifizierung", href: "/leistungen/zertifizierung" },
+      { label: "Bilanzierung und Nachweisführung", href: "/leistungen/bilanzierung" },
+      { label: "Emissions- und Quotenhandel", href: "/leistungen/emissionshandel" },
+      { label: "Berichterstattung und Meldung", href: "/leistungen/berichterstattung" },
     ],
   },
   {
@@ -82,6 +85,18 @@ export function SiteHeader() {
     setOpenDropdownId((current) => (current === id ? null : id));
   }
 
+  function scrollToSection(e: React.MouseEvent<HTMLAnchorElement>, href: string) {
+    if (pathname !== "/") return;
+    const id = href.split("#")[1];
+    if (!id) return;
+    const el = document.getElementById(id);
+    if (el) {
+      e.preventDefault();
+      el.scrollIntoView({ behavior: "smooth" });
+      closeMobileNav();
+    }
+  }
+
   return (
     <header className={`header${menuOpen ? " is-open" : ""}`}>
       <div className="header__inner container">
@@ -119,26 +134,55 @@ export function SiteHeader() {
                 key={dd.id}
                 className={`nav__item nav__item--dropdown${
                   openDropdownId === dd.id ? " is-open-dropdown" : ""
-                }`}
+                }${"sectionHref" in dd && dd.sectionHref ? " nav__item--has-section" : ""}`}
               >
-                <button
-                  type="button"
-                  className="nav__link nav__dropdown-toggle"
-                  aria-expanded={openDropdownId === dd.id}
-                  onClick={() => {
-                    if (mobile) toggleDropdown(dd.id);
-                  }}
-                >
-                  {dd.label}
-                  <span className="nav__chevron" aria-hidden="true" />
-                </button>
+                {"sectionHref" in dd && dd.sectionHref ? (
+                  <div className="nav__dropdown-head">
+                    <Link
+                      href={dd.sectionHref}
+                      className={`nav__link nav__dropdown-label${
+                        dd.id === "leistungen" && pathname.startsWith("/leistungen") ? " nav__link--active" : ""
+                      }`}
+                      onClick={(e) => scrollToSection(e, dd.sectionHref!)}
+                    >
+                      {dd.label}
+                      <span className="nav__chevron nav__chevron--label" aria-hidden="true" />
+                    </Link>
+                    <button
+                      type="button"
+                      className="nav__link nav__dropdown-toggle nav__dropdown-toggle--chevron"
+                      aria-expanded={openDropdownId === dd.id}
+                      aria-label={`${dd.label} Untermenü`}
+                      onClick={() => {
+                        if (mobile) toggleDropdown(dd.id);
+                      }}
+                    >
+                      <span className="nav__chevron" aria-hidden="true" />
+                    </button>
+                  </div>
+                ) : (
+                  <button
+                    type="button"
+                    className="nav__link nav__dropdown-toggle"
+                    aria-expanded={openDropdownId === dd.id}
+                    onClick={() => {
+                      if (mobile) toggleDropdown(dd.id);
+                    }}
+                  >
+                    {dd.label}
+                    <span className="nav__chevron" aria-hidden="true" />
+                  </button>
+                )}
                 <ul className="nav__dropdown">
                   {dd.items.map((item) => (
                     <li key={item.href + item.label}>
                       <Link
                         href={item.href}
-                        onClick={() => {
-                          if (mobile && item.href !== "#") closeMobileNav();
+                        onClick={(e) => {
+                          if (item.href.includes("#")) {
+                            scrollToSection(e, item.href);
+                          }
+                          if (mobile) closeMobileNav();
                         }}
                       >
                         {item.label}
@@ -157,16 +201,7 @@ export function SiteHeader() {
               <Link
                 href="/#kontakt"
                 className="nav__link"
-                onClick={(e) => {
-                  if (pathname === "/") {
-                    const el = document.getElementById("kontakt");
-                    if (el) {
-                      e.preventDefault();
-                      el.scrollIntoView({ behavior: "smooth" });
-                    }
-                  }
-                  closeMobileNav();
-                }}
+                onClick={(e) => scrollToSection(e, "/#kontakt")}
               >
                 Kontakt
               </Link>

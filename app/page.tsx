@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { LeistungenSection } from "@/components/LeistungenSection";
+import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import heroImage from "@/assets/hero-h2-wind.png";
 
@@ -30,18 +32,11 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        <LeistungenSection />
       </main>
 
-      <footer id="kontakt" className="footer">
-        <div className="container footer__inner">
-          <p>
-            Kontakt aufnehmen:{" "}
-            <a className="footer__mailto" href="mailto:kontakt@fuelcert.de">
-              kontakt@fuelcert.de
-            </a>
-          </p>
-        </div>
-      </footer>
+      <SiteFooter />
     </>
   );
 }

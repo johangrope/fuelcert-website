@@ -70,7 +70,7 @@ function IconCalendar({ className }: { className?: string }) {
 
 export function SiteFooter() {
   return (
-    <footer id="kontakt" className="site-footer">
+    <footer className="site-footer">
       <div className="container site-footer__inner">
         <div className="site-footer__grid">
           <div className="site-footer__brand">
@@ -111,7 +111,7 @@ export function SiteFooter() {
             <h2 className="site-footer__heading">Weiteres</h2>
             <ul className="site-footer__list site-footer__list--links">
               <li>
-                <Link href="#" className="site-footer__link">
+                <Link href="/ueber-uns" className="site-footer__link">
                   <IconUser className="site-footer__icon" />
                   <span>Über uns</span>
                 </Link>
@@ -129,7 +129,7 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="site-footer__link">
+                <Link href="/kontakt" className="site-footer__link">
                   <IconCalendar className="site-footer__icon" />
                   <span>Erstgespräch buchen</span>
                 </Link>

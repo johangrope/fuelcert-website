@@ -1,0 +1,30 @@
+import { ReferenceLogoItem } from "./ReferenceLogoItem";
+import { HOME_REFERENCE_LOGOS } from "@/lib/home-references";
+
+export function ReferencesSection() {
+  return (
+    <section id="referenzen" className="references" aria-labelledby="references-heading">
+      <div className="container references__inner">
+        <h2 id="references-heading" className="references__title">
+          Referenzen
+        </h2>
+        <p className="references__intro">Diese Kunden und Partner setzen bereits auf FuelCert.</p>
+
+        <div className="references__strip-wrap" aria-label="Referenzlogos">
+          <div className="references__strip">
+            <ul className="references__list">
+              {HOME_REFERENCE_LOGOS.map((item) => (
+                <ReferenceLogoItem key={item.id} item={item} />
+              ))}
+            </ul>
+            <ul className="references__list references__list--clone" aria-hidden="true">
+              {HOME_REFERENCE_LOGOS.map((item) => (
+                <ReferenceLogoItem key={`${item.id}-clone`} item={item} />
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

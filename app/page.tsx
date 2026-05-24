@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { LeistungenSection } from "@/components/LeistungenSection";
+import { ReferencesSection } from "@/components/ReferencesSection";
 import { SiteFooter } from "@/components/SiteFooter";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { SiteHeader } from "@/components/SiteHeader";
 import heroImage from "@/assets/hero-h2-wind.png";
 
@@ -34,6 +36,8 @@ export default function HomePage() {
         </section>
 
         <LeistungenSection />
+        <TestimonialsSection />
+        <ReferencesSection />
       </main>
 
       <SiteFooter />

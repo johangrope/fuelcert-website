@@ -1,0 +1,126 @@
+import type { OverviewPageConfig, PageScaffold, TeaserItem } from "./types";
+
+export type AnwendungSlug =
+  | "thg-quote"
+  | "emissionshandel-ets-1"
+  | "emissionshandel-nehs"
+  | "esg-und-nachhaltigkeitsnachweise"
+  | "wasserstoff-und-derivate"
+  | "rfnbo"
+  | "biomethan-und-bio-lng";
+
+export const ANWENDUNGEN_OVERVIEW: OverviewPageConfig = {
+  title: "Anwendungsbereiche | FuelCert",
+  metaDescription:
+    "Regulatorische und produktbezogene Anwendungsbereiche für erneuerbare Kraft- und Brennstoffe, Wasserstoff, RFNBO und Biomethan.",
+  kicker: "Anwendungsbereiche",
+  h1: "Anwendungsbereiche",
+  intro:
+    "Platzhalter: Wo greifen Zertifizierung, Nachweise und Marktmechanismen in Ihrem Geschäftsmodell? Die folgenden Bereiche gliedern sich in regulatorische Kontexte und produktbezogene Schwerpunkte.",
+};
+
+const regulatorySlugs: AnwendungSlug[] = [
+  "thg-quote",
+  "emissionshandel-ets-1",
+  "emissionshandel-nehs",
+  "esg-und-nachhaltigkeitsnachweise",
+];
+
+const productSlugs: AnwendungSlug[] = [
+  "wasserstoff-und-derivate",
+  "biomethan-und-bio-lng",
+  "rfnbo",
+];
+
+export const ALL_ANWENDUNG_SLUGS = [...regulatorySlugs, ...productSlugs] as AnwendungSlug[];
+
+const pages: Record<AnwendungSlug, PageScaffold & { category: "regulatory" | "product" }> = {
+  "thg-quote": {
+    slug: "thg-quote",
+    category: "regulatory",
+    menuLabel: "THG-Quote",
+    title: "THG-Quote",
+    metaDescription: "Anwendungsbereich Treibhausgas-Quote für erneuerbare Kraftstoffe.",
+    intro: "Platzhalter: Einordnung der THG-Quote und typischer Compliance-Anforderungen für Inverkehrbringer.",
+    sections: [{ heading: "Schwerpunkte", body: "Platzhalter für Leistungen und Anknüpfungspunkte in diesem Markt." }],
+  },
+  "emissionshandel-ets-1": {
+    slug: "emissionshandel-ets-1",
+    category: "regulatory",
+    menuLabel: "Emissionshandel (ETS I)",
+    title: "Emissionshandel (ETS I)",
+    metaDescription: "Anwendungsbereich EU-Emissionshandel (ETS I).",
+    intro: "Platzhalter: Bezug zu Zertifikaten, Meldepflichten und Brennstoffbezug im Emissionshandel (ETS I).",
+    sections: [{ heading: "Schwerpunkte", body: "Platzhalter für typische Fragestellungen und Unterstützungsangebote." }],
+  },
+  "emissionshandel-nehs": {
+    slug: "emissionshandel-nehs",
+    category: "regulatory",
+    menuLabel: "Nationaler Emissionshandel (nEHS)",
+    title: "Nationaler Emissionshandel (nEHS)",
+    metaDescription: "Anwendungsbereich nationaler Emissionshandel (nEHS).",
+    intro: "Platzhalter: Einordnung des nationalen Emissionshandels (nEHS) und Schnittstellen zu Brennstoffen und Energieträgern.",
+    sections: [{ heading: "Schwerpunkte", body: "Platzhalter für Beratungsschwerpunkte in diesem Segment." }],
+  },
+  "esg-und-nachhaltigkeitsnachweise": {
+    slug: "esg-und-nachhaltigkeitsnachweise",
+    category: "regulatory",
+    menuLabel: "ESG und Nachhaltigkeitsnachweise",
+    title: "ESG und Nachhaltigkeitsnachweise",
+    metaDescription: "ESG-Reporting und Nachhaltigkeitsnachweise im Energiekontext.",
+    intro: "Platzhalter: Verbindung von regulatorischen Nachweisen und ESG-Anforderungen.",
+    sections: [{ heading: "Schwerpunkte", body: "Platzhalter für Daten, Nachweise und Reporting." }],
+  },
+  "wasserstoff-und-derivate": {
+    slug: "wasserstoff-und-derivate",
+    category: "product",
+    menuLabel: "Wasserstoff und Derivate",
+    title: "Wasserstoff und Derivate",
+    metaDescription: "Zertifizierung und Compliance für grünen Wasserstoff und Derivate.",
+    intro: "Platzhalter: Schwerpunkte bei Wasserstoffprojekten, Nachweisen und Zertifizierungssystemen.",
+    sections: [{ heading: "Schwerpunkte", body: "Platzhalter für typische Projekt- und Marktfragen." }],
+  },
+  rfnbo: {
+    slug: "rfnbo",
+    category: "product",
+    menuLabel: "RFNBO und E-Fuels",
+    title: "RFNBO und E-Fuels",
+    metaDescription: "RFNBO und E-Fuels – Anforderungen, Zertifizierung und Nachweisführung.",
+    intro: "Platzhalter: Einordnung von RFNBO und E-Fuels nach RED III und operativen Umsetzungsfragen.",
+    sections: [{ heading: "Schwerpunkte", body: "Platzhalter für Bilanzierung, Zertifizierung und Märkte." }],
+  },
+  "biomethan-und-bio-lng": {
+    slug: "biomethan-und-bio-lng",
+    category: "product",
+    menuLabel: "Biomethan und Bio-LNG",
+    title: "Biomethan und Bio-LNG",
+    metaDescription: "Biomethan und Bio-LNG – Zertifizierung und regulatorische Einordnung.",
+    intro: "Platzhalter: Schwerpunkte bei Biomethan- und Bio-LNG-Lieferketten und Nachweisen.",
+    sections: [{ heading: "Schwerpunkte", body: "Platzhalter für typische Compliance-Themen." }],
+  },
+};
+
+export function getAnwendung(slug: string) {
+  return pages[slug as AnwendungSlug];
+}
+
+export function anwendungPath(slug: AnwendungSlug) {
+  return `/anwendungsbereiche/${slug}`;
+}
+
+function toTeaser(d: (typeof pages)[AnwendungSlug]): TeaserItem {
+  return {
+    slug: d.slug,
+    title: d.menuLabel,
+    description: d.intro,
+    href: anwendungPath(d.slug as AnwendungSlug),
+  };
+}
+
+export function getAnwendungenRegulatoryTeasers() {
+  return regulatorySlugs.map((s) => toTeaser(pages[s]));
+}
+
+export function getAnwendungenProductTeasers() {
+  return productSlugs.map((s) => toTeaser(pages[s]));
+}

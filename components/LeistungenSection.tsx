@@ -83,8 +83,8 @@ export function LeistungenSection() {
         <div ref={timelineRef} className="leistungen__timeline">
           {services.map((service) => (
             <div
-              key={service.id}
-              id={service.id}
+              key={service.sectionId}
+              id={service.sectionId}
               className={`leistungen__row leistungen__row--${service.side}`}
             >
               <article className="leistungen__card">

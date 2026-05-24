@@ -1,19 +1,17 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PlaceholderDetailLayout } from "@/components/PlaceholderDetailLayout";
-import { ALL_LEISTUNG_SLUGS, getLeistung, type LeistungSlug } from "@/lib/leistungen";
+import { ALL_ANWENDUNG_SLUGS, getAnwendung, type AnwendungSlug } from "@/lib/anwendungsbereiche";
 
 type Props = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
-  return ALL_LEISTUNG_SLUGS.filter((slug) => slug !== "zertifizierung-redcert-iscc-certifhy").map((slug) => ({
-    slug,
-  }));
+  return ALL_ANWENDUNG_SLUGS.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const data = getLeistung(slug);
+  const data = getAnwendung(slug);
   if (!data) return { title: "Seite nicht gefunden" };
   return {
     title: `${data.title} | FuelCert`,
@@ -21,10 +19,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function LeistungDetailPage({ params }: Props) {
+export default async function AnwendungDetailPage({ params }: Props) {
   const { slug } = await params;
-  const data = getLeistung(slug);
-  if (!data || !ALL_LEISTUNG_SLUGS.includes(slug as LeistungSlug)) {
+  const data = getAnwendung(slug);
+  if (!data || !ALL_ANWENDUNG_SLUGS.includes(slug as AnwendungSlug)) {
     notFound();
   }
 
@@ -32,15 +30,15 @@ export default async function LeistungDetailPage({ params }: Props) {
     <PlaceholderDetailLayout
       breadcrumbs={[
         { label: "Home", href: "/" },
-        { label: "Leistungen", href: "/leistungen" },
+        { label: "Anwendungsbereiche", href: "/anwendungsbereiche" },
         { label: data.menuLabel },
       ]}
-      kicker="Leistungen"
+      kicker="Anwendungsbereiche"
       title={data.title}
       intro={data.intro}
       sections={data.sections}
-      backHref="/leistungen"
-      backLabel="Zurück zur Leistungsübersicht"
+      backHref="/anwendungsbereiche"
+      backLabel="Zurück zur Übersicht Anwendungsbereiche"
     />
   );
 }

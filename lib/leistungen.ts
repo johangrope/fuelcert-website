@@ -9,7 +9,7 @@ export type LeistungSlug =
 export const LEISTUNGEN_OVERVIEW: OverviewPageConfig = {
   title: "Leistungen | FuelCert",
   metaDescription:
-    "Überblick über Zertifizierung, Nachweisführung, Registerführung, CO2- und Quotenhandel sowie Berichte und Meldepflichten für erneuerbare Kraft- und Brennstoffe.",
+    "Überblick über Zertifizierung, Nachweisführung, Registerführung, CO₂- und Quotenhandel sowie Berichte und Meldepflichten für erneuerbare Kraft- und Brennstoffe.",
   kicker: "Leistungen",
   h1: "Vier Leistungsbereiche entlang der regulatorischen Umsetzung",
   intro:
@@ -50,14 +50,17 @@ const leistungen: Record<LeistungSlug, PageScaffold & { sectionId: string }> = {
   "co2-und-quotenhandel": {
     slug: "co2-und-quotenhandel",
     sectionId: "leistung-co2-quotenhandel",
-    menuLabel: "CO2- und Quotenhandel",
-    title: "CO2- und Quotenhandel",
-    metaDescription: "Beratung zu THG-Quote, Emissionshandel und CO2-Marktmechanismen.",
+    menuLabel: "CO₂- und Quotenhandel",
+    title: "CO₂- und Quotenhandel",
+    metaDescription:
+      "FuelCert unterstützt bei THG-Quote, ETS I und nEHS – mit Markterfahrung, Netzwerk zu Käufern und Händlern sowie fachlicher Einordnung von Vermarktung und Vertragsinhalten.",
     intro:
-      "Platzhalter: Einordnung regulatorischer Märkte und begleitende Unterstützung bei Handel und Vertragsgestaltung.",
+      "FuelCert unterstützt bei der Einordnung und Nutzung regulatorischer CO₂- und Quotenmärkte – insbesondere THG-Quote, ETS I und nEHS.",
     sections: [
-      { heading: "Marktüberblick", body: "Platzhalter zu Quoten, Zertifikaten und Anknüpfungspunkten." },
-      { heading: "Operative Begleitung", body: "Platzhalter zu Partnern, Prozessen und Dokumentation." },
+      {
+        heading: "Leistungsübersicht",
+        body: "Details finden Sie auf der Leistungsseite CO₂- und Quotenhandel.",
+      },
     ],
   },
   "berichterstattung-und-meldepflichten": {
@@ -65,12 +68,15 @@ const leistungen: Record<LeistungSlug, PageScaffold & { sectionId: string }> = {
     sectionId: "leistung-berichterstattung",
     menuLabel: "Berichte und Meldepflichten",
     title: "Berichte und Meldepflichten",
-    metaDescription: "Berichte und Meldepflichten bei Behörden und zuständigen Stellen.",
+    metaDescription:
+      "FuelCert unterstützt Unternehmen bei Berichts-, Melde- und Abgabepflichten in der THG-Quote, im EU-ETS I und im nEHS – strukturiert, fristgerecht und prüffähig.",
     intro:
-      "Platzhalter: Unterstützung bei Berichten, Fristen und Meldepflichten – z. B. im Kontext von DEHSt und Quotenstelle.",
+      "FuelCert unterstützt bei Berichts-, Melde- und Abgabepflichten in THG-Quote, EU-ETS I und nEHS – von der Datenaufbereitung bis zur fristgerechten Einreichung.",
     sections: [
-      { heading: "Berichte", body: "Platzhalter zu Datenaufbereitung und formalen Anforderungen." },
-      { heading: "Koordination", body: "Platzhalter zu internen Schnittstellen und Einreichungsprozessen." },
+      {
+        heading: "Leistungsübersicht",
+        body: "Details finden Sie auf der Leistungsseite Berichte und Meldepflichten.",
+      },
     ],
   },
 };

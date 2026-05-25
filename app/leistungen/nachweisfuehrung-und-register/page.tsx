@@ -4,6 +4,7 @@ import { ServiceBulletList } from "@/components/ServiceBulletList";
 import { ServiceCtaSection } from "@/components/ServiceCtaSection";
 import { ServicePageLayout } from "@/components/ServicePageLayout";
 import {
+  NACHWEISFUEHRUNG_CTA,
   NACHWEISFUEHRUNG_INTRO,
   NACHWEISFUEHRUNG_RELATED_TOPICS,
   NACHWEISFUEHRUNG_SEO,
@@ -45,6 +46,7 @@ export default function NachweisfuehrungPage() {
           nachvollziehbar, fristgerecht und im Alltag beherrschbar.
         </p>
         <ServiceBulletList items={[...NACHWEISFUEHRUNG_SERVICES]} />
+        <ServiceCtaSection id="service-cta-mid" variant="subtle" heading={NACHWEISFUEHRUNG_CTA.heading} />
       </section>
 
       <section className="service-block" aria-labelledby="nachweis-bilanzen-heading">
@@ -108,10 +110,7 @@ export default function NachweisfuehrungPage() {
 
       <RelatedTopicsSection topics={[...NACHWEISFUEHRUNG_RELATED_TOPICS]} />
 
-      <ServiceCtaSection
-        heading="Sie möchten Ihre Nachweisführung und Registerprozesse belastbar aufsetzen?"
-        text="Sprechen Sie mit uns über Ihre Ausgangslage – wir klären, welche Bilanz-, Nachweis- und Registerprozesse für Ihr Projekt sinnvoll sind."
-      />
+      <ServiceCtaSection id="service-cta-end" {...NACHWEISFUEHRUNG_CTA} />
     </ServicePageLayout>
   );
 }

@@ -22,6 +22,11 @@ export const NACHWEISFUEHRUNG_SERVICES = [
   "Unterstützung bei Registrierung, Mengenmeldungen, Buchungen, Fristenüberwachung und regulatorischen Neuerungen",
 ] as const;
 
+export const NACHWEISFUEHRUNG_CTA = {
+  heading: "Sie möchten Ihre Nachweisführung und Registerprozesse belastbar aufsetzen?",
+  text: "Sprechen Sie mit uns über Ihre Ausgangslage – wir klären, welche Bilanz-, Nachweis- und Registerprozesse für Ihr Projekt sinnvoll sind.",
+} as const;
+
 export const NACHWEISFUEHRUNG_RELATED_TOPICS = [
   { label: "THG- und Massenbilanz", href: "/wissen/thg-und-massenbilanz" },
   { label: "UDB, Nabisy und Registerführung", href: "/wissen/udb-nabisy-und-registerfuehrung" },

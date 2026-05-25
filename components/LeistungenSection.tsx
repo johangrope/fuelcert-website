@@ -75,7 +75,7 @@ export function LeistungenSection() {
         </h2>
         <p className="leistungen__intro">
           Die Zertifizierung erneuerbarer Kraft- und Brennstoffe ermöglicht deren Anrechnung auf regulierte
-          CO2-Märkte, wie die THG-Quote oder den europäischen und nationalen Emissionshandel. Wir unterstützen
+          CO₂-Märkte, wie die THG-Quote oder den europäischen und nationalen Emissionshandel. Wir unterstützen
           Produzenten, Händler und Inverkehrbringer bzw. Emissionshandelspflichtige entlang der gesamten
           Wertschöpfungskette von diesen Möglichkeiten bestmöglich zu profitieren.
         </p>

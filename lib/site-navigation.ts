@@ -15,7 +15,7 @@ export const NAV_DROPDOWNS: NavDropdownConfig[] = [
     items: [
       { label: "Zertifizierung", href: "/leistungen/zertifizierung-redcert-iscc-certifhy" },
       { label: "Nachweisführung und Registerführung", href: "/leistungen/nachweisfuehrung-und-register" },
-      { label: "CO2- und Quotenhandel", href: "/leistungen/co2-und-quotenhandel" },
+      { label: "CO₂- und Quotenhandel", href: "/leistungen/co2-und-quotenhandel" },
       { label: "Berichte und Meldepflichten", href: "/leistungen/berichterstattung-und-meldepflichten" },
     ],
   },

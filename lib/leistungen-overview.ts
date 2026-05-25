@@ -15,7 +15,7 @@ export const LEISTUNGEN_CARD_TEASERS: Record<
       "Massen- und THG-Bilanzen, Nabisy und UDB sowie Meldungen an Register und Behörden im laufenden Betrieb.",
   },
   "co2-und-quotenhandel": {
-    title: "CO2- und Quotenhandel",
+    title: "CO₂- und Quotenhandel",
     description:
       "Einordnung von THG-Quote und Emissionshandel sowie begleitende Unterstützung bei Marktmechanismen und Verträgen.",
   },

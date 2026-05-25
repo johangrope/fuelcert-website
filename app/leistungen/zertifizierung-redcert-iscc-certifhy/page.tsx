@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import { CertificationProcessGraphic } from "@/components/CertificationProcessGraphic";
 import { RelatedTopicsSection } from "@/components/RelatedTopicsSection";
+import { ServiceProcessFlow } from "@/components/ServiceProcessFlow";
 import { ServiceBulletList } from "@/components/ServiceBulletList";
 import { ServiceCtaSection } from "@/components/ServiceCtaSection";
 import { ServicePageLayout } from "@/components/ServicePageLayout";
 import {
+  ZERTIFIZIERUNG_CTA,
   ZERTIFIZIERUNG_INTRO,
+  ZERTIFIZIERUNG_PROCESS_INTRO,
+  ZERTIFIZIERUNG_PROCESS_STEPS,
   ZERTIFIZIERUNG_RELATED_TOPICS,
   ZERTIFIZIERUNG_SEO,
   ZERTIFIZIERUNG_SERVICES,
@@ -46,25 +50,25 @@ export default function ZertifizierungPage() {
           Team entlastet und der Prozess auditfest dokumentiert.
         </p>
         <ServiceBulletList items={[...ZERTIFIZIERUNG_SERVICES]} />
+        <ServiceCtaSection id="service-cta-mid" variant="subtle" heading={ZERTIFIZIERUNG_CTA.heading} />
       </section>
 
       <section className="service-block" aria-labelledby="service-process-heading">
         <h2 id="service-process-heading" className="subpage__heading">
           So begleiten wir den Zertifizierungsprozess
         </h2>
+        <p className="subpage__text">{ZERTIFIZIERUNG_PROCESS_INTRO}</p>
+        <ServiceProcessFlow steps={ZERTIFIZIERUNG_PROCESS_STEPS} />
         <CertificationProcessGraphic />
         <p className="subpage__text service-page__process-note">
-          Von der ersten Datenerfassung bis zur Rezertifizierung begleiten wir Sie Schritt für Schritt – mit
-          klaren Verantwortlichkeiten, abgestimmt auf Prüfstelle und Unternehmen.
+          Die Grafik zeigt die Einbettung in Wertschöpfungskette und Behördenkontext – der Ablauf oben
+          beschreibt, wie FuelCert Sie operativ durch den Zertifizierungsprozess begleitet.
         </p>
       </section>
 
       <RelatedTopicsSection topics={[...ZERTIFIZIERUNG_RELATED_TOPICS]} />
 
-      <ServiceCtaSection
-        heading="Sie planen eine Zertifizierung nach REDcert, ISCC EU oder CertifHy?"
-        text="Sprechen Sie mit uns über Ihr Projekt – wir klären Ausgangslage, Systemwahl und den nächsten sinnvollen Schritt."
-      />
+      <ServiceCtaSection id="service-cta-end" {...ZERTIFIZIERUNG_CTA} />
     </ServicePageLayout>
   );
 }

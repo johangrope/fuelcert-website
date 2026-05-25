@@ -6,9 +6,9 @@ import { ALL_LEISTUNG_SLUGS, getLeistung, type LeistungSlug } from "@/lib/leistu
 type Props = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
-  return ALL_LEISTUNG_SLUGS.filter((slug) => slug !== "zertifizierung-redcert-iscc-certifhy").map((slug) => ({
-    slug,
-  }));
+  return ALL_LEISTUNG_SLUGS.filter(
+    (slug) => slug !== "zertifizierung-redcert-iscc-certifhy" && slug !== "nachweisfuehrung-und-register"
+  ).map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

@@ -796,6 +796,107 @@ img {
   text-decoration: underline !important;
 }
 
+/* —— Leistungen overview page —— */
+
+.subpage__inner--leistungen {
+  max-width: min(72rem, 100% - 3rem);
+}
+
+.subpage__inner--leistungen .subpage__lead {
+  margin-bottom: clamp(2rem, 4vw, 2.75rem);
+  max-width: 40rem;
+}
+
+.leistung-teaser-grid {
+  display: grid;
+  gap: 1.35rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: clamp(2rem, 4vw, 2.75rem);
+}
+
+.leistung-teaser {
+  margin: 0;
+  min-height: 100%;
+}
+
+.leistung-teaser__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.5rem 1.45rem 1.35rem;
+  border: 1px solid rgba(184, 217, 226, 0.75);
+  border-radius: 12px;
+  background: #fff;
+  text-decoration: none !important;
+  color: inherit;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.leistung-teaser__link:hover {
+  border-color: rgba(61, 149, 135, 0.55);
+  box-shadow: 0 8px 28px rgba(42, 47, 51, 0.07);
+  transform: translateY(-2px);
+  text-decoration: none !important;
+}
+
+.leistung-teaser__icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.25rem;
+  height: 4.25rem;
+  margin-bottom: 1.2rem;
+  border-radius: 12px;
+  background: rgba(61, 149, 135, 0.1);
+  color: var(--color-teal);
+  flex-shrink: 0;
+}
+
+.leistung-teaser__title {
+  margin: 0 0 0.6rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--color-text);
+}
+
+.leistung-teaser__text {
+  margin: 0 0 1.15rem;
+  flex: 1;
+  font-size: 0.94rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+.leistung-teaser__cta {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-teal);
+}
+
+.leistung-teaser__link:hover .leistung-teaser__cta {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.subpage__inner--leistungen .service-cta {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .leistung-teaser-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .leistung-teaser__icon-wrap {
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+}
+
 .grouped-section {
   margin-top: 2.75rem;
   padding-top: 2.25rem;

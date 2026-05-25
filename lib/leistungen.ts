@@ -11,9 +11,9 @@ export const LEISTUNGEN_OVERVIEW: OverviewPageConfig = {
   metaDescription:
     "Überblick über Zertifizierung, Nachweisführung, Registerführung, CO2- und Quotenhandel sowie Berichte und Meldepflichten für erneuerbare Kraft- und Brennstoffe.",
   kicker: "Leistungen",
-  h1: "Unsere Leistungen",
+  h1: "Vier Leistungsbereiche entlang der regulatorischen Umsetzung",
   intro:
-    "FuelCert begleitet Unternehmen entlang der Wertschöpfungskette bei Zertifizierung, Nachweisführung, Marktmechanismen und Meldepflichten. Hier finden Sie einen Überblick – die Detailseiten folgen mit vertiefenden Inhalten.",
+    "Von der Zertifizierung über Nachweise und Register bis zu Marktmechanismen und Meldepflichten – FuelCert strukturiert Ihre Umsetzung entlang dieser vier Felder.",
 };
 
 const leistungen: Record<LeistungSlug, PageScaffold & { sectionId: string }> = {
@@ -35,13 +35,16 @@ const leistungen: Record<LeistungSlug, PageScaffold & { sectionId: string }> = {
     slug: "nachweisfuehrung-und-register",
     sectionId: "leistung-nachweisfuehrung",
     menuLabel: "Nachweisführung und Registerführung",
-    title: "Nachweisführung und Registerführung",
-    metaDescription: "Nachweisführung, Massenbilanz und Registerführung (UDB, Nabisy) für erneuerbare Kraft- und Brennstoffe.",
+    title: "Nachweisführung und Registerführung für erneuerbare Kraft- und Brennstoffe",
+    metaDescription:
+      "FuelCert unterstützt Unternehmen bei Massen- und THG-Bilanzen, Nachweisführung, Registerführung in Nabisy und UDB sowie bei Meldungen an Register und Behörden.",
     intro:
-      "Platzhalter: Unterstützung bei unterjährigen Bilanzen, RED-konformer Nachweisführung und Abstimmung mit relevanten Registern.",
+      "FuelCert begleitet Sie bei laufender Nachweisführung und Registerführung – von Massen- und THG-Bilanzen über Nabisy und UDB bis zu Meldungen an Behörden.",
     sections: [
-      { heading: "Bilanzen", body: "Platzhalter zu Massen- und Treibhausgasbilanzen entlang der Lieferkette." },
-      { heading: "Registerführung", body: "Platzhalter zu UDB, Nabisy und Registerführung in der Praxis." },
+      {
+        heading: "Leistungsübersicht",
+        body: "Details finden Sie auf der Leistungsseite Nachweisführung und Registerführung.",
+      },
     ],
   },
   "co2-und-quotenhandel": {

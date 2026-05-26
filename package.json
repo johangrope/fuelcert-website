@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "next dev -H 127.0.0.1",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -H 127.0.0.1",
     "clean": "rm -rf .next",
-    "dev:clean": "npm run clean && next dev"
+    "dev:clean": "lsof -ti:3000 | xargs kill -9 2>/dev/null || true; rm -rf .next && next dev -H 127.0.0.1",
+    "preview": "npm run build && next start -H 127.0.0.1"
   },
   "dependencies": {
     "next": "15.3.9",

@@ -50,6 +50,7 @@ export const NAV_DROPDOWNS: NavDropdownConfig[] = [
     href: "/wissen",
     variant: "flat",
     items: [
+      { label: "Erlösrechner", href: "/wissen/erloesrechner" },
       { label: "RFNBO-Zertifizierung", href: "/wissen/rfnbo-zertifizierung" },
       { label: "REDcert, ISCC EU und CertifHy", href: "/wissen/redcert-iscc-certifhy-unterschiede" },
       { label: "THG- und Massenbilanz", href: "/wissen/thg-und-massenbilanz" },

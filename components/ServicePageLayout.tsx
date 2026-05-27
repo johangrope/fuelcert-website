@@ -11,6 +11,8 @@ type Props = {
   children: ReactNode;
   backHref?: string;
   backLabel?: string;
+  /** Breiterer Inhaltsbereich für z. B. Tabellen und Rechner */
+  wide?: boolean;
 };
 
 export function ServicePageLayout({
@@ -20,12 +22,17 @@ export function ServicePageLayout({
   children,
   backHref = "/leistungen",
   backLabel = "Zurück zur Leistungsübersicht",
+  wide = false,
 }: Props) {
+  const innerClass = ["container", "subpage__inner", "service-page__inner", wide && "service-page__inner--wide"]
+    .filter(Boolean)
+    .join(" ");
+
   return (
     <>
       <SiteHeader />
       <main className="subpage service-page">
-        <div className="container subpage__inner service-page__inner">
+        <div className={innerClass}>
           <Breadcrumbs items={breadcrumbs} />
           <p className="subpage__kicker">{kicker}</p>
           <h1 className="subpage__title">{title}</h1>

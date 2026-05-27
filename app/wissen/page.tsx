@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { OverviewPageLayout } from "@/components/OverviewPageLayout";
 import { TeaserGrid } from "@/components/TeaserGrid";
+import { ERLOESRECHNER_TEASER } from "@/lib/erloesrechner-content";
 import { WISSEN_OVERVIEW, getWissenOverviewTeasers } from "@/lib/wissen";
 
 export const metadata: Metadata = {
@@ -17,7 +18,7 @@ export default function WissenOverviewPage() {
         { label: "Wissen" },
       ]}
     >
-      <TeaserGrid items={getWissenOverviewTeasers()} />
+      <TeaserGrid items={[ERLOESRECHNER_TEASER, ...getWissenOverviewTeasers()]} />
     </OverviewPageLayout>
   );
 }

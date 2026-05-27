@@ -13,10 +13,10 @@ export type ReferenceLogo = {
 };
 
 export const HOME_REFERENCE_LOGOS: ReferenceLogo[] = [
+  { id: "rwe", name: "RWE", logo: logoRwe },
   { id: "biogem", name: "bioGem express", logo: logoBiogem },
   { id: "koehler-pappen", name: "Köhler Pappen", logo: logoKoehlerPappen },
   { id: "gutcert", name: "GUTcert", logo: logoGutcert },
   { id: "wun-h2", name: "WUN H2", logo: logoWunH2 },
-  { id: "rwe", name: "RWE", logo: logoRwe },
   { id: "riessner-gase", name: "Riessner Gase", logo: logoRiessnerGase },
 ];

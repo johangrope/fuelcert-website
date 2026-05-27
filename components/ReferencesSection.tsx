@@ -3,12 +3,11 @@ import { HOME_REFERENCE_LOGOS } from "@/lib/home-references";
 
 export function ReferencesSection() {
   return (
-    <section id="referenzen" className="references" aria-labelledby="references-heading">
+    <section id="referenzen" className="references" aria-labelledby="references-intro">
       <div className="container references__inner">
-        <h2 id="references-heading" className="references__title">
-          Referenzen
-        </h2>
-        <p className="references__intro">Diese Kunden und Partner setzen bereits auf FuelCert.</p>
+        <p id="references-intro" className="references__intro">
+          Diese Kunden und Partner setzen bereits auf FuelCert.
+        </p>
 
         <div className="references__strip-wrap" aria-label="Referenzlogos">
           <div className="references__strip">

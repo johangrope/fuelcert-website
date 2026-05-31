@@ -13,8 +13,7 @@ export const ERLOESRECHNER_INTRO = [
 export const ERLOESRECHNER_SCOPE_NOTE =
   "Aktuell werden nur Erlöse aus der THG-Quote für grünen Wasserstoff berechnet. Erweiterungen für ETS I und nEHS sind perspektivisch vorgesehen.";
 
-export const ERLOESRECHNER_LIABILITY_DISCLAIMER =
-  "Haftungsausschluss: Die berechneten Werte dienen ausschließlich der unverbindlichen Orientierung. FuelCert übernimmt keine Gewähr für Richtigkeit, Vollständigkeit oder Aktualität der Ergebnisse und haftet nicht für Entscheidungen oder Schäden, die auf Basis dieses Rechners getroffen bzw. entstehen.";
+export { CALCULATOR_LIABILITY_DISCLAIMER as ERLOESRECHNER_LIABILITY_DISCLAIMER } from "./calculator-common";
 
 export const ERLOESRECHNER_ASSUMPTIONS_HEADING = "Annahmen und Hinweise";
 
@@ -32,7 +31,7 @@ export const ERLOESRECHNER_CTA = {
 
 export const ERLOESRECHNER_TEASER = {
   slug: "erloesrechner",
-  title: "Erlösrechner",
+  title: "Erlösrechner Wasserstoff (RFNBO)",
   description:
     "Interaktive Schätzung des Erlöspotenzials von grünem Wasserstoff (RFNBO) in der THG-Quote.",
   href: "/wissen/erloesrechner",

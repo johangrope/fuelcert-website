@@ -4,6 +4,7 @@ import type { ServiceIconId } from "./ServiceIcon";
 import { LeistungTeaserCard } from "./LeistungTeaserCard";
 
 const CARD_ICONS: Record<string, ServiceIconId> = {
+  "pre-zertifizierung": "zertifizierung",
   "zertifizierung-redcert-iscc-certifhy": "zertifizierung",
   "nachweisfuehrung-und-register": "nachweisfuehrung",
   "co2-und-quotenhandel": "co2-quotenhandel",

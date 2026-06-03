@@ -8,6 +8,7 @@ type Props = { params: Promise<{ slug: string }> };
 export function generateStaticParams() {
   return ALL_LEISTUNG_SLUGS.filter(
     (slug) =>
+      slug !== "pre-zertifizierung" &&
       slug !== "zertifizierung-redcert-iscc-certifhy" &&
       slug !== "nachweisfuehrung-und-register" &&
       slug !== "co2-und-quotenhandel" &&

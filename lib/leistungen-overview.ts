@@ -4,6 +4,11 @@ export const LEISTUNGEN_CARD_TEASERS: Record<
   LeistungSlug,
   { title: string; description: string }
 > = {
+  "pre-zertifizierung": {
+    title: "Pre-Zertifizierung",
+    description:
+      "Generalprobe mit Prüfstelle nach REDcert, ISCC EU oder CertifHy – FuelCert begleitet, die Prüfstelle prüft RFNBO-Konformität.",
+  },
   "zertifizierung-redcert-iscc-certifhy": {
     title: "Zertifizierung",
     description:

@@ -34,7 +34,7 @@ const leistungen: Record<LeistungSlug, PageScaffold & { sectionId: string }> = {
     metaDescription:
       "Pre-Zertifizierung nach REDcert, ISCC EU oder CertifHy – FuelCert begleitet RFNBO-Projekte als Generalprobe vor der Zertifizierung, die Prüfstelle führt das Audit.",
     intro:
-      "Pre-Zertifizierung durch Prüfstellen wie den TÜV nach REDcert, ISCC EU oder CertifHy – als Generalprobe für RFNBO-Konformität. FuelCert begleitet den Prozess; die Prüfstelle führt das Audit durch.",
+      "FuelCert unterstützt bei der Pre-Zertifizierung von RFNBO-Projekten in der Planungs- oder Bauphase – mit belastbarer Einordnung für Investitionsentscheidungen, Bankfinanzierung und Fördermittel.",
     sections: [
       {
         heading: "Leistungsübersicht",

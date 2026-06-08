@@ -62,7 +62,16 @@ export const NAV_DROPDOWNS: NavDropdownConfig[] = [
   },
 ];
 
+/** Strip locale prefix so nav active state works for /en/... routes. */
+export function stripLocalePrefix(pathname: string): string {
+  if (pathname === "/en" || pathname.startsWith("/en/")) {
+    return pathname === "/en" ? "/" : pathname.slice(3) || "/";
+  }
+  return pathname;
+}
+
 export function isNavSectionActive(pathname: string, href: string): boolean {
-  if (href === "/") return pathname === "/";
-  return pathname === href || pathname.startsWith(`${href}/`);
+  const path = stripLocalePrefix(pathname);
+  if (href === "/") return path === "/";
+  return path === href || path.startsWith(`${href}/`);
 }

@@ -1,5 +1,6 @@
-import Link from "next/link";
 import type { ReactNode } from "react";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { Breadcrumbs, type Crumb } from "./Breadcrumbs";
 import { SiteFooter } from "./SiteFooter";
 import { SiteHeader } from "./SiteHeader";
@@ -15,15 +16,17 @@ type Props = {
   wide?: boolean;
 };
 
-export function ServicePageLayout({
+export async function ServicePageLayout({
   breadcrumbs,
   kicker,
   title,
   children,
   backHref = "/leistungen",
-  backLabel = "Zurück zur Leistungsübersicht",
+  backLabel,
   wide = false,
 }: Props) {
+  const t = await getTranslations("common");
+  const resolvedBackLabel = backLabel ?? t("backToServices");
   const innerClass = ["container", "subpage__inner", "service-page__inner", wide && "service-page__inner--wide"]
     .filter(Boolean)
     .join(" ");
@@ -39,7 +42,7 @@ export function ServicePageLayout({
           {children}
           <p className="subpage__cta subpage__cta--back">
             <Link href={backHref} className="subpage__back-link">
-              ← {backLabel}
+              ← {resolvedBackLabel}
             </Link>
           </p>
         </div>

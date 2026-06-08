@@ -10,6 +10,8 @@ export const BERICHTERSTATTUNG_SEO = {
 export const BERICHTERSTATTUNG_INTRO =
   "FuelCert unterstützt Unternehmen bei der fristgerechten, belastbaren und prüffähigen Erfüllung von Berichts-, Melde- und Abgabepflichten in der THG-Quote, im EU-ETS I und im nationalen Emissionshandel (nEHS). Wir helfen dabei, regulatorische Anforderungen richtig einzuordnen, Daten systematisch aufzubereiten und die erforderlichen Meldungen, Berichte und Abgaben sicher umzusetzen." as const;
 
+export const BERICHTERSTATTUNG_SERVICES_HEADING = "Was wir bei Berichts- und Meldepflichten übernehmen";
+
 export const BERICHTERSTATTUNG_SERVICES_INTRO =
   "Je nach System und Unternehmensrolle fallen unterschiedliche Melde-, Berichts- und Abgabepflichten an. FuelCert unterstützt Sie in allen drei relevanten Feldern – strukturiert, fristgerecht und prüffähig." as const;
 
@@ -33,6 +35,7 @@ export const BERICHTERSTATTUNG_SERVICE_GROUPS: readonly ServiceBulletGroup[] = [
       "Vorbereitung der Verifizierung durch die Prüfstelle",
       "Abstimmung mit Prüfstelle und DEHSt",
       "Unterstützung bei der Abgabe von Emissionsberechtigungen",
+      "Unterstützung bei Konten und Prozessen im Unionsregister",
       "Einordnung von Sonderfällen, z. B. Biomasse, RFNBO oder Abfallbrennstoffen",
     ],
   },
@@ -44,11 +47,14 @@ export const BERICHTERSTATTUNG_SERVICE_GROUPS: readonly ServiceBulletGroup[] = [
       "Vorbereitung und Unterstützung bei der jährlichen Emissionsberichterstattung",
       "Eintragung der Emissionen im nEHS-Register",
       "Unterstützung bei der Abgabe von nEHS-Zertifikaten",
+      "Unterstützung bei Konten und Prozessen im nEHS-Register",
       "Abstimmung mit DEHSt und Prüfstelle",
       "Abgrenzung zu EU-ETS I, EU-ETS II und biogenen Brennstoffanteilen",
     ],
   },
 ] as const;
+
+export const BERICHTERSTATTUNG_IMPLEMENTATION_HEADING = "So begleiten wir die Umsetzung";
 
 export const BERICHTERSTATTUNG_IMPLEMENTATION = [
   "Berichts- und Meldepflichten in CO₂- und Quotenmärkten sind formal anspruchsvoll und an feste Fristen gebunden. Je nach System müssen Mengen-, Energie- und Emissionsdaten strukturiert aufbereitet, Überwachungspläne erstellt, Emissionsberichte eingereicht, Verifizierungen vorbereitet oder Zertifikate abgegeben werden.",

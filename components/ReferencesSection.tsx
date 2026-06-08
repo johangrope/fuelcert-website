@@ -1,12 +1,17 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import { ReferenceLogoItem } from "./ReferenceLogoItem";
 import { HOME_REFERENCE_LOGOS } from "@/lib/home-references";
 
 export function ReferencesSection() {
+  const t = useTranslations("home");
+
   return (
     <section id="referenzen" className="references" aria-labelledby="references-intro">
       <div className="container references__inner">
         <p id="references-intro" className="references__intro">
-          Diese Kunden und Partner setzen bereits auf FuelCert.
+          {t("referencesIntro")}
         </p>
 
         <div className="references__strip-wrap" aria-label="Referenzlogos">

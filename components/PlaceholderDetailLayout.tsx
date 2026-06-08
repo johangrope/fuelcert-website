@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Breadcrumbs, type Crumb } from "./Breadcrumbs";
 import { SiteFooter } from "./SiteFooter";
 import { SiteHeader } from "./SiteHeader";
@@ -14,7 +14,7 @@ type Props = {
   backLabel: string;
 };
 
-export function PlaceholderDetailLayout({
+export async function PlaceholderDetailLayout({
   breadcrumbs,
   kicker,
   title,

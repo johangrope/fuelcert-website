@@ -1,13 +1,9 @@
 "use client";
 
+import { useLocale, useTranslations } from "next-intl";
 import { useMemo, useState } from "react";
 import {
-  ERLOESRECHNER_LIABILITY_DISCLAIMER,
-  ERLOESRECHNER_SCOPE_NOTE,
-} from "@/lib/erloesrechner-content";
-import {
   DEFAULT_ERLOESRECHNER_INPUT,
-  DRIVETRAIN_OPTIONS,
   EMISSIONS_FACTOR_MAX,
   EMISSIONS_FACTOR_MIN,
   HYDROGEN_KG_MAX,
@@ -32,6 +28,18 @@ function parseNumericInput(value: string, fallback: number): number {
 }
 
 export function ErloesrechnerCalculator() {
+  const locale = useLocale();
+  const t = useTranslations("calculatorH2");
+  const tCommon = useTranslations("common");
+  const numberLocale = locale === "en" ? "en-GB" : "de-DE";
+  const drivetrainOptions = useMemo(
+    () =>
+      [
+        { value: "brennstoffzelle" as Drivetrain, label: t("drivetrainFuelCell") },
+        { value: "verbrennungsmotor" as Drivetrain, label: t("drivetrainCombustion") },
+      ] as const,
+    [t],
+  );
   const [input, setInput] = useState<ErloesrechnerInput>(DEFAULT_ERLOESRECHNER_INPUT);
 
   const results = useMemo(() => calculateErloesrechner(input), [input]);
@@ -43,19 +51,19 @@ export function ErloesrechnerCalculator() {
   return (
     <div className="erloesrechner">
       <p className="erloesrechner__scope-note" role="note">
-        {ERLOESRECHNER_SCOPE_NOTE}
+        {t("scopeNote")}
       </p>
 
       <div className="erloesrechner__grid">
         <section className="erloesrechner__panel erloesrechner__panel--inputs" aria-labelledby="erloesrechner-inputs-heading">
           <h2 id="erloesrechner-inputs-heading" className="erloesrechner__panel-title">
-            Annahmen
+            {tCommon("assumptions")}
           </h2>
 
           <div className="erloesrechner__fields">
             <div className="erloesrechner__field">
               <label className="erloesrechner__label" htmlFor="hydrogen-kg">
-                Menge Wasserstoff in kg
+                {t("hydrogenKg")}
               </label>
               <input
                 id="hydrogen-kg"
@@ -72,12 +80,17 @@ export function ErloesrechnerCalculator() {
                   )
                 }
               />
-              <p className="erloesrechner__hint">Bereich: {HYDROGEN_KG_MIN.toLocaleString("de-DE")} – {HYDROGEN_KG_MAX.toLocaleString("de-DE")} kg</p>
+              <p className="erloesrechner__hint">
+                {t("rangeHint", {
+                  min: HYDROGEN_KG_MIN.toLocaleString(numberLocale),
+                  max: HYDROGEN_KG_MAX.toLocaleString(numberLocale),
+                })}
+              </p>
             </div>
 
             <div className="erloesrechner__field">
               <label className="erloesrechner__label" htmlFor="emissions-factor">
-                Emissionsfaktor des Wasserstoffs in gCO₂/MJ
+                {t("emissionsFactor")}
               </label>
               <input
                 id="emissions-factor"
@@ -99,13 +112,13 @@ export function ErloesrechnerCalculator() {
                 }
               />
               <p className="erloesrechner__hint">
-                Manuell eintragbar, z. B. aus Zertifizierung oder Bilanzierung. Bereich: {EMISSIONS_FACTOR_MIN} bis {EMISSIONS_FACTOR_MAX} gCO₂/MJ.
+                {t("emissionsHint", { min: EMISSIONS_FACTOR_MIN, max: EMISSIONS_FACTOR_MAX })}
               </p>
             </div>
 
             <div className="erloesrechner__field">
               <label className="erloesrechner__label" htmlFor="year">
-                Verpflichtungsjahr
+                {t("year")}
               </label>
               <select
                 id="year"
@@ -119,12 +132,12 @@ export function ErloesrechnerCalculator() {
                   </option>
                 ))}
               </select>
-              <p className="erloesrechner__hint">Steuert THG-Quote und Jahresfaktor gemäß Regulierung.</p>
+              <p className="erloesrechner__hint">{t("yearHint")}</p>
             </div>
 
             <div className="erloesrechner__field">
               <label className="erloesrechner__label" htmlFor="drivetrain">
-                Antriebsart
+                {t("drivetrain")}
               </label>
               <select
                 id="drivetrain"
@@ -132,19 +145,19 @@ export function ErloesrechnerCalculator() {
                 value={input.drivetrain}
                 onChange={(e) => update("drivetrain", e.target.value as Drivetrain)}
               >
-                {DRIVETRAIN_OPTIONS.map((option) => (
+                {drivetrainOptions.map((option) => (
                   <option key={option.value} value={option.value}>
                     {option.label}
                   </option>
                 ))}
               </select>
-              <p className="erloesrechner__hint">Beeinflusst die No-Cap-Quote; die RFNBO-Unterquote bleibt unverändert.</p>
+              <p className="erloesrechner__hint">{t("drivetrainHint")}</p>
             </div>
 
             <div className="erloesrechner__field">
               <div className="erloesrechner__slider-header">
                 <label className="erloesrechner__label" htmlFor="no-cap-price">
-                  Quotenpreis No-Cap in € je Tonne
+                  {t("noCapPrice")}
                 </label>
                 <span className="erloesrechner__slider-value" aria-live="polite">
                   {formatSliderCurrency(input.noCapPricePerTonne, "€/t")}
@@ -169,7 +182,7 @@ export function ErloesrechnerCalculator() {
             <div className="erloesrechner__field">
               <div className="erloesrechner__slider-header">
                 <label className="erloesrechner__label" htmlFor="rfnbo-price">
-                  Quotenpreis RFNBO-Unterquote in € je GJ
+                  {t("rfnboPrice")}
                 </label>
                 <span className="erloesrechner__slider-value" aria-live="polite">
                   {formatSliderCurrency(input.rfnboSubquotaPricePerGj, "€/GJ")}
@@ -195,31 +208,34 @@ export function ErloesrechnerCalculator() {
 
         <section className="erloesrechner__panel erloesrechner__panel--results" aria-labelledby="erloesrechner-results-heading">
           <h2 id="erloesrechner-results-heading" className="erloesrechner__panel-title">
-            Ergebnis
+            {tCommon("result")}
           </h2>
 
           <div className="erloesrechner__results-table-wrap">
             <table className="erloesrechner__results-table">
               <caption className="erloesrechner__results-caption">
-                Erlöse für {input.hydrogenKg.toLocaleString("de-DE")} kg H₂ im Jahr {input.year}
+                {t("resultsCaption", {
+                  kg: input.hydrogenKg.toLocaleString(numberLocale),
+                  year: input.year,
+                })}
               </caption>
               <thead>
                 <tr>
                   <th scope="col" />
-                  <th scope="col">No-Cap Quote</th>
-                  <th scope="col">RFNBO-Unterquote</th>
-                  <th scope="col">gesamt</th>
+                  <th scope="col">{t("colNoCap")}</th>
+                  <th scope="col">{t("colRfnbo")}</th>
+                  <th scope="col">{t("colTotal")}</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">spezifischer Erlös</th>
+                  <th scope="row">{t("specificRevenue")}</th>
                   <td>{formatSpecificRevenue(results.specificNoCap)}</td>
                   <td>{formatSpecificRevenue(results.specificSubquota)}</td>
                   <td className="erloesrechner__highlight">{formatSpecificRevenue(results.specificTotal)}</td>
                 </tr>
                 <tr>
-                  <th scope="row">Gesamterlös</th>
+                  <th scope="row">{t("totalRevenue")}</th>
                   <td>{formatTotalRevenue(results.totalNoCap)}</td>
                   <td>{formatTotalRevenue(results.totalSubquota)}</td>
                   <td className="erloesrechner__highlight">{formatTotalRevenue(results.totalTotal)}</td>
@@ -231,7 +247,7 @@ export function ErloesrechnerCalculator() {
         </section>
       </div>
 
-      <p className="erloesrechner__disclaimer">{ERLOESRECHNER_LIABILITY_DISCLAIMER}</p>
+      <p className="erloesrechner__disclaimer">{tCommon("liabilityDisclaimer")}</p>
     </div>
   );
 }

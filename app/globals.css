@@ -66,6 +66,66 @@ img {
   gap: 1rem;
 }
 
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav__item--lang {
+  display: flex;
+  align-items: center;
+}
+
+.lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0 0.25rem;
+}
+
+.lang-switcher__btn {
+  min-width: 0;
+  padding: 0.5rem 0.4rem;
+  border: 0;
+  background: transparent;
+  color: var(--color-text);
+  font-size: 0.975rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  font-family: inherit;
+  line-height: 1;
+  transition: color 0.15s ease;
+}
+
+.lang-switcher__btn:hover {
+  color: var(--color-teal);
+}
+
+.lang-switcher__btn--active {
+  font-weight: 700;
+  color: var(--color-teal);
+}
+
+.lang-switcher__sep {
+  color: var(--color-border);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1;
+  user-select: none;
+}
+
+@media (max-width: 960px) {
+  .nav__item--lang {
+    padding: 0.35rem 0.65rem 0.15rem;
+  }
+
+  .lang-switcher__btn {
+    padding: 0.85rem 0.5rem;
+  }
+}
+
 .logo {
   display: inline-flex;
   align-items: center;

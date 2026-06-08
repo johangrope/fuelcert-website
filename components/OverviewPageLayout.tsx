@@ -1,5 +1,6 @@
-import Link from "next/link";
 import type { ReactNode } from "react";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { Breadcrumbs, type Crumb } from "./Breadcrumbs";
 import { SiteFooter } from "./SiteFooter";
 import { SiteHeader } from "./SiteHeader";
@@ -14,7 +15,7 @@ type Props = OverviewPageConfig & {
   showFooterCta?: boolean;
 };
 
-export function OverviewPageLayout({
+export async function OverviewPageLayout({
   breadcrumbs,
   kicker,
   h1,
@@ -23,6 +24,7 @@ export function OverviewPageLayout({
   innerClassName,
   showFooterCta = true,
 }: Props) {
+  const t = await getTranslations("common");
   const innerClass = ["container", "subpage__inner", "subpage__inner--wide", innerClassName]
     .filter(Boolean)
     .join(" ");
@@ -40,7 +42,7 @@ export function OverviewPageLayout({
           {showFooterCta && (
             <p className="subpage__cta">
               <Link href="/kontakt" className="subpage__back-link">
-                Kontakt aufnehmen →
+                {t("contactCta")}
               </Link>
             </p>
           )}

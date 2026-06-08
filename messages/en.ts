@@ -1,0 +1,193 @@
+import { ERLOESRECHNER_TEASER } from "@/lib/i18n/en/erloesrechner-content";
+import { BIOMETHAN_ERLOESRECHNER_TEASER } from "@/lib/i18n/en/erloesrechner-biomethan-content";
+import { LEISTUNGEN_CARD_TEASERS, LEISTUNGEN_OVERVIEW } from "@/lib/i18n/en/leistungen-data";
+import {
+  PRE_ZERTIFIZIERUNG_CTA,
+  PRE_ZERTIFIZIERUNG_INTRO,
+  PRE_ZERTIFIZIERUNG_RELATED_TOPICS,
+  PRE_ZERTIFIZIERUNG_SEO,
+  PRE_ZERTIFIZIERUNG_SERVICES,
+  PRE_ZERTIFIZIERUNG_SERVICES_HEADING,
+  PRE_ZERTIFIZIERUNG_SERVICES_INTRO,
+  PRE_ZERTIFIZIERUNG_VARIANTS,
+  PRE_ZERTIFIZIERUNG_VARIANTS_HEADING,
+} from "@/lib/i18n/en/leistungen-pre-zertifizierung";
+import { UEBER_UNS_CTA, UEBER_UNS_HIGHLIGHTS, UEBER_UNS_INTRO, UEBER_UNS_PUBLICATIONS, UEBER_UNS_SEO } from "@/lib/i18n/en/ueber-uns";
+import { UEBER_UNS_TEAM } from "@/lib/i18n/en/ueber-uns-team";
+import { WISSEN_OVERVIEW } from "@/lib/i18n/en/wissen-data";
+import { ANWENDUNGEN_OVERVIEW } from "@/lib/i18n/en/anwendungen-data";
+
+const messages = {
+  common: {
+    learnMore: "Learn more >",
+    contact: "Contact us",
+    backToServices: "Back to services overview",
+    backToWissen: "Back to knowledge overview",
+    backToAnwendungsbereiche: "Back to application areas overview",
+    backToHome: "Back to home",
+    contactCta: "Contact us →",
+    readArticle: "Read article →",
+    assumptionsHeading: "Assumptions and notes",
+    relatedTopicsHeading: "Related topics",
+    relatedTopicsIntro:
+      "Find in-depth context in our knowledge section – for details on systems, balances and regulatory requirements.",
+    breadcrumbAria: "Breadcrumb",
+    assumptions: "Assumptions",
+    result: "Result",
+    liabilityDisclaimer:
+      "Disclaimer: Calculated values are for non-binding orientation only. FuelCert assumes no liability for accuracy, completeness or timeliness of results and is not liable for decisions or damages based on this calculator.",
+    portraitAlt: "Portrait of {name}",
+    certificationGraphicAlt:
+      "Schematic of the certification process from starting position through data and balancing to audit and recertification",
+    languageLabel: "Language",
+    notFound: "Page not found",
+  },
+  nav: {
+    home: "Home",
+    about: "About us",
+    contact: "Contact",
+    services: "Services",
+    applications: "Application areas",
+    knowledge: "Knowledge",
+    regulatoryAreas: "Regulatory areas",
+    productAreas: "Product-related areas",
+    preCertification: "Pre-certification",
+    certification: "Certification",
+    proofManagement: "Proof management and registers",
+    co2Trading: "CO₂ and quota trading",
+    reporting: "Reports and reporting obligations",
+    calculatorH2: "Revenue calculator hydrogen (RFNBO)",
+    calculatorBiomethan: "Revenue calculator biomethane (bio-CNG)",
+    thgQuote: "GHG quota",
+    ets: "Emissions trading (EU ETS I)",
+    nehs: "National emissions trading (nEHS)",
+    esg: "ESG and sustainability reporting",
+    hydrogen: "Hydrogen and derivatives",
+    biomethan: "Biomethane and bio-LNG",
+    rfnbo: "RFNBO and e-fuels",
+    rfnboCert: "RFNBO certification",
+    systemsCompare: "REDcert, ISCC EU and CertifHy",
+    thgMass: "GHG and mass balance",
+    udbNabisy: "UDB, Nabisy and register management",
+    redIII: "RFNBO requirements under RED III",
+  },
+  footer: {
+    contact: "Contact",
+    more: "More",
+    about: "About us",
+    imprint: "Imprint",
+    privacy: "Privacy",
+    bookCall: "Book initial consultation",
+    copyright: "Copyright © 2025 FuelCert Sailer & Grope GbR",
+    company: "FuelCert Sailer & Grope GbR",
+    addressLine1: "Bismarckstraße 65",
+    addressLine2: "10627 Berlin",
+  },
+  home: {
+    metaTitle: "FuelCert – Certification for renewable fuels",
+    metaDescription:
+      "FuelCert supports companies with certification, proof management and regulatory questions around RFNBO, green hydrogen, biomethane and compliance.",
+    heroTitle: "Certification and regulatory advisory for renewable fuels",
+    heroLead:
+      "FuelCert supports companies with certification, proof management and regulatory questions around RFNBO, green hydrogen, biomethane and related compliance topics.",
+    heroImageAlt: "Hydrogen storage and wind turbines",
+    servicesTitle: "Our services",
+    servicesIntro:
+      "Certification of renewable fuels enables crediting on regulated CO₂ markets such as the GHG quota or European and national emissions trading. We support producers, traders and fuel suppliers along the value chain to benefit from these opportunities.",
+    testimonialsTitle: "Client voices",
+    testimonialsIntro: "What clients say about working with FuelCert.",
+    referencesIntro: "These clients and partners already rely on FuelCert.",
+  },
+  leistungen: {
+    overview: LEISTUNGEN_OVERVIEW,
+    cards: LEISTUNGEN_CARD_TEASERS,
+    ctaHeading: "Want to clarify which support is relevant for your project?",
+    ctaText:
+      "We assess your starting position and show which service areas may apply to your project.",
+    ctaButton: "Schedule initial consultation",
+    kicker: "Services",
+  },
+  preZert: {
+    seo: PRE_ZERTIFIZIERUNG_SEO,
+    intro: PRE_ZERTIFIZIERUNG_INTRO,
+    servicesHeading: PRE_ZERTIFIZIERUNG_SERVICES_HEADING,
+    servicesIntro: PRE_ZERTIFIZIERUNG_SERVICES_INTRO,
+    services: PRE_ZERTIFIZIERUNG_SERVICES,
+    variantsHeading: PRE_ZERTIFIZIERUNG_VARIANTS_HEADING,
+    variants: PRE_ZERTIFIZIERUNG_VARIANTS,
+    cta: PRE_ZERTIFIZIERUNG_CTA,
+    relatedTopics: PRE_ZERTIFIZIERUNG_RELATED_TOPICS,
+    breadcrumb: "Pre-certification",
+  },
+  about: {
+    seo: UEBER_UNS_SEO,
+    intro: UEBER_UNS_INTRO,
+    highlightsTitle: "What defines FuelCert",
+    highlights: UEBER_UNS_HIGHLIGHTS,
+    teamTitle: "The team behind FuelCert",
+    publicationsTitle: "Publications and articles",
+    publications: UEBER_UNS_PUBLICATIONS,
+    cta: UEBER_UNS_CTA,
+    team: UEBER_UNS_TEAM,
+    kicker: "FuelCert",
+    breadcrumb: "About us",
+  },
+  wissen: {
+    overview: WISSEN_OVERVIEW,
+    erloesrechnerTeaser: ERLOESRECHNER_TEASER,
+    biomethanTeaser: BIOMETHAN_ERLOESRECHNER_TEASER,
+    kicker: "Knowledge",
+    breadcrumb: "Knowledge",
+  },
+  anwendungsbereiche: {
+    overview: ANWENDUNGEN_OVERVIEW,
+    kicker: "Application areas",
+    breadcrumb: "Application areas",
+    regulatoryTitle: "Regulatory areas",
+    regulatoryIntro:
+      "Markets, quotas and emissions trading systems – with typical questions for producers, traders and obligated parties.",
+    productTitle: "Product-related areas",
+    productIntro:
+      "Hydrogen and derivatives, biomethane and bio-LNG, and RFNBO and e-fuels – focused on product-related compliance.",
+  },
+  contact: {
+    title: "Contact",
+    metaDescription: "Contact FuelCert – advisory and initial consultation.",
+    kicker: "Contact",
+    breadcrumb: "Contact",
+  },
+  calculatorH2: {
+    scopeNote:
+      "Currently only GHG quota revenue for green hydrogen is calculated. Extensions for EU ETS I and nEHS are planned.",
+    hydrogenKg: "Hydrogen volume in kg",
+    rangeHint: "Range: {min} – {max} kg",
+    emissionsFactor: "Hydrogen emissions factor in gCO₂/MJ",
+    emissionsHint:
+      "Enter manually, e.g. from certification or balancing. Range: {min} to {max} gCO₂/MJ.",
+    year: "Compliance year",
+    yearHint: "Controls GHG quota and year factor per regulation.",
+    drivetrain: "Drivetrain",
+    drivetrainHint: "Affects the no-cap quota; RFNBO sub-quota remains unchanged.",
+    drivetrainFuelCell: "Fuel cell vehicles",
+    drivetrainCombustion: "Combustion engine",
+    noCapPrice: "No-cap quota price in € per tonne",
+    rfnboPrice: "RFNBO sub-quota price in € per GJ",
+    resultsCaption: "Revenue for {kg} kg H₂ in {year}",
+    colNoCap: "No-cap quota",
+    colRfnbo: "RFNBO sub-quota",
+    colTotal: "Total",
+    specificRevenue: "Specific revenue",
+    totalRevenue: "Total revenue",
+  },
+  calculatorBiomethan: {
+    scopeNote: "Currently only bio-CNG is calculated. Extensions for bio-LNG, RFNBO and electricity are planned.",
+    calorificVolume: "Calorific volume in kWh (LHV)",
+    emissionsValue: "Emissions value in gCO₂/MJ",
+    year: "Compliance year",
+    thgPrice: "GHG quota price in € per tonne",
+    specificRevenue: "Specific revenue",
+    totalRevenue: "Total revenue",
+  },
+} as const;
+
+export default messages;

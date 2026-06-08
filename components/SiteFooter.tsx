@@ -1,5 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import logoWhite from "@/assets/fuelcert-logo-white.png";
 
 function IconPhone({ className }: { className?: string }) {
@@ -68,7 +69,9 @@ function IconCalendar({ className }: { className?: string }) {
   );
 }
 
-export function SiteFooter() {
+export async function SiteFooter() {
+  const t = await getTranslations("footer");
+
   return (
     <footer className="site-footer">
       <div className="container site-footer__inner">
@@ -84,12 +87,12 @@ export function SiteFooter() {
           </div>
 
           <div className="site-footer__col">
-            <h2 className="site-footer__heading">Kontakt</h2>
-            <p className="site-footer__company">FuelCert Sailer &amp; Grope GbR</p>
+            <h2 className="site-footer__heading">{t("contact")}</h2>
+            <p className="site-footer__company">{t("company")}</p>
             <p className="site-footer__address">
-              Bismarckstraße 65
+              {t("addressLine1")}
               <br />
-              10627 Berlin
+              {t("addressLine2")}
             </p>
             <ul className="site-footer__list">
               <li>
@@ -108,37 +111,37 @@ export function SiteFooter() {
           </div>
 
           <div className="site-footer__col">
-            <h2 className="site-footer__heading">Weiteres</h2>
+            <h2 className="site-footer__heading">{t("more")}</h2>
             <ul className="site-footer__list site-footer__list--links">
               <li>
                 <Link href="/ueber-uns" className="site-footer__link">
                   <IconUser className="site-footer__icon" />
-                  <span>Über uns</span>
+                  <span>{t("about")}</span>
                 </Link>
               </li>
               <li>
                 <Link href="#" className="site-footer__link">
                   <IconInfo className="site-footer__icon" />
-                  <span>Impressum</span>
+                  <span>{t("imprint")}</span>
                 </Link>
               </li>
               <li>
                 <Link href="#" className="site-footer__link">
                   <IconCloud className="site-footer__icon" />
-                  <span>Datenschutz</span>
+                  <span>{t("privacy")}</span>
                 </Link>
               </li>
               <li>
                 <Link href="/kontakt" className="site-footer__link">
                   <IconCalendar className="site-footer__icon" />
-                  <span>Erstgespräch buchen</span>
+                  <span>{t("bookCall")}</span>
                 </Link>
               </li>
             </ul>
           </div>
         </div>
 
-        <p className="site-footer__copyright">Copyright © 2025 FuelCert Sailer &amp; Grope GbR</p>
+        <p className="site-footer__copyright">{t("copyright")}</p>
       </div>
     </footer>
   );

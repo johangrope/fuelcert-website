@@ -1,17 +1,23 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
+import { useEffect, useMemo, useState } from "react";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { Link, usePathname } from "@/i18n/navigation";
 import fuelcertLogo from "@/assets/fuelcert-logo.png";
-import { isNavSectionActive, MAIN_NAV_LINKS, NAV_DROPDOWNS } from "@/lib/site-navigation";
+import { buildMainNavLinks, buildNavDropdowns, type NavMessageKey } from "@/lib/i18n/nav";
+import { isNavSectionActive } from "@/lib/site-navigation";
 import type { NavDropdownConfig } from "@/lib/types";
 
 const MQ_MAX_MOBILE = "(max-width: 960px)";
 
 export function SiteHeader() {
   const pathname = usePathname();
+  const t = useTranslations("nav");
+  const navT = (key: NavMessageKey) => t(key);
+  const mainNavLinks = useMemo(() => buildMainNavLinks(navT), [t]);
+  const navDropdowns = useMemo(() => buildNavDropdowns(navT), [t]);
   const [mobile, setMobile] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdownId, setOpenDropdownId] = useState<string | null>(null);
@@ -78,33 +84,15 @@ export function SiteHeader() {
           <Image src={fuelcertLogo} alt="FuelCert" className="logo__img" priority />
         </Link>
 
-        <button
-          type="button"
-          className="nav-toggle"
-          aria-expanded={menuOpen}
-          aria-controls="site-nav"
-          onClick={() =>
-            setMenuOpen((open) => {
-              const next = !open;
-              if (!next) setOpenDropdownId(null);
-              return next;
-            })
-          }
-        >
-          <span className="nav-toggle__bar" />
-          <span className="nav-toggle__bar" />
-          <span className="nav-toggle__bar" />
-        </button>
-
         <nav id="site-nav" className="nav">
           <ul className="nav__list">
             <li>
               <Link href="/" className={`nav__link${pathname === "/" ? " nav__link--active" : ""}`}>
-                Home
+                {t("home")}
               </Link>
             </li>
 
-            {NAV_DROPDOWNS.map((dd) => (
+            {navDropdowns.map((dd) => (
               <li
                 key={dd.id}
                 className={`nav__item nav__item--dropdown nav__item--has-section${
@@ -131,7 +119,7 @@ export function SiteHeader() {
                     type="button"
                     className="nav__link nav__dropdown-toggle nav__dropdown-toggle--chevron"
                     aria-expanded={openDropdownId === dd.id}
-                    aria-label={`${dd.label} Untermenü`}
+                    aria-label={`${dd.label}`}
                     onClick={() => {
                       if (mobile) toggleDropdown(dd.id);
                     }}
@@ -179,7 +167,7 @@ export function SiteHeader() {
               </li>
             ))}
 
-            {MAIN_NAV_LINKS.filter((l) => l.href !== "/").map((link) => (
+            {mainNavLinks.filter((l) => l.href !== "/").map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
@@ -190,8 +178,32 @@ export function SiteHeader() {
                 </Link>
               </li>
             ))}
+
+            <li className="nav__item nav__item--lang">
+              <LanguageSwitcher />
+            </li>
           </ul>
         </nav>
+
+        <div className="header__actions">
+          <button
+            type="button"
+            className="nav-toggle"
+            aria-expanded={menuOpen}
+            aria-controls="site-nav"
+            onClick={() =>
+              setMenuOpen((open) => {
+                const next = !open;
+                if (!next) setOpenDropdownId(null);
+                return next;
+              })
+            }
+          >
+            <span className="nav-toggle__bar" />
+            <span className="nav-toggle__bar" />
+            <span className="nav-toggle__bar" />
+          </button>
+        </div>
       </div>
     </header>
   );

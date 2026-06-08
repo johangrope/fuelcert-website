@@ -1,16 +1,22 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import { TestimonialCard } from "./TestimonialCard";
-import { HOME_TESTIMONIALS } from "@/lib/home-testimonials";
+import { useHomeTestimonials } from "@/lib/use-home-testimonials";
 
 export function TestimonialsSection() {
+  const t = useTranslations("home");
+  const testimonials = useHomeTestimonials();
+
   return (
     <section id="kundenstimmen" className="testimonials" aria-labelledby="testimonials-heading">
       <div className="container">
         <h2 id="testimonials-heading" className="testimonials__title">
-          Kundenstimmen
+          {t("testimonialsTitle")}
         </h2>
-        <p className="testimonials__intro">Was Kunden über die Zusammenarbeit mit FuelCert sagen.</p>
+        <p className="testimonials__intro">{t("testimonialsIntro")}</p>
         <div className="testimonials__grid">
-          {HOME_TESTIMONIALS.map((item) => (
+          {testimonials.map((item) => (
             <TestimonialCard key={item.name} {...item} />
           ))}
         </div>

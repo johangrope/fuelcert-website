@@ -1,4 +1,5 @@
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 
 type Props = {
   heading: string;
@@ -13,15 +14,17 @@ type Props = {
   variant?: "default" | "subtle";
 };
 
-export function ServiceCtaSection({
+export async function ServiceCtaSection({
   heading,
   text,
-  buttonLabel = "Kontakt aufnehmen",
+  buttonLabel,
   href = "/kontakt",
   id = "service-cta",
   className,
   variant = "default",
 }: Props) {
+  const t = await getTranslations("common");
+  const resolvedButtonLabel = buttonLabel ?? t("contact");
   const headingId = `${id}-heading`;
   const sectionClass = ["service-cta", variant === "subtle" && "service-cta--subtle", className]
     .filter(Boolean)
@@ -34,7 +37,7 @@ export function ServiceCtaSection({
       </h2>
       {variant === "default" && text ? <p className="service-cta__text">{text}</p> : null}
       <Link href={href} className="service-cta__button">
-        {buttonLabel}
+        {resolvedButtonLabel}
       </Link>
     </section>
   );

@@ -10,6 +10,16 @@ export const ZERTIFIZIERUNG_INTRO = [
   "Unser Leistungsumfang umfasst Zertifizierungsprojekte für Biokraftstoffe, Biobrennstoffe, Biomethan und Bio-LNG, RFNBO, grünen Wasserstoff, Wasserstoffderivate und E-Fuels. So stellen wir sicher, dass Ihr Zertifizierungsprozess nachvollziehbar aufgesetzt und auditfähig umgesetzt wird.",
 ] as const;
 
+export const ZERTIFIZIERUNG_SERVICES_HEADING = "Was wir im Zertifizierungsprozess übernehmen";
+
+export const ZERTIFIZIERUNG_SERVICES_INTRO =
+  "Wir übernehmen die operativ anspruchsvollen Schritte im Zertifizierungsprozess – von der Datenerfassung über THG- und Massenbilanz bis zur Auditvorbereitung, Auditbegleitung und Rezertifizierung. So bleibt Ihr Team entlastet und der Prozess auditfest dokumentiert.";
+
+export const ZERTIFIZIERUNG_PROCESS_HEADING = "So begleiten wir den Zertifizierungsprozess";
+
+export const ZERTIFIZIERUNG_PROCESS_NOTE =
+  "Die Grafik zeigt die Einbettung in Wertschöpfungskette und Behördenkontext – der Ablauf oben beschreibt, wie FuelCert Sie operativ durch den Zertifizierungsprozess begleitet.";
+
 export const ZERTIFIZIERUNG_SERVICES = [
   "Erfassung der individuellen projekt- und unternehmensbezogenen Ausgangslage",
   "Zusammenstellung aller relevanten Daten, Unterlagen und Informationen für den Zertifizierungsprozess",

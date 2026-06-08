@@ -1,19 +1,19 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { getTranslations } from "next-intl/server";
 
 type Topic = { label: string; href: string };
 
 type Props = { topics: Topic[] };
 
-export function RelatedTopicsSection({ topics }: Props) {
+export async function RelatedTopicsSection({ topics }: Props) {
+  const t = await getTranslations("common");
+
   return (
     <section className="service-block service-block--related" aria-labelledby="related-topics-heading">
       <h2 id="related-topics-heading" className="subpage__heading">
-        Weiterführende Themen
+        {t("relatedTopicsHeading")}
       </h2>
-      <p className="subpage__text">
-        Vertiefende Einordnungen finden Sie in unserem Wissensbereich – für Details zu Systemen, Bilanzen und
-        regulatorischen Anforderungen.
-      </p>
+      <p className="subpage__text">{t("relatedTopicsIntro")}</p>
       <ul className="related-topics">
         {topics.map((topic) => (
           <li key={topic.href}>

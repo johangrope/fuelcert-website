@@ -40,8 +40,10 @@ const pages: Record<AnwendungSlug, PageScaffold & { category: "regulatory" | "pr
     category: "regulatory",
     menuLabel: "THG-Quote",
     title: "THG-Quote",
-    metaDescription: "Anwendungsbereich Treibhausgas-Quote für erneuerbare Kraftstoffe.",
-    intro: "Platzhalter: Einordnung der THG-Quote und typischer Compliance-Anforderungen für Inverkehrbringer.",
+    metaDescription:
+      "Was ist die THG-Quote? Anforderungen, Erfüllungsoptionen und Relevanz für Biomethan, RFNBO, Wasserstoff und erneuerbare Kraftstoffe.",
+    intro:
+      "Die Treibhausgasminderungsquote verpflichtet Inverkehrbringer fossiler Kraftstoffe zur Emissionsminderung – mit wachsenden Chancen für erneuerbare Energieträger.",
     sections: [{ heading: "Schwerpunkte", body: "Platzhalter für Leistungen und Anknüpfungspunkte in diesem Markt." }],
   },
   "emissionshandel-ets-1": {

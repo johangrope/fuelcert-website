@@ -59,12 +59,17 @@ const messages = {
   calculatorBiomethan: {
     scopeNote:
       "Aktuell wird nur Bio-CNG berechnet. Erweiterungen für Bio-LNG, RFNBO und Strom sind perspektivisch vorgesehen.",
-    calorificVolume: "Brennwertmenge in kWh",
-    emissionsValue: "Emissionswert in gCO₂/MJ",
     year: "Verpflichtungsjahr",
-    thgPrice: "THG-Quotenpreis in € je Tonne",
-    specificRevenue: "spezifischer Erlös",
-    totalRevenue: "Gesamterlös",
+    yearHint: "Steuert die THG-Quote gemäß Regulierung.",
+    calorificVolume: "Brennwertmenge Biomethan (kWh)",
+    rangeHint: "Bereich: {min} – {max} kWh",
+    emissionsValue: "Emissionswert Biomethan (gCO₂/MJ)",
+    emissionsHint: "Manuell eintragbar. Bereich: {min} bis {max} gCO₂/MJ.",
+    thgPrice: "THG-Preis (€/t CO₂eq)",
+    resultsCaption: "Erlöse für {kwh} kWh (Brennwert) als Bio-CNG im Jahr {year}",
+    specificRevenue: "Spezifischer Erlös",
+    specificRevenueUnit: "€/MWh (Brennwert)",
+    totalRevenue: "Absoluter Erlös",
   },
   nav: {
     home: "Home",

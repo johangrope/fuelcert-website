@@ -1,4 +1,5 @@
 import type { NavDropdownConfig, NavLinkItem } from "@/lib/types";
+import { filterNavDropdowns } from "@/lib/nav-visibility";
 
 export type NavMessageKey =
   | "home"
@@ -40,7 +41,7 @@ export function buildMainNavLinks(t: NavTranslate): NavLinkItem[] {
 }
 
 export function buildNavDropdowns(t: NavTranslate): NavDropdownConfig[] {
-  return [
+  return filterNavDropdowns([
     {
       id: "leistungen",
       label: t("services"),
@@ -94,5 +95,5 @@ export function buildNavDropdowns(t: NavTranslate): NavDropdownConfig[] {
         { label: t("redIII"), href: "/wissen/rfnbo-anforderungen-red-iii" },
       ],
     },
-  ];
+  ]);
 }

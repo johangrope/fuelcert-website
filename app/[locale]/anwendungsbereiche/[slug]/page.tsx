@@ -9,9 +9,18 @@ import { getLocalizedAnwendung } from "@/lib/i18n/content-access";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
+const DEDICATED_SLUGS = new Set<AnwendungSlug>([
+  "thg-quote",
+  "emissionshandel-ets-1",
+  "emissionshandel-nehs",
+]);
+
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
-    ALL_ANWENDUNG_SLUGS.map((slug) => ({ locale, slug })),
+    ALL_ANWENDUNG_SLUGS.filter((slug) => !DEDICATED_SLUGS.has(slug)).map((slug) => ({
+      locale,
+      slug,
+    })),
   );
 }
 
@@ -33,7 +42,11 @@ export default async function AnwendungDetailPage({ params }: Props) {
   const t = await getTranslations("common");
   const tApp = await getTranslations("anwendungsbereiche");
 
-  if (!data || !ALL_ANWENDUNG_SLUGS.includes(slug as AnwendungSlug)) {
+  if (
+    !data ||
+    !ALL_ANWENDUNG_SLUGS.includes(slug as AnwendungSlug) ||
+    DEDICATED_SLUGS.has(slug as AnwendungSlug)
+  ) {
     notFound();
   }
 

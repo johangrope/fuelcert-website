@@ -1,4 +1,5 @@
 import type { NavDropdownConfig, NavLinkItem } from "./types";
+import { filterNavDropdowns } from "./nav-visibility";
 
 export const MAIN_NAV_LINKS: NavLinkItem[] = [
   { label: "Home", href: "/" },
@@ -6,7 +7,7 @@ export const MAIN_NAV_LINKS: NavLinkItem[] = [
   { label: "Kontakt", href: "/kontakt" },
 ];
 
-export const NAV_DROPDOWNS: NavDropdownConfig[] = [
+export const NAV_DROPDOWNS: NavDropdownConfig[] = filterNavDropdowns([
   {
     id: "leistungen",
     label: "Leistungen",
@@ -60,7 +61,7 @@ export const NAV_DROPDOWNS: NavDropdownConfig[] = [
       { label: "RFNBO-Anforderungen nach RED III", href: "/wissen/rfnbo-anforderungen-red-iii" },
     ],
   },
-];
+]);
 
 /** Strip locale prefix so nav active state works for /en/... routes. */
 export function stripLocalePrefix(pathname: string): string {

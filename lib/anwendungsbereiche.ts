@@ -50,19 +50,23 @@ const pages: Record<AnwendungSlug, PageScaffold & { category: "regulatory" | "pr
     slug: "emissionshandel-ets-1",
     category: "regulatory",
     menuLabel: "Emissionshandel (ETS I)",
-    title: "Emissionshandel (ETS I)",
-    metaDescription: "Anwendungsbereich EU-Emissionshandel (ETS I).",
-    intro: "Platzhalter: Bezug zu Zertifikaten, Meldepflichten und Brennstoffbezug im Emissionshandel (ETS I).",
-    sections: [{ heading: "Schwerpunkte", body: "Platzhalter für typische Fragestellungen und Unterstützungsangebote." }],
+    title: "Emissionshandel (EU-ETS 1)",
+    metaDescription:
+      "EU-ETS 1 für Betreiber stationärer Anlagen: Wie nachhaltige Brennstoffe berichtete Emissionen, EUA-Bedarf und ETS-Kosten mindern können.",
+    intro:
+      "Im EU-ETS 1 müssen Betreiber erfasster Anlagen Emissionen melden und Emissionsberechtigungen abgeben – mit wirtschaftlicher Relevanz für nachhaltige Brennstoffe und abziehbare Anteile.",
+    sections: [{ heading: "Schwerpunkte", body: "Überwachungsplan, Emissionsbericht, Nachweise und Unionsregister im wirtschaftlichen Kontext." }],
   },
   "emissionshandel-nehs": {
     slug: "emissionshandel-nehs",
     category: "regulatory",
     menuLabel: "Nationaler Emissionshandel (nEHS)",
     title: "Nationaler Emissionshandel (nEHS)",
-    metaDescription: "Anwendungsbereich nationaler Emissionshandel (nEHS).",
-    intro: "Platzhalter: Einordnung des nationalen Emissionshandels (nEHS) und Schnittstellen zu Brennstoffen und Energieträgern.",
-    sections: [{ heading: "Schwerpunkte", body: "Platzhalter für Beratungsschwerpunkte in diesem Segment." }],
+    metaDescription:
+      "Nationaler Emissionshandel (nEHS) nach BEHG: Überwachungsplan, Emissionsbericht, nEHS-Register, nEZ und erneuerbare Brennstoffe.",
+    intro:
+      "Das nEHS bepreist CO₂-Emissionen aus Brennstoffen außerhalb des EU-ETS – mit besonderer Relevanz für Wärme, Verkehr und Inverkehrbringer.",
+    sections: [{ heading: "Schwerpunkte", body: "Betroffenheit, Pflichten, Fristen, Register und erneuerbare Brennstoffe im nationalen Emissionshandel." }],
   },
   "esg-und-nachhaltigkeitsnachweise": {
     slug: "esg-und-nachhaltigkeitsnachweise",

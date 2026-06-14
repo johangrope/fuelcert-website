@@ -19,7 +19,7 @@ export const KONTAKT: PageScaffold = {
   title: "Kontakt",
   metaDescription: "Kontakt zu FuelCert – Beratung und Erstgespräch.",
   intro:
-    "Platzhalter: Nehmen Sie Kontakt auf für Fragen zu Zertifizierung, Nachweisführung und regulatorischen Themen.",
+    "Nehmen Sie Kontakt auf für Fragen zu Zertifizierung, Nachweisführung und regulatorischen Themen.",
   sections: [
     {
       heading: "Kontaktdaten",

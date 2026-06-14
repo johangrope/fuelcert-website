@@ -120,7 +120,7 @@ export async function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="site-footer__link">
+                <Link href="/impressum" className="site-footer__link">
                   <IconInfo className="site-footer__icon" />
                   <span>{t("imprint")}</span>
                 </Link>

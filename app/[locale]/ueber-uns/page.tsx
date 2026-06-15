@@ -5,6 +5,7 @@ import { PublicationsSection } from "@/components/PublicationsSection";
 import { ServiceCtaSection } from "@/components/ServiceCtaSection";
 import { ServicePageLayout } from "@/components/ServicePageLayout";
 import { TeamSection } from "@/components/TeamSection";
+import { TestimonialsMarquee } from "@/components/TestimonialsMarquee";
 import { routing } from "@/i18n/routing";
 import { homeCrumb } from "@/lib/i18n/breadcrumbs";
 import { getLocaleContent } from "@/lib/i18n/resolve";
@@ -68,6 +69,8 @@ export default async function UeberUnsPage({ params }: Props) {
         title={t("publicationsTitle")}
         readArticleLabel={tCommon("readArticle")}
       />
+
+      <TestimonialsMarquee />
 
       <ServiceCtaSection id="about-cta" {...c.UEBER_UNS_CTA} />
     </ServicePageLayout>

@@ -1,11 +1,13 @@
 import Image from "next/image";
-import type { Testimonial } from "@/lib/home-testimonials";
+import type { Testimonial } from "@/lib/testimonials";
 
-type Props = Pick<Testimonial, "quote" | "name" | "role" | "portrait" | "portraitAlt">;
+type Props = Pick<Testimonial, "quote" | "name" | "role" | "portrait" | "portraitAlt"> & {
+  className?: string;
+};
 
-export function TestimonialCard({ quote, name, role, portrait, portraitAlt }: Props) {
+export function TestimonialCard({ quote, name, role, portrait, portraitAlt, className }: Props) {
   return (
-    <figure className="testimonial-card">
+    <figure className={["testimonial-card", className].filter(Boolean).join(" ")}>
       <div className="testimonial-card__portrait-wrap">
         <Image
           src={portrait}

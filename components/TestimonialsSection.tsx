@@ -14,10 +14,9 @@ export function TestimonialsSection() {
         <h2 id="testimonials-heading" className="testimonials__title">
           {t("testimonialsTitle")}
         </h2>
-        <p className="testimonials__intro">{t("testimonialsIntro")}</p>
         <div className="testimonials__grid">
           {testimonials.map((item) => (
-            <TestimonialCard key={item.name} {...item} />
+            <TestimonialCard key={item.id} {...item} />
           ))}
         </div>
       </div>

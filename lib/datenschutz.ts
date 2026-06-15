@@ -1,3 +1,5 @@
+import { INITIAL_CONSULTATION_BOOKING_URL } from "./booking";
+
 export const DATENSCHUTZ_SEO = {
   title: "Datenschutz | FuelCert",
   metaDescription:
@@ -120,7 +122,7 @@ export const DATENSCHUTZ_SECTIONS: readonly DatenschutzSection[] = [
       {
         heading: "5.1 Allgemeine Informationen zum Verfahren und der Funktionsweise",
         paragraphs: [
-          "Wenn Sie uns per Email oder über die Online-Terminbuchung (unter https://koalendar.com/e/erstgesprach-mit-fuelcert) kontaktieren, werden Ihre Angaben inklusive der von Ihnen angegebenen Kontaktdaten gespeichert, um Ihre Anfrage zu bearbeiten und mögliche Anschlussfragen zu klären.",
+          `Wenn Sie uns per Email oder über die Online-Terminbuchung (unter ${INITIAL_CONSULTATION_BOOKING_URL}) kontaktieren, werden Ihre Angaben inklusive der von Ihnen angegebenen Kontaktdaten gespeichert, um Ihre Anfrage zu bearbeiten und mögliche Anschlussfragen zu klären.`,
         ],
       },
       {
@@ -143,16 +145,21 @@ export const DATENSCHUTZ_SECTIONS: readonly DatenschutzSection[] = [
         ],
       },
       {
-        heading: "Terminbuchung über Koalender",
+        heading: "Terminbuchung über Microsoft Bookings",
         paragraphs: [
-          "Zur Vereinfachung der Terminbuchung nutzen wir den Dienst „Koalender“, angeboten von der Kollo UG (haftungsbeschränkt), Warthestraße 58, 12051 Berlin, Deutschland.",
-          "Bei der Buchung eines Termins über Koalender werden personenbezogene Daten wie Name, E-Mail-Adresse sowie ggf. weitere Angaben erhoben und verarbeitet. Die Datenverarbeitung erfolgt zur Bearbeitung der Terminbuchung sowie zur Vorbereitung eines Erstgesprächs.",
-          "Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. b DSGVO. Mit Koalender besteht ein Vertrag zur Auftragsverarbeitung gemäß Art. 28 DSGVO.",
+          "Zur Vereinfachung der Terminbuchung für Erstgespräche nutzen wir den Online-Buchungsdienst „Microsoft Bookings“, einen Bestandteil von Microsoft 365. Anbieter ist die Microsoft Ireland Operations Limited, One Microsoft Place, South County Business Park, Leopardstown, Dublin 18, D18 P521, Irland (im Folgenden „Microsoft“).",
+          "Bei der Buchung eines Termins über Microsoft Bookings werden personenbezogene Daten wie Name, E-Mail-Adresse, ggf. Telefonnummer sowie Termininformationen erhoben und verarbeitet. Die Datenverarbeitung erfolgt zur Bearbeitung der Terminbuchung, zur Terminbestätigung sowie zur Vorbereitung und Durchführung des Erstgesprächs (z. B. Versand einer Kalendereinladung per Microsoft Teams).",
+          "Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. b DSGVO. Microsoft handelt in diesem Zusammenhang als Auftragsverarbeiter; es besteht ein Vertrag zur Auftragsverarbeitung gemäß Art. 28 DSGVO auf Grundlage der von Microsoft bereitgestellten Standardvertragsklauseln bzw. des Microsoft-Produkte-und-Dienste-Datenschutz-Addendums (DPA).",
+          "Im Rahmen der Nutzung von Microsoft Bookings kann es auch zu einer Übermittlung personenbezogener Daten an Server der Microsoft Corporation in den USA kommen. Microsoft stellt hierfür geeignete Garantien im Sinne von Art. 46 DSGVO bereit.",
         ],
         links: [
           {
-            label: "Datenschutzerklärung von Koalender",
-            href: "https://help.koalendar.com/article/45-gdpr",
+            label: "Datenschutzerklärung von Microsoft",
+            href: "https://privacy.microsoft.com/de-de/privacystatement",
+          },
+          {
+            label: "Microsoft-Datenschutz-Addendum (DPA)",
+            href: "https://www.microsoft.com/licensing/docs/view/Microsoft-Products-and-Services-Data-Protection-Addendum-DPA",
           },
         ],
       },
@@ -260,5 +267,5 @@ export const DATENSCHUTZ_CONTACT = {
   phone: "+49 (0)15233560411",
   phoneHref: "tel:+4915233560411",
   dpoEmail: "k.sailer@fuelcert.com",
-  bookingUrl: "https://koalendar.com/e/erstgesprach-mit-fuelcert",
+  bookingUrl: INITIAL_CONSULTATION_BOOKING_URL,
 } as const;

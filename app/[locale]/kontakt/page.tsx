@@ -6,6 +6,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { homeCrumb } from "@/lib/i18n/breadcrumbs";
+import { INITIAL_CONSULTATION_BOOKING_URL } from "@/lib/booking";
 import { getLocaleContent } from "@/lib/i18n/resolve";
 import { KONTAKT as KONTAKT_DE } from "@/lib/static-pages";
 import { KONTAKT as KONTAKT_EN } from "@/lib/i18n/en/static-pages";
@@ -30,6 +31,7 @@ export default async function KontaktPage({ params }: Props) {
   setRequestLocale(locale);
   const t = await getTranslations("contact");
   const tCommon = await getTranslations("common");
+  const tFooter = await getTranslations("footer");
   const k = await getLocaleContent(KONTAKT_DE, KONTAKT_EN);
   const home = await homeCrumb();
 
@@ -61,7 +63,18 @@ export default async function KontaktPage({ params }: Props) {
             </p>
           </section>
 
-          <p className="subpage__cta">
+          <p className="subpage__cta subpage__cta--action">
+            <a
+              href={INITIAL_CONSULTATION_BOOKING_URL}
+              className="btn btn--primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {tFooter("bookCall")}
+            </a>
+          </p>
+
+          <p className="subpage__cta subpage__cta--back">
             <Link href="/" className="subpage__back-link">
               ← {tCommon("backToHome")}
             </Link>

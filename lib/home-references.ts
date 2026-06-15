@@ -10,13 +10,19 @@ export type ReferenceLogo = {
   id: string;
   name: string;
   logo: StaticImageData;
+  /** Freigabe erteilt – sonst auf der Startseite ausgeblendet */
+  approved: boolean;
 };
 
 export const HOME_REFERENCE_LOGOS: ReferenceLogo[] = [
-  { id: "rwe", name: "RWE", logo: logoRwe },
-  { id: "biogem", name: "bioGem express", logo: logoBiogem },
-  { id: "koehler-pappen", name: "Köhler Pappen", logo: logoKoehlerPappen },
-  { id: "gutcert", name: "GUTcert", logo: logoGutcert },
-  { id: "wun-h2", name: "WUN H2", logo: logoWunH2 },
-  { id: "riessner-gase", name: "Riessner Gase", logo: logoRiessnerGase },
+  { id: "rwe", name: "RWE", logo: logoRwe, approved: false },
+  { id: "biogem", name: "bioGem express", logo: logoBiogem, approved: true },
+  { id: "koehler-pappen", name: "Köhler Pappen", logo: logoKoehlerPappen, approved: true },
+  { id: "gutcert", name: "GUTcert", logo: logoGutcert, approved: true },
+  { id: "wun-h2", name: "WUN H2", logo: logoWunH2, approved: false },
+  { id: "riessner-gase", name: "Riessner Gase", logo: logoRiessnerGase, approved: false },
 ];
+
+export function getVisibleReferenceLogos(): ReferenceLogo[] {
+  return HOME_REFERENCE_LOGOS.filter((item) => item.approved);
+}

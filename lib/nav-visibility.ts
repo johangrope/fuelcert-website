@@ -5,12 +5,27 @@ import type { NavDropdownConfig } from "./types";
  * Pages remain routable; remove entries here to show them again.
  */
 export const NAV_HIDDEN_HREFS = new Set<string>([
-  // Wissen
+  // Wissen – Fachartikel (Übersicht zeigt nur Erlösrechner)
   "/wissen/rfnbo-zertifizierung",
   "/wissen/redcert-iscc-certifhy-unterschiede",
   "/wissen/thg-und-massenbilanz",
   "/wissen/udb-nabisy-und-registerfuehrung",
   "/wissen/rfnbo-anforderungen-red-iii",
+  "/wissen/ueberwachungsplan-im-eu-ets-1",
+  "/wissen/emissionsbericht-im-eu-ets-1",
+  "/wissen/unionsregister-im-emissionshandel",
+  "/wissen/nachhaltige-brennstoffe-im-eu-ets-1",
+  "/wissen/biomethan-im-emissionshandel",
+  "/wissen/rfnbo-im-emissionshandel",
+  "/wissen/kostenlose-zuteilung-im-eu-ets-1",
+  "/wissen/cbam",
+  "/wissen/ueberwachungsplan-im-nehs",
+  "/wissen/emissionsbericht-im-nehs",
+  "/wissen/nehs-register",
+  "/wissen/biomethan-im-nehs",
+  "/wissen/rfnbo-im-nehs",
+  "/wissen/zusammenwirken-nehs-und-eu-ets-1",
+  "/wissen/eu-ets-2",
   // Anwendungsbereiche – regulatorisch
   "/anwendungsbereiche/esg-und-nachhaltigkeitsnachweise",
   // Anwendungsbereiche – produktbezogen

@@ -25,11 +25,11 @@ export type WissenSlug =
 export const WISSEN_OVERVIEW: OverviewPageConfig = {
   title: "Wissen | FuelCert",
   metaDescription:
-    "Grundlagen zu RFNBO, REDcert, ISCC EU, CertifHy, THG- und Massenbilanz sowie UDB, Nabisy und Registerführung.",
+    "Hintergrundinformationen zu Fachthemen und Regularien sowie Erlösrechner für erneuerbare Kraft- und Brennstoffe in THG-Quote und angrenzenden CO₂-Märkten.",
   kicker: "Wissen",
   h1: "Wissen",
   intro:
-    "Platzhalter: Kuratierte Einordnungen zu zentralen Begriffen und Prozessen – als Grundlage für vertiefende Beratung und SEO-Inhalte in einem späteren Schritt.",
+    "Hier erhalten Sie sowohl Hintergrundinformationen zu den relevanten Fachthemen und Regularien sowie die Möglichkeit, die potenziellen Erlöse für Ihre erneuerbaren Kraft- und Brennstoffe in den unterschiedlichen CO₂-Märkten zu berechnen.",
 };
 
 const articles: Record<WissenSlug, PageScaffold> = {

@@ -2,6 +2,7 @@ import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import logoWhite from "@/assets/fuelcert-logo-white.png";
+import { INITIAL_CONSULTATION_BOOKING_URL } from "@/lib/booking";
 
 function IconPhone({ className }: { className?: string }) {
   return (
@@ -132,10 +133,15 @@ export async function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="/kontakt" className="site-footer__link">
+                <a
+                  href={INITIAL_CONSULTATION_BOOKING_URL}
+                  className="site-footer__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <IconCalendar className="site-footer__icon" />
                   <span>{t("bookCall")}</span>
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

@@ -4,11 +4,11 @@ import type { OverviewPageConfig, PageScaffold } from "@/lib/types";
 export const WISSEN_OVERVIEW: OverviewPageConfig = {
   title: "Knowledge | FuelCert",
   metaDescription:
-    "Fundamentals on RFNBO, REDcert, ISCC EU, CertifHy, GHG and mass balance, and UDB, Nabisy and register management.",
+    "Background on specialist topics and regulations, plus revenue calculators for renewable fuels in the GHG quota and related CO₂ markets.",
   kicker: "Knowledge",
   h1: "Knowledge",
   intro:
-    "Curated insights on key terms and processes – as a basis for in-depth advisory and content development.",
+    "Here you will find background information on relevant specialist topics and regulations, as well as the option to calculate potential revenue for your renewable fuels across different CO₂ markets.",
 };
 
 const articles: Record<WissenSlug, PageScaffold> = {

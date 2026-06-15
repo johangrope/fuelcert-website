@@ -84,7 +84,7 @@ export async function getLocalizedWissenTeasers(locale?: Locale): Promise<Teaser
       description: a.intro,
       href: wissenPath(slug as WissenSlug),
     };
-  });
+  }).filter((item) => isNavItemVisible(item.href));
   return [calcH2, calcBio, ...articles];
 }
 

@@ -13,6 +13,7 @@ import { BIOMETHAN_ERLOESRECHNER_TEASER } from "@/lib/erloesrechner-biomethan-co
 import { ERLOESRECHNER_TEASER as ERLOESRECHNER_TEASER_EN } from "./en/erloesrechner-content";
 import { BIOMETHAN_ERLOESRECHNER_TEASER as BIOMETHAN_TEASER_EN } from "./en/erloesrechner-biomethan-content";
 import type { TeaserItem } from "@/lib/types";
+import { isNavItemVisible } from "@/lib/nav-visibility";
 import type { Locale } from "@/i18n/routing";
 import { getCurrentLocale } from "./resolve";
 
@@ -115,10 +116,14 @@ function toAnwendungTeaser(
 
 export async function getLocalizedAnwendungenRegulatoryTeasers(locale?: Locale) {
   const en = await localeIsEn(locale);
-  return regulatorySlugs.map((s) => toAnwendungTeaser(s, en));
+  return regulatorySlugs
+    .map((s) => toAnwendungTeaser(s, en))
+    .filter((item) => isNavItemVisible(item.href));
 }
 
 export async function getLocalizedAnwendungenProductTeasers(locale?: Locale) {
   const en = await localeIsEn(locale);
-  return productSlugs.map((s) => toAnwendungTeaser(s, en));
+  return productSlugs
+    .map((s) => toAnwendungTeaser(s, en))
+    .filter((item) => isNavItemVisible(item.href));
 }

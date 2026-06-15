@@ -1,4 +1,5 @@
 import type { OverviewPageConfig, PageScaffold, TeaserItem } from "./types";
+import { isNavItemVisible } from "./nav-visibility";
 
 export type AnwendungSlug =
   | "thg-quote"
@@ -124,9 +125,9 @@ function toTeaser(d: (typeof pages)[AnwendungSlug]): TeaserItem {
 }
 
 export function getAnwendungenRegulatoryTeasers() {
-  return regulatorySlugs.map((s) => toTeaser(pages[s]));
+  return regulatorySlugs.map((s) => toTeaser(pages[s])).filter((item) => isNavItemVisible(item.href));
 }
 
 export function getAnwendungenProductTeasers() {
-  return productSlugs.map((s) => toTeaser(pages[s]));
+  return productSlugs.map((s) => toTeaser(pages[s])).filter((item) => isNavItemVisible(item.href));
 }

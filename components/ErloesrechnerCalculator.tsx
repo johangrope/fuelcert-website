@@ -3,6 +3,12 @@
 import { useLocale, useTranslations } from "next-intl";
 import { useMemo, useState } from "react";
 import {
+  formatDecimalDraft,
+  isDecimalInputDraft,
+  parseNumericInput,
+  roundToSingleDecimal,
+} from "@/lib/calculator-common";
+import {
   DEFAULT_ERLOESRECHNER_INPUT,
   EMISSIONS_FACTOR_MAX,
   EMISSIONS_FACTOR_MIN,
@@ -22,11 +28,6 @@ import {
   type ErloesrechnerInput,
 } from "@/lib/erloesrechner";
 
-function parseNumericInput(value: string, fallback: number): number {
-  const parsed = Number(value.replace(",", "."));
-  return Number.isFinite(parsed) ? parsed : fallback;
-}
-
 export function ErloesrechnerCalculator() {
   const locale = useLocale();
   const t = useTranslations("calculatorH2");
@@ -41,6 +42,9 @@ export function ErloesrechnerCalculator() {
     [t],
   );
   const [input, setInput] = useState<ErloesrechnerInput>(DEFAULT_ERLOESRECHNER_INPUT);
+  const [emissionsFactorDraft, setEmissionsFactorDraft] = useState(
+    formatDecimalDraft(DEFAULT_ERLOESRECHNER_INPUT.emissionsFactor),
+  );
 
   const results = useMemo(() => calculateErloesrechner(input), [input]);
 
@@ -95,21 +99,33 @@ export function ErloesrechnerCalculator() {
               <input
                 id="emissions-factor"
                 className="erloesrechner__input"
-                type="number"
-                min={EMISSIONS_FACTOR_MIN}
-                max={EMISSIONS_FACTOR_MAX}
-                step={0.1}
-                value={input.emissionsFactor}
-                onChange={(e) =>
-                  update(
-                    "emissionsFactor",
-                    clamp(
-                      parseNumericInput(e.target.value, input.emissionsFactor),
-                      EMISSIONS_FACTOR_MIN,
-                      EMISSIONS_FACTOR_MAX,
+                type="text"
+                inputMode="decimal"
+                autoComplete="off"
+                value={emissionsFactorDraft}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  if (!isDecimalInputDraft(value)) return;
+                  setEmissionsFactorDraft(value);
+                  const parsed = parseNumericInput(value, NaN);
+                  if (Number.isFinite(parsed)) {
+                    update(
+                      "emissionsFactor",
+                      clamp(roundToSingleDecimal(parsed), EMISSIONS_FACTOR_MIN, EMISSIONS_FACTOR_MAX),
+                    );
+                  }
+                }}
+                onBlur={() => {
+                  const parsed = clamp(
+                    roundToSingleDecimal(
+                      parseNumericInput(emissionsFactorDraft, input.emissionsFactor),
                     ),
-                  )
-                }
+                    EMISSIONS_FACTOR_MIN,
+                    EMISSIONS_FACTOR_MAX,
+                  );
+                  update("emissionsFactor", parsed);
+                  setEmissionsFactorDraft(formatDecimalDraft(parsed));
+                }}
               />
               <p className="erloesrechner__hint">
                 {t("emissionsHint", { min: EMISSIONS_FACTOR_MIN, max: EMISSIONS_FACTOR_MAX })}

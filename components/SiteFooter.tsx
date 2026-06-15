@@ -126,7 +126,7 @@ export async function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="site-footer__link">
+                <Link href="/datenschutz" className="site-footer__link">
                   <IconCloud className="site-footer__icon" />
                   <span>{t("privacy")}</span>
                 </Link>

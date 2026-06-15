@@ -32,6 +32,9 @@ export default async function AnwendungsbereicheOverviewPage({ params }: Props) 
   const t = await getTranslations("anwendungsbereiche");
   const home = await homeCrumb();
 
+  const regulatoryItems = await getLocalizedAnwendungenRegulatoryTeasers(locale as "de" | "en");
+  const productItems = await getLocalizedAnwendungenProductTeasers(locale as "de" | "en");
+
   return (
     <OverviewPageLayout
       {...overview}
@@ -40,13 +43,15 @@ export default async function AnwendungsbereicheOverviewPage({ params }: Props) 
       <GroupedTeaserSection
         title={t("regulatoryTitle")}
         intro={t("regulatoryIntro")}
-        items={await getLocalizedAnwendungenRegulatoryTeasers(locale as "de" | "en")}
+        items={regulatoryItems}
       />
-      <GroupedTeaserSection
-        title={t("productTitle")}
-        intro={t("productIntro")}
-        items={await getLocalizedAnwendungenProductTeasers(locale as "de" | "en")}
-      />
+      {productItems.length > 0 ? (
+        <GroupedTeaserSection
+          title={t("productTitle")}
+          intro={t("productIntro")}
+          items={productItems}
+        />
+      ) : null}
     </OverviewPageLayout>
   );
 }

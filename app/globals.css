@@ -887,6 +887,17 @@ img {
   margin-top: 0.25rem;
 }
 
+.legal-page__list--links a {
+  color: var(--color-teal);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.legal-page__list--links a:hover {
+  color: var(--color-teal-hover);
+}
+
 .legal-page__subsection + .legal-page__subsection {
   margin-top: 1.35rem;
 }

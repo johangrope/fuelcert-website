@@ -8,7 +8,7 @@ export const HYDROGEN_KG_MIN = 1;
 export const HYDROGEN_KG_MAX = 1_000_000;
 export const HYDROGEN_KG_DEFAULT = 1000;
 
-export const EMISSIONS_FACTOR_MIN = -50;
+export const EMISSIONS_FACTOR_MIN = -100;
 export const EMISSIONS_FACTOR_MAX = 28.1;
 export const EMISSIONS_FACTOR_DEFAULT = 5;
 

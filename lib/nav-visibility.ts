@@ -1,8 +1,8 @@
 import type { NavDropdownConfig } from "./types";
 
 /**
- * Hrefs hidden from header navigation until ready for launch.
- * Pages remain routable; remove entries here to show them in the menu again.
+ * Hrefs hidden from header navigation and overview teasers until ready for launch.
+ * Pages remain routable; remove entries here to show them again.
  */
 export const NAV_HIDDEN_HREFS = new Set<string>([
   // Wissen

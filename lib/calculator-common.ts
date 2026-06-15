@@ -25,13 +25,17 @@ export function parseNumericInput(value: string, fallback: number): number {
   return Number.isFinite(parsed) ? parsed : fallback;
 }
 
-/** Erlaubt Zwischenzustände beim Tippen (z. B. „-“, „-0,“) */
+/** Erlaubt Zwischenzustände beim Tippen (z. B. „-“, „-0,“) – höchstens eine Nachkommastelle */
 export function isDecimalInputDraft(value: string): boolean {
-  return /^-?\d*[.,]?\d*$/.test(value);
+  return /^-?\d*([.,]\d?)?$/.test(value);
 }
 
 export function formatDecimalDraft(value: number): string {
   return String(value).replace(".", ",");
+}
+
+export function roundToSingleDecimal(value: number): number {
+  return Math.round(value * 10) / 10;
 }
 
 const currencyFormatter = new Intl.NumberFormat("de-DE", {

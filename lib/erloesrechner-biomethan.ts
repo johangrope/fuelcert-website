@@ -21,6 +21,10 @@ export const EMISSIONS_DEFAULT = 0;
 export const EMISSIONS_MIN = -150;
 export const EMISSIONS_MAX = 94;
 
+export const ADVANCED_BIOFUEL_PRICE_MIN = 0;
+export const ADVANCED_BIOFUEL_PRICE_MAX = 45;
+export const ADVANCED_BIOFUEL_PRICE_DEFAULT = 25;
+
 /** THG-Quote je Verpflichtungsjahr (Anteil, z. B. 0,12 = 12 %) */
 export const BIOMETHAN_YEAR_THG_QUOTE: Record<number, number> = {
   2026: 0.12,
@@ -49,6 +53,8 @@ export type BiomethanErloesrechnerInput = {
   emissionsGco2PerMj: number;
   thgPricePerTonne: number;
   fuelMode: BiomethanFuelMode;
+  isAdvancedBiofuel: boolean;
+  advancedBiofuelPricePerGj: number;
 };
 
 export type BiomethanErloesrechnerResult = {
@@ -62,9 +68,12 @@ export type BiomethanErloesrechnerResult = {
   nettoThg: number;
   handelbareThg: number;
   thgPricePerTonne: number;
-  thgWert: number;
-  specificRevenuePerKwh: number;
-  absoluteRevenue: number;
+  specificNoCap: number;
+  specificAdvancedSubquota: number;
+  specificTotal: number;
+  totalNoCap: number;
+  totalAdvancedSubquota: number;
+  totalTotal: number;
 };
 
 export const DEFAULT_BIOMETHAN_INPUT: BiomethanErloesrechnerInput = {
@@ -73,6 +82,8 @@ export const DEFAULT_BIOMETHAN_INPUT: BiomethanErloesrechnerInput = {
   emissionsGco2PerMj: EMISSIONS_DEFAULT,
   thgPricePerTonne: THG_PRICE_DEFAULT,
   fuelMode: "bio-cng",
+  isAdvancedBiofuel: false,
+  advancedBiofuelPricePerGj: ADVANCED_BIOFUEL_PRICE_DEFAULT,
 };
 
 export { CALCULATOR_YEAR_OPTIONS as BIOMETHAN_YEAR_OPTIONS, THG_PRICE_MIN, THG_PRICE_MAX };
@@ -99,9 +110,15 @@ export function calculateBiomethanErloesrechner(
   const nettoThg =
     (energieGj * (FOSSILER_REFERENZWERT * (1 - thgQuote) - effectiveEmissions)) / 1000;
   const handelbareThg = nettoThg * anrechnungsfaktor;
-  const thgWert = handelbareThg * input.thgPricePerTonne;
+  const totalNoCap = handelbareThg * input.thgPricePerTonne;
+  const totalAdvancedSubquota = input.isAdvancedBiofuel
+    ? energieGj * input.advancedBiofuelPricePerGj
+    : 0;
 
-  const specificRevenuePerKwh = kwh > 0 ? thgWert / kwh : 0;
+  const mwh = kwh / 1000;
+  const specificNoCap = mwh > 0 ? totalNoCap / mwh : 0;
+  const specificAdvancedSubquota =
+    input.isAdvancedBiofuel && mwh > 0 ? totalAdvancedSubquota / mwh : 0;
 
   return {
     year: input.year,
@@ -113,10 +130,13 @@ export function calculateBiomethanErloesrechner(
     tatsaechlicheEmissionen,
     nettoThg,
     handelbareThg,
-    thgWert,
     thgPricePerTonne: input.thgPricePerTonne,
-    specificRevenuePerKwh,
-    absoluteRevenue: thgWert,
+    specificNoCap,
+    specificAdvancedSubquota,
+    specificTotal: specificNoCap + specificAdvancedSubquota,
+    totalNoCap,
+    totalAdvancedSubquota,
+    totalTotal: totalNoCap + totalAdvancedSubquota,
   };
 }
 
@@ -129,5 +149,11 @@ export function sanitizeBiomethanInput(
     emissionsGco2PerMj: clamp(input.emissionsGco2PerMj, EMISSIONS_MIN, EMISSIONS_MAX),
     thgPricePerTonne: clamp(input.thgPricePerTonne, THG_PRICE_MIN, THG_PRICE_MAX),
     fuelMode: "bio-cng",
+    isAdvancedBiofuel: input.isAdvancedBiofuel,
+    advancedBiofuelPricePerGj: clamp(
+      input.advancedBiofuelPricePerGj,
+      ADVANCED_BIOFUEL_PRICE_MIN,
+      ADVANCED_BIOFUEL_PRICE_MAX,
+    ),
   };
 }

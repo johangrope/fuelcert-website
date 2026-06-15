@@ -72,6 +72,10 @@ export function formatSpecificRevenuePerMwhFromKwh(valuePerKwh: number): string 
   return `${decimalFormatter.format(valuePerKwh * 1000)} €/MWh`;
 }
 
+export function formatSpecificRevenuePerMwh(value: number): string {
+  return `${decimalFormatter.format(value)} €/MWh`;
+}
+
 export function formatPercent(value: number): string {
   return `${(value * 100).toLocaleString("de-DE", { minimumFractionDigits: 1, maximumFractionDigits: 1 })} %`;
 }

@@ -32,6 +32,8 @@ const messages = {
       "Schematische Darstellung des Zertifizierungsprozesses von der Ausgangslage über Daten und Bilanzierung bis zum Audit und zur Rezertifizierung",
     languageLabel: "Sprache",
     notFound: "Seite nicht gefunden",
+    yes: "Ja",
+    no: "Nein",
   },
   calculatorH2: {
     scopeNote:
@@ -66,10 +68,17 @@ const messages = {
     emissionsValue: "Emissionswert Biomethan (gCO₂/MJ)",
     emissionsHint: "Manuell eintragbar. Bereich: {min} bis {max} gCO₂/MJ.",
     thgPrice: "THG-Preis (€/t CO₂eq)",
+    advancedBiofuelQuestion:
+      "Wurde das Biomethan ausschließlich aus Einsatzstoffen des Anhang I der 38. BImSchV hergestellt und gilt somit als fortschrittlicher Biokraftstoff?",
+    advancedBiofuelHint:
+      "Zusätzliche Erlöse aus der Unterquote sind nur relevant, wenn das Biomethan als fortschrittlicher Biokraftstoff im Sinne der 38. BImSchV einzuordnen ist.",
+    advancedBiofuelPrice: "Preis Unterquote fortschrittliche Biokraftstoffe (€/GJ)",
     resultsCaption: "Erlöse für {kwh} kWh (Brennwert) als Bio-CNG im Jahr {year}",
-    specificRevenue: "Spezifischer Erlös",
-    specificRevenueUnit: "€/MWh (Brennwert)",
-    totalRevenue: "Absoluter Erlös",
+    colNoCap: "No-Cap-Quote",
+    colAdvanced: "Unterquote fortschrittliche Biokraftstoffe",
+    colTotal: "gesamt",
+    specificRevenue: "spezifischer Erlös",
+    totalRevenue: "absoluter Erlös",
   },
   nav: {
     home: "Home",

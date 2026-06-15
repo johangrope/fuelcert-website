@@ -4,15 +4,18 @@ import { useLocale, useTranslations } from "next-intl";
 import { useMemo, useState } from "react";
 import { CalculatorField } from "./calculator/CalculatorField";
 import { CalculatorSlider } from "./calculator/CalculatorSlider";
+import { CalculatorYesNoToggle } from "./calculator/CalculatorYesNoToggle";
 import {
   clamp,
   formatDecimalDraft,
-  formatSpecificRevenuePerMwhFromKwh,
+  formatSpecificRevenuePerMwh,
   formatTotalRevenue,
   isDecimalInputDraft,
   parseNumericInput,
 } from "@/lib/calculator-common";
 import {
+  ADVANCED_BIOFUEL_PRICE_MAX,
+  ADVANCED_BIOFUEL_PRICE_MIN,
   BIOMETHAN_YEAR_OPTIONS,
   DEFAULT_BIOMETHAN_INPUT,
   EMISSIONS_MAX,
@@ -136,6 +139,16 @@ export function ErloesrechnerBiomethanCalculator() {
               />
             </CalculatorField>
 
+            <CalculatorYesNoToggle
+              id="biomethan-advanced-biofuel"
+              label={t("advancedBiofuelQuestion")}
+              hint={t("advancedBiofuelHint")}
+              value={input.isAdvancedBiofuel}
+              yesLabel={tCommon("yes")}
+              noLabel={tCommon("no")}
+              onChange={(value) => update("isAdvancedBiofuel", value)}
+            />
+
             <CalculatorSlider
               id="biomethan-thg-price"
               label={t("thgPrice")}
@@ -144,6 +157,17 @@ export function ErloesrechnerBiomethanCalculator() {
               value={input.thgPricePerTonne}
               unit="€/t"
               onChange={(value) => update("thgPricePerTonne", value)}
+            />
+
+            <CalculatorSlider
+              id="biomethan-advanced-price"
+              label={t("advancedBiofuelPrice")}
+              min={ADVANCED_BIOFUEL_PRICE_MIN}
+              max={ADVANCED_BIOFUEL_PRICE_MAX}
+              step={1}
+              value={input.advancedBiofuelPricePerGj}
+              unit="€/GJ"
+              onChange={(value) => update("advancedBiofuelPricePerGj", value)}
             />
           </div>
         </section>
@@ -156,25 +180,41 @@ export function ErloesrechnerBiomethanCalculator() {
             {tCommon("result")}
           </h2>
 
-          <p className="erloesrechner__results-caption">
-            {t("resultsCaption", {
-              kwh: results.kwh.toLocaleString(numberLocale),
-              year: results.year,
-            })}
-          </p>
-
-          <div className="erloesrechner__highlights">
-            <div className="erloesrechner__highlight-card">
-              <p className="erloesrechner__highlight-label">{t("specificRevenue")}</p>
-              <p className="erloesrechner__highlight-value">
-                {formatSpecificRevenuePerMwhFromKwh(results.specificRevenuePerKwh)}
-              </p>
-              <p className="erloesrechner__highlight-unit">{t("specificRevenueUnit")}</p>
-            </div>
-            <div className="erloesrechner__highlight-card erloesrechner__highlight-card--featured">
-              <p className="erloesrechner__highlight-label">{t("totalRevenue")}</p>
-              <p className="erloesrechner__highlight-value">{formatTotalRevenue(results.absoluteRevenue)}</p>
-            </div>
+          <div className="erloesrechner__results-table-wrap">
+            <table className="erloesrechner__results-table">
+              <caption className="erloesrechner__results-caption">
+                {t("resultsCaption", {
+                  kwh: results.kwh.toLocaleString(numberLocale),
+                  year: results.year,
+                })}
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col" />
+                  <th scope="col">{t("colNoCap")}</th>
+                  <th scope="col">{t("colAdvanced")}</th>
+                  <th scope="col">{t("colTotal")}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">{t("specificRevenue")}</th>
+                  <td>{formatSpecificRevenuePerMwh(results.specificNoCap)}</td>
+                  <td>{formatSpecificRevenuePerMwh(results.specificAdvancedSubquota)}</td>
+                  <td className="erloesrechner__highlight">
+                    {formatSpecificRevenuePerMwh(results.specificTotal)}
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">{t("totalRevenue")}</th>
+                  <td>{formatTotalRevenue(results.totalNoCap)}</td>
+                  <td>{formatTotalRevenue(results.totalAdvancedSubquota)}</td>
+                  <td className="erloesrechner__highlight">
+                    {formatTotalRevenue(results.totalTotal)}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </section>
       </div>

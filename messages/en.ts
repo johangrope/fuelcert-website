@@ -41,6 +41,8 @@ const messages = {
       "Schematic of the certification process from starting position through data and balancing to audit and recertification",
     languageLabel: "Language",
     notFound: "Page not found",
+    yes: "Yes",
+    no: "No",
   },
   nav: {
     home: "Home",
@@ -188,9 +190,16 @@ const messages = {
     emissionsValue: "Emissions value biomethane (gCO₂/MJ)",
     emissionsHint: "Enter manually. Range: {min} to {max} gCO₂/MJ.",
     thgPrice: "GHG price (€/t CO₂eq)",
+    advancedBiofuelQuestion:
+      "Was the biomethane produced exclusively from feedstocks listed in Annex I of the 38th BImSchV and therefore qualifies as an advanced biofuel?",
+    advancedBiofuelHint:
+      "Additional sub-quota revenue only applies if the biomethane qualifies as an advanced biofuel under the 38th BImSchV.",
+    advancedBiofuelPrice: "Advanced biofuel sub-quota price (€/GJ)",
     resultsCaption: "Revenue for {kwh} kWh (UHV) as bio-CNG in {year}",
+    colNoCap: "No-cap quota",
+    colAdvanced: "Advanced biofuel sub-quota",
+    colTotal: "Total",
     specificRevenue: "Specific revenue",
-    specificRevenueUnit: "€/MWh (UHV)",
     totalRevenue: "Total revenue",
   },
 } as const;

@@ -89,13 +89,15 @@ const messages = {
     metaTitle: "FuelCert – Certification for renewable fuels",
     metaDescription:
       "FuelCert supports companies with certification, proof management and regulatory questions around RFNBO, green hydrogen, biomethane and compliance.",
-    heroTitle: "Certification and regulatory advisory for renewable fuels",
+    heroTitle:
+      "Your experts in certification and proof management for renewable fuels and emissions and quota trading",
     heroLead:
-      "FuelCert supports companies with certification, proof management and regulatory questions around RFNBO, green hydrogen, biomethane and related compliance topics.",
-    heroImageAlt: "Hydrogen storage and wind turbines",
+      "FuelCert supports producers, traders, fuel suppliers, energy utilities and emissions trading obligated companies in the regulatory implementation of certification, proof management, emissions reporting, filing processes, and CO₂ and quota trading.",
+    heroImageAlt:
+      "Tanker truck with Renewable Fuel branding in front of a modern energy facility with wind turbine, solar panels and storage tanks",
     servicesTitle: "Our services",
     servicesIntro:
-      "Certification of renewable fuels enables crediting on regulated CO₂ markets such as the GHG quota or European and national emissions trading. We support producers, traders and fuel suppliers along the value chain to benefit from these opportunities.",
+      "FuelCert supports companies along the entire regulatory value chain – from preparing for and accompanying certification through proof management and registry administration to fulfilling obligations under national and European emissions trading.",
     testimonialsTitle: "Client voices",
     testimonialsIntro: "What clients say about working with FuelCert.",
     referencesIntro: "These clients and partners already rely on FuelCert.",

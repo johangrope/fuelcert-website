@@ -547,27 +547,33 @@ img {
   padding: clamp(3rem, 8vw, 5.75rem) 0 clamp(4rem, 10vw, 6.25rem);
 }
 
+.hero .container {
+  width: min(1380px, 100% - 3rem);
+}
+
 .hero__grid {
   display: grid;
-  gap: clamp(2.5rem, 5vw, 4rem);
-  align-items: center;
-  grid-template-columns: minmax(0, 1.06fr) minmax(0, 0.94fr);
+  gap: clamp(2rem, 3.5vw, 3.25rem);
+  align-items: start;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
 }
 
 .hero__title {
   margin: 0 0 1.35rem;
-  font-size: clamp(1.75rem, 3.4vw + 0.85rem, 2.875rem);
+  font-size: clamp(1.75rem, 2.1vw + 0.8rem, 2.65rem);
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.22;
   letter-spacing: -0.035em;
-  max-width: 22ch;
+  max-width: 20.5em;
+  white-space: pre-line;
 }
 
 .hero__lead {
   margin: 0 0 2rem;
   font-size: 1.065rem;
+  line-height: 1.65;
   color: var(--color-text-muted);
-  max-width: 44ch;
+  max-width: 42em;
 }
 
 .btn {
@@ -613,6 +619,27 @@ img {
   object-position: center;
   border-radius: 14px;
   box-shadow: 0 20px 50px rgba(42, 47, 51, 0.1);
+}
+
+@media (min-width: 961px) {
+  .hero__grid {
+    align-items: stretch;
+  }
+
+  .hero__content {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    min-height: 100%;
+  }
+
+  .hero__title {
+    margin-bottom: 0;
+  }
+
+  .hero__lead {
+    align-self: center;
+    margin: 0;
+  }
 }
 
 #leistungen,
@@ -1962,6 +1989,7 @@ img {
 
   .hero__title {
     max-width: none;
+    white-space: normal;
   }
 
   .hero__lead {

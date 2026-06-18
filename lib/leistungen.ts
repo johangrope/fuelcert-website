@@ -34,7 +34,7 @@ const leistungen: Record<LeistungSlug, PageScaffold & { sectionId: string }> = {
     metaDescription:
       "Pre-Zertifizierung nach REDcert, ISCC EU oder CertifHy – FuelCert begleitet RFNBO-Projekte als Generalprobe vor der Zertifizierung, die Prüfstelle führt das Audit.",
     intro:
-      "FuelCert unterstützt bei der Pre-Zertifizierung von RFNBO-Projekten in der Planungs- oder Bauphase – mit belastbarer Einordnung für Investitionsentscheidungen, Bankfinanzierung und Fördermittel.",
+      "FuelCert unterstützt bei der Pre-Zertifizierung von RFNBO-Projekten in der Planungs- oder Bauphase – mit belastbarer Einordnung für Investitionsentscheidungen, Finanzierung und Fördermittelanträgen.",
     sections: [
       {
         heading: "Leistungsübersicht",
@@ -50,7 +50,7 @@ const leistungen: Record<LeistungSlug, PageScaffold & { sectionId: string }> = {
     metaDescription:
       "FuelCert begleitet Unternehmen bei der Zertifizierung nach REDcert, ISCC EU und CertifHy – von Datenaufbereitung und THG-/Massenbilanz bis Auditvorbereitung, Auditbegleitung und Rezertifizierung.",
     intro:
-      "FuelCert unterstützt bei der Zertifizierung nach REDcert, ISCC EU und CertifHy – für Biokraftstoffe, Biomethan, Bio-LNG, RFNBO, grünen Wasserstoff, Derivate und E-Fuels, auditfest und strukturiert.",
+      "FuelCert unterstützt bei der Zertifizierung nach REDcert, ISCC EU und CertifHy – für Biokraftstoffe, Biomethan, Bio-LNG, RFNBO, grünen Wasserstoff, Derivate und E-Fuels, anforderungskonform und strukturiert.",
     sections: [
       { heading: "Systeme und Scope", body: "Kurzer Platzhaltertext zu REDcert, ISCC EU und CertifHy sowie typischen Anwendungsfällen." },
       { heading: "Umsetzung", body: "Platzhalter für Vorgehen von Erstaufbau bis wiederkehrendem Audit." },
@@ -64,7 +64,7 @@ const leistungen: Record<LeistungSlug, PageScaffold & { sectionId: string }> = {
     metaDescription:
       "FuelCert unterstützt Unternehmen bei Massen- und THG-Bilanzen, Nachweisführung, Registerführung in Nabisy und UDB sowie bei Meldungen an Register und Behörden.",
     intro:
-      "FuelCert begleitet Sie bei laufender Nachweisführung und Registerführung – von Massen- und THG-Bilanzen über Nabisy und UDB bis zu Meldungen an Behörden.",
+      "FuelCert begleitet Sie bei laufender Nachweisführung und Registerführung – von Massen- und THG-Bilanzen über die Nabisy-Datenbank und Unionsdatenbank (UDB) bis zu den Meldungen an die Behörden.",
     sections: [
       {
         heading: "Leistungsübersicht",

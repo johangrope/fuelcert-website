@@ -6,7 +6,7 @@ import { ReferencesSection } from "@/components/ReferencesSection";
 import { SiteFooter } from "@/components/SiteFooter";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { SiteHeader } from "@/components/SiteHeader";
-import heroImage from "@/assets/hero-h2-wind.png";
+import heroImage from "@/assets/hero-startseite.png";
 import { routing } from "@/i18n/routing";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -40,7 +40,7 @@ export default async function HomePage({ params }: Props) {
               <h1 id="hero-heading" className="hero__title">
                 {t("heroTitle")}
               </h1>
-              <p className="hero__lead">{t("heroLead")}</p>
+              {t("heroLead") ? <p className="hero__lead">{t("heroLead")}</p> : null}
             </div>
             <div className="hero__media">
               <Image

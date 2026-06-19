@@ -31,7 +31,7 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: "balling",
     quote:
-      "Johan hat für uns zuverlässig Abnehmer für Biomethan und THG-Quoten gefunden und die behördliche Abwicklung übernommen. Seine Expertise an der Schnittstelle von Gesetzgebung und Praxis ist für Unternehmen im Quotenmarkt ein echter Mehrwert.",
+      "FuelCert hat für uns zuverlässig Abnehmer für Biomethan und THG-Quoten gefunden und die behördliche Abwicklung übernommen. FuelCerts Expertise an der Schnittstelle von Gesetzgebung und Praxis ist für Unternehmen im Quotenmarkt ein echter Mehrwert.",
     name: "Thomas Balling",
     role: "Geschäftsführer mehrerer Biomethananlagen, Präsidium Fachverband Biogas",
     portrait: portraitBalling,
@@ -49,7 +49,7 @@ export const TESTIMONIALS: Testimonial[] = [
     portrait: portraitHeigl,
     portraitAlt: "Portrait von Dr. Matthias Heigl",
     approved: true,
-    showOnHome: true,
+    showOnHome: false,
     showOnAbout: true,
   },
   {
@@ -96,9 +96,9 @@ export const TESTIMONIALS: Testimonial[] = [
     role: "Geschäftsführer der WUN H2 GmbH und der Rießner-Gase GmbH",
     portrait: portraitRiessner,
     portraitAlt: "Portrait von Dr. Thilo Rießner",
-    approved: false,
-    showOnHome: false,
-    showOnAbout: false,
+    approved: true,
+    showOnHome: true,
+    showOnAbout: true,
   },
 ];
 

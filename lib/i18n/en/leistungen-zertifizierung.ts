@@ -2,18 +2,18 @@ export const ZERTIFIZIERUNG_SEO = {
   title: "REDcert, ISCC EU and CertifHy certification | FuelCert",
   metaDescription:
     "FuelCert supports companies with certification under REDcert, ISCC EU and CertifHy – from data preparation and GHG/mass balance to audit preparation, audit support and recertification.",
-  h1: "Certification under REDcert, ISCC EU or CertifHy",
+  h1: "Preparation and support for certification under REDcert, ISCC EU or CertifHy",
 } as const;
 
 export const ZERTIFIZIERUNG_INTRO = [
-  "FuelCert supports companies with certification under REDcert, ISCC EU and CertifHy – structured, practical and audit-ready. We accompany you from initial assessment through certificate issuance and beyond for surveillance and recertification audits.",
-  "Our scope covers certification projects for biofuels, solid biofuels, biomethane and bio-LNG, RFNBO, green hydrogen, hydrogen derivatives and e-fuels. We ensure your certification process is set up transparently and implemented in an audit-ready manner.",
+  "FuelCert supports companies with certification under REDcert, ISCC EU and CertifHy – structured, practical and in line with requirements. We accompany you from initial assessment through certificate issuance and beyond for surveillance and recertification audits.",
+  "Our scope covers certification projects for biofuels, solid biofuels, biomethane and bio-LNG, RFNBO, green hydrogen, hydrogen derivatives and e-fuels. We ensure your certification process is set up transparently and implemented in a requirements-compliant manner.",
 ] as const;
 
 export const ZERTIFIZIERUNG_SERVICES_HEADING = "What we deliver in the certification process";
 
 export const ZERTIFIZIERUNG_SERVICES_INTRO =
-  "We handle the operationally demanding steps in the certification process – from data capture through GHG and mass balance to audit preparation, audit support and recertification. Your team stays focused and the process is documented in an audit-ready way.";
+  "We handle the operationally demanding steps in the certification process – from data capture through greenhouse gas (GHG) and mass balance to audit preparation, audit support and recertification. Your team stays focused and the process is documented in an audit-ready way.";
 
 export const ZERTIFIZIERUNG_PROCESS_HEADING = "How we support the certification process";
 
@@ -23,13 +23,12 @@ export const ZERTIFIZIERUNG_PROCESS_NOTE =
 export const ZERTIFIZIERUNG_SERVICES = [
   "Capture of your individual project and company starting position",
   "Compilation of all relevant data, documents and information for the certification process",
-  "Development of tailored balancing tools for GHG and mass balance",
+  "Development of tailored balancing tools for greenhouse gas (GHG) and mass balance",
   "Close coordination with certification bodies and your internal stakeholders",
   "Quality management documentation as a prerequisite for certification",
   "Optimal preparation for the certification body audit",
-  "Support during the audit itself",
+  "Support during the audit",
   "Completion of all required follow-up until certificate issuance",
-  "Preparation, execution and follow-up of surveillance and recurring audits for annual recertification",
   "Internal audits as a prerequisite for certification",
 ] as const;
 

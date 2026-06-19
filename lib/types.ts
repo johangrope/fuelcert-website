@@ -33,7 +33,7 @@ export interface NavLinkItem {
 }
 
 export interface NavGroup {
-  groupLabel: string;
+  groupLabel?: string;
   items: NavLinkItem[];
 }
 
@@ -41,7 +41,10 @@ export type NavDropdownConfig =
   | {
       id: string;
       label: string;
+      /** Section path for active-state detection in navigation */
       href: string;
+      /** When true, the top-level label links to the overview page */
+      linkToOverview?: boolean;
       variant: "flat";
       items: NavLinkItem[];
     }
@@ -49,6 +52,7 @@ export type NavDropdownConfig =
       id: string;
       label: string;
       href: string;
+      linkToOverview?: boolean;
       variant: "grouped";
       groups: NavGroup[];
     };

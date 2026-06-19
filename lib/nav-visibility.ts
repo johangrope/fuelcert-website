@@ -1,5 +1,8 @@
 import type { NavDropdownConfig } from "./types";
 
+/** Category overview pages – not linked in navigation; redirect to home */
+export const NAV_OVERVIEW_HREFS = ["/leistungen", "/anwendungsbereiche", "/wissen"] as const;
+
 /**
  * Hrefs hidden from header navigation and overview teasers until ready for launch.
  * Pages remain routable; remove entries here to show them again.
@@ -36,6 +39,10 @@ export const NAV_HIDDEN_HREFS = new Set<string>([
 
 export function isNavItemVisible(href: string): boolean {
   return !NAV_HIDDEN_HREFS.has(href);
+}
+
+export function isNavOverviewHref(href: string): boolean {
+  return (NAV_OVERVIEW_HREFS as readonly string[]).includes(href);
 }
 
 export function filterNavDropdowns(dropdowns: NavDropdownConfig[]): NavDropdownConfig[] {

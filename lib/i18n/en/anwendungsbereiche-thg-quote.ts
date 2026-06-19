@@ -205,7 +205,7 @@ export const THG_QUOTE_RELATED_GROUPS = [
       { label: "Certification under REDcert, ISCC EU or CertifHy", href: "/leistungen/zertifizierung-redcert-iscc-certifhy" },
       { label: "Proof management and register operations", href: "/leistungen/nachweisfuehrung-und-register" },
       { label: "CO₂ and quota trading", href: "/leistungen/co2-und-quotenhandel" },
-      { label: "Reporting and compliance obligations", href: "/leistungen/berichterstattung-und-meldepflichten" },
+      { label: "Reports and reporting obligations", href: "/leistungen/berichterstattung-und-meldepflichten" },
     ],
   },
   {

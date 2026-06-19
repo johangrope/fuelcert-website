@@ -10,8 +10,8 @@ type Props = {
   title: string;
   intro: string;
   sections: ContentSection[];
-  backHref: string;
-  backLabel: string;
+  backHref?: string;
+  backLabel?: string;
 };
 
 export async function PlaceholderDetailLayout({
@@ -40,11 +40,13 @@ export async function PlaceholderDetailLayout({
               <p className="subpage__text">{section.body}</p>
             </section>
           ))}
-          <p className="subpage__cta">
-            <Link href={backHref} className="subpage__back-link">
-              ← {backLabel}
-            </Link>
-          </p>
+          {backHref && backLabel ? (
+            <p className="subpage__cta">
+              <Link href={backHref} className="subpage__back-link">
+                ← {backLabel}
+              </Link>
+            </p>
+          ) : null}
         </div>
       </main>
       <SiteFooter />

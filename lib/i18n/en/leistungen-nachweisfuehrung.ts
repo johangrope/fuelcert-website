@@ -2,11 +2,11 @@ export const NACHWEISFUEHRUNG_SEO = {
   title: "Proof management and register operations | FuelCert",
   metaDescription:
     "FuelCert supports companies with mass and GHG balances, proof management, register operations in Nabisy and UDB, and submissions to registers and authorities.",
-  h1: "Proof management and register operations for renewable fuels",
+  h1: "Proof management and register operations for renewable power and fuels",
 } as const;
 
 export const NACHWEISFUEHRUNG_INTRO = [
-  "FuelCert supports companies with ongoing proof management and register operations for renewable fuels – structured, robust and focused on day-to-day operations.",
+  "FuelCert supports companies with ongoing proof management and register operations for renewable power and fuels – structured, robust and focused on day-to-day operations.",
   "We support you with mass and GHG balances, proof issuance, register bookings and submissions to authorities. We set up processes to fit your organisation and keep internal effort as low as possible.",
 ] as const;
 

@@ -32,7 +32,6 @@ export default async function Ets1Page({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const tApp = await getTranslations("anwendungsbereiche");
-  const tCommon = await getTranslations("common");
   const tNav = await getTranslations("nav");
   const c = await getLocaleContent(DE, EN);
 
@@ -41,8 +40,6 @@ export default async function Ets1Page({ params }: Props) {
       kicker={tApp("kicker")}
       title={c.ETS1_SEO.h1}
       breadcrumbs={await anwendungenBreadcrumbs(tNav("ets"))}
-      backHref="/anwendungsbereiche"
-      backLabel={tCommon("backToAnwendungsbereiche")}
       wide
     >
       <div className="thg-quote-intro">

@@ -7,7 +7,7 @@ export const ETS1_SEO = {
 
 export const ETS1_INTRO = [
   "Under the European emissions trading system (EU ETS I), operators of covered installations must monitor their greenhouse gas emissions, report annually and surrender emission allowances (EUAs). For many companies, EU ETS I is both a regulatory obligation and a significant cost factor.",
-  "FuelCert supports companies across the entire ETS I process – from monitoring plans and emissions reports through verification and the Union Registry to EUA procurement and timely surrender to DEHSt. In addition, topics such as sustainable fuels, free allocation and CBAM may be relevant.",
+  "FuelCert supports companies across the entire ETS I process – from monitoring plans and emissions reports through verification and Union Registry account management to EUA procurement and timely surrender to DEHSt. In addition, topics such as sustainable fuels, free allocation and CBAM may be relevant and can also be supported by us.",
 ] as const;
 
 export const ETS1_INTRO_VISUAL = {
@@ -33,13 +33,12 @@ export const ETS1_SUPPORT = {
     "Data collection and internal processes",
     "Emissions report – preparation and structuring",
     "Verification and support through the accredited verifier",
-    "Union Registry – processes and regulatory classification",
-    "EUA procurement",
-    "EUA surrender and transfer to DEHSt",
+    "Union Registry account management",
+    "Procurement and surrender of emission allowances (EUAs)",
     "substantive clarifications with DEHSt",
-    "sustainable fuels and deductible shares",
-    "free allocation",
-    "CBAM as an adjacent topic",
+    "Proof management and recognition of deductibility of sustainable fuels and their shares",
+    "Processing of free allocation",
+    "Support with reporting around CBAM as an adjacent topic",
   ],
 } as const;
 
@@ -116,9 +115,9 @@ export const ETS1_RELATED_GROUPS = [
     items: [
       { label: "Pre-certification", href: "/leistungen/pre-zertifizierung" },
       { label: "Certification", href: "/leistungen/zertifizierung-redcert-iscc-certifhy" },
-      { label: "Proof and register management", href: "/leistungen/nachweisfuehrung-und-register" },
+      { label: "Proof management and register operations", href: "/leistungen/nachweisfuehrung-und-register" },
       { label: "CO₂ and quota trading", href: "/leistungen/co2-und-quotenhandel" },
-      { label: "Reporting and submission obligations", href: "/leistungen/berichterstattung-und-meldepflichten" },
+      { label: "Reports and reporting obligations", href: "/leistungen/berichterstattung-und-meldepflichten" },
     ],
   },
   {

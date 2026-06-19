@@ -7,30 +7,27 @@ export async function homeCrumb() {
 
 export async function leistungenBreadcrumbs(currentLabel: string) {
   const tNav = await getTranslations("nav");
-  const t = await getTranslations("leistungen");
   return [
     { label: tNav("home"), href: "/" },
-    { label: t("kicker"), href: "/leistungen" },
+    { label: tNav("services") },
     { label: currentLabel },
   ];
 }
 
 export async function wissenBreadcrumbs(currentLabel: string) {
   const tNav = await getTranslations("nav");
-  const t = await getTranslations("wissen");
   return [
     { label: tNav("home"), href: "/" },
-    { label: t("breadcrumb"), href: "/wissen" },
+    { label: tNav("knowledge") },
     { label: currentLabel },
   ];
 }
 
 export async function anwendungenBreadcrumbs(currentLabel: string) {
   const tNav = await getTranslations("nav");
-  const t = await getTranslations("anwendungsbereiche");
   return [
     { label: tNav("home"), href: "/" },
-    { label: t("breadcrumb"), href: "/anwendungsbereiche" },
+    { label: tNav("applications") },
     { label: currentLabel },
   ];
 }

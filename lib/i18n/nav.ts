@@ -59,25 +59,15 @@ export function buildNavDropdowns(t: NavTranslate): NavDropdownConfig[] {
       id: "anwendungsbereiche",
       label: t("applications"),
       href: "/anwendungsbereiche",
-      variant: "grouped",
-      groups: [
-        {
-          groupLabel: t("regulatoryAreas"),
-          items: [
-            { label: t("thgQuote"), href: "/anwendungsbereiche/thg-quote" },
-            { label: t("ets"), href: "/anwendungsbereiche/emissionshandel-ets-1" },
-            { label: t("nehs"), href: "/anwendungsbereiche/emissionshandel-nehs" },
-            { label: t("esg"), href: "/anwendungsbereiche/esg-und-nachhaltigkeitsnachweise" },
-          ],
-        },
-        {
-          groupLabel: t("productAreas"),
-          items: [
-            { label: t("hydrogen"), href: "/anwendungsbereiche/wasserstoff-und-derivate" },
-            { label: t("biomethan"), href: "/anwendungsbereiche/biomethan-und-bio-lng" },
-            { label: t("rfnbo"), href: "/anwendungsbereiche/rfnbo" },
-          ],
-        },
+      variant: "flat",
+      items: [
+        { label: t("thgQuote"), href: "/anwendungsbereiche/thg-quote" },
+        { label: t("ets"), href: "/anwendungsbereiche/emissionshandel-ets-1" },
+        { label: t("nehs"), href: "/anwendungsbereiche/emissionshandel-nehs" },
+        { label: t("esg"), href: "/anwendungsbereiche/esg-und-nachhaltigkeitsnachweise" },
+        { label: t("hydrogen"), href: "/anwendungsbereiche/wasserstoff-und-derivate" },
+        { label: t("biomethan"), href: "/anwendungsbereiche/biomethan-und-bio-lng" },
+        { label: t("rfnbo"), href: "/anwendungsbereiche/rfnbo" },
       ],
     },
     {

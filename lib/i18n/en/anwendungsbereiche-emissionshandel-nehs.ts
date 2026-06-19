@@ -7,7 +7,7 @@ export const NEHS_SEO = {
 
 export const NEHS_INTRO = [
   "The national emissions trading system (nEHS) under the German Fuel Emissions Trading Act (BEHG) puts a price on CO₂ emissions from fuels outside the EU ETS – especially in heating and transport. Unlike EU ETS I, nEHS generally links not to direct installation emissions but to the placing on the market of fuels.",
-  "For affected companies, nEHS is therefore a compliance topic, a cost factor and – for renewable fuels under the applicable conditions – also an economic lever. FuelCert supports across the entire nEHS process.",
+  "For affected companies, nEHS is therefore a compliance topic, a cost factor and – for renewable power and fuels under the applicable conditions – also an economic lever. FuelCert supports across the entire nEHS process.",
 ] as const;
 
 export const NEHS_INTRO_VISUAL = {
@@ -45,9 +45,9 @@ export const NEHS_SUPPORT = {
 } as const;
 
 export const NEHS_RENEWABLES = {
-  heading: "Renewable fuels in nEHS",
+  heading: "Renewable power and fuels in nEHS",
   paragraphs: [
-    "Renewable fuels play a greater practical role in nEHS than in EU ETS I. Particularly relevant are biomass, biomethane, bio-LNG, biogenic fuel shares, RFNBO, synthetic methane and other low-carbon or climate-neutral fuels – depending on fuel and use case within the applicable regulatory framework.",
+    "Renewable power and fuels play a greater practical role in nEHS than in EU ETS I. Particularly relevant are biomass, biomethane, bio-LNG, biogenic fuel shares, RFNBO, synthetic methane and other low-carbon or climate-neutral fuels – depending on fuel and use case within the applicable regulatory framework.",
     "Biomethane in the natural gas grid is a particularly practical case: emissions attributable to corresponding quantities can be deducted in the emissions report under the applicable conditions – provided proof management, certification and data foundations are set up in a rule-compliant manner.",
     "For RFNBO and other non-biogenic renewable fuels, recognition is regulatorily envisaged but practical proof management is partly still limited or under development. Pure hydrogen is not generally subject to the same reporting obligation as natural gas; hydrogen blending or mixing with natural gas must be assessed separately.",
   ],
@@ -111,9 +111,9 @@ export const NEHS_RELATED_GROUPS = [
     items: [
       { label: "Pre-certification", href: "/leistungen/pre-zertifizierung" },
       { label: "Certification", href: "/leistungen/zertifizierung-redcert-iscc-certifhy" },
-      { label: "Proof and register management", href: "/leistungen/nachweisfuehrung-und-register" },
+      { label: "Proof management and register operations", href: "/leistungen/nachweisfuehrung-und-register" },
       { label: "CO₂ and quota trading", href: "/leistungen/co2-und-quotenhandel" },
-      { label: "Reporting and submission obligations", href: "/leistungen/berichterstattung-und-meldepflichten" },
+      { label: "Reports and reporting obligations", href: "/leistungen/berichterstattung-und-meldepflichten" },
     ],
   },
   {

@@ -15,12 +15,12 @@ export type ReferenceLogo = {
 };
 
 export const HOME_REFERENCE_LOGOS: ReferenceLogo[] = [
-  { id: "rwe", name: "RWE", logo: logoRwe, approved: false },
+  { id: "rwe", name: "RWE", logo: logoRwe, approved: true },
   { id: "biogem", name: "bioGem express", logo: logoBiogem, approved: true },
   { id: "koehler-pappen", name: "Köhler Pappen", logo: logoKoehlerPappen, approved: true },
   { id: "gutcert", name: "GUTcert", logo: logoGutcert, approved: true },
-  { id: "wun-h2", name: "WUN H2", logo: logoWunH2, approved: false },
-  { id: "riessner-gase", name: "Riessner Gase", logo: logoRiessnerGase, approved: false },
+  { id: "wun-h2", name: "WUN H2", logo: logoWunH2, approved: true },
+  { id: "riessner-gase", name: "Riessner Gase", logo: logoRiessnerGase, approved: true },
 ];
 
 export function getVisibleReferenceLogos(): ReferenceLogo[] {

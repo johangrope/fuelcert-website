@@ -5,7 +5,7 @@ type TestimonialCopy = Pick<Testimonial, "quote" | "name" | "role" | "portraitAl
 export const TESTIMONIALS_EN: Record<TestimonialId, TestimonialCopy> = {
   balling: {
     quote:
-      "Johan reliably found buyers for biomethane and GHG quotas for us and handled the regulatory process. His expertise at the interface between legislation and practice is real added value for companies in the quota market.",
+      "FuelCert has reliably found buyers for biomethane and GHG quotas for us and handled the regulatory process. FuelCert's expertise at the interface between legislation and practice is real added value for companies in the quota market.",
     name: "Thomas Balling",
     role: "Managing director of several biomethane plants, board German Biogas Association",
     portraitAlt: "Portrait of Thomas Balling",

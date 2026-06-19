@@ -1,31 +1,31 @@
 export const UEBER_UNS_SEO = {
   title: "About FuelCert | FuelCert",
   metaDescription:
-    "FuelCert supports companies with certification, proof management and regulatory implementation of renewable fuels – with over 20 years of experience in regulation and markets.",
+    "FuelCert supports companies with certification, proof management and regulatory implementation of renewable power and fuels – with over 20 years of experience in regulation and markets.",
   h1: "About FuelCert",
 } as const;
 
 export const UEBER_UNS_INTRO = [
-  "FuelCert supports companies with certification, proof management and regulatory implementation of renewable fuels. We accompany projects around biofuels, solid biofuels, biomethane, bio-LNG, RFNBO, green hydrogen, hydrogen derivatives and e-fuels – from initial assessment through balancing and documentation to ongoing implementation with certification bodies, registers and authorities.",
-  "We combine regulatory depth with practical market understanding. Our experience of more than 20 years in regulation, markets and operational implementation of renewable fuels helps clients handle complex requirements efficiently, audit-ready and in a practical way.",
+  "FuelCert supports companies with certification, proof management and regulatory implementation in renewable power and fuels. We accompany projects around biofuels, solid biofuels, biomethane, bio-LNG, RFNBO, green hydrogen, hydrogen derivatives and e-fuels – from initial assessment through balancing and documentation to ongoing implementation with certification bodies, registers and authorities.",
+  "We combine regulatory depth with practical market understanding. Our experience of more than 15 years in regulation, markets and operational implementation of renewable power and fuels helps clients handle complex requirements efficiently, audit-ready and in a practical way.",
 ] as const;
 
 export const UEBER_UNS_HIGHLIGHTS = [
   {
-    title: "Regulatory and market experience",
-    text: "FuelCert brings long-standing experience in regulation and markets for renewable fuels. We know not only formal requirements but also practical challenges in implementation.",
+    title: "Compliance that pays off",
+    text: "FuelCert combines regulatory expertise with genuine market experience in renewable power and fuels. We know which regulatory levers actually translate into economic advantage – rather than treating compliance as a box-ticking exercise.",
   },
   {
-    title: "Practical, not rigid",
-    text: "Clients should not have to adapt to our tools or processes – we align our support with actual requirements, data structures and workflows in your organisation.",
+    title: "Your processes, not our template",
+    text: "No standard tool that clients must adapt to. We build our support around your data, structures and workflows – not the other way around.",
   },
   {
-    title: "Efficient and audit-ready",
-    text: "Our solutions should work in day-to-day operations and remain robust for regulators and audits. The goal is implementation that keeps effort on your side as low as possible while staying reliably verifiable.",
+    title: "Smooth in daily operations, solid in the audit",
+    text: "Our solutions are designed to be barely noticeable in day-to-day operations – and to show their strength when it matters: in the audit. Minimal effort on your side, maximum confidence in the review.",
   },
   {
-    title: "Expert and operational",
-    text: "We do not treat regulatory requirements in isolation but in connection with data availability, internal responsibilities, register processes, marketing and reporting obligations.",
+    title: "The big picture in view",
+    text: "Regulation does not exist in a vacuum. We factor in data availability, responsibilities, registers and marketing from the outset.",
   },
 ] as const;
 
@@ -47,5 +47,5 @@ export const UEBER_UNS_PUBLICATIONS = [
 
 export const UEBER_UNS_CTA = {
   heading: "Want to discuss your project with FuelCert?",
-  text: "We support you with certification, proof management, register processes, and regulatory and market questions around renewable fuels.",
+  text: "We support you with certification, proof management, register processes, and regulatory and market questions around renewable power and fuels.",
 } as const;

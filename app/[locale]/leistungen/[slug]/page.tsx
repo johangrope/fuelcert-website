@@ -42,7 +42,6 @@ export default async function LeistungDetailPage({ params }: Props) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
   const data = await getLocalizedLeistung(slug, locale as "de" | "en");
-  const t = await getTranslations("common");
   const tLeistungen = await getTranslations("leistungen");
 
   if (!data || !ALL_LEISTUNG_SLUGS.includes(slug as LeistungSlug) || DEDICATED_SLUGS.has(slug)) {
@@ -56,8 +55,6 @@ export default async function LeistungDetailPage({ params }: Props) {
       title={data.title}
       intro={data.intro}
       sections={data.sections}
-      backHref="/leistungen"
-      backLabel={t("backToServices")}
     />
   );
 }

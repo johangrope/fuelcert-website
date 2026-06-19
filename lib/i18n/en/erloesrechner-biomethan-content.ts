@@ -11,7 +11,7 @@ export const BIOMETHAN_ERLOESRECHNER_INTRO = [
 ] as const;
 
 export const BIOMETHAN_ERLOESRECHNER_SCOPE_NOTE =
-  "Currently only bio-CNG is calculated. Extensions for bio-LNG, RFNBO and electricity are planned.";
+  "Currently only bio-CNG is calculated. Extensions for bio-LNG and electricity are planned.";
 
 export const BIOMETHAN_ERLOESRECHNER_ASSUMPTIONS_HEADING = "Assumptions and notes";
 

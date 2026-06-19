@@ -21,7 +21,7 @@ export async function ServicePageLayout({
   kicker,
   title,
   children,
-  backHref = "/leistungen",
+  backHref,
   backLabel,
   wide = false,
 }: Props) {
@@ -40,11 +40,13 @@ export async function ServicePageLayout({
           <p className="subpage__kicker">{kicker}</p>
           <h1 className="subpage__title">{title}</h1>
           {children}
-          <p className="subpage__cta subpage__cta--back">
-            <Link href={backHref} className="subpage__back-link">
-              ← {resolvedBackLabel}
-            </Link>
-          </p>
+          {backHref ? (
+            <p className="subpage__cta subpage__cta--back">
+              <Link href={backHref} className="subpage__back-link">
+                ← {resolvedBackLabel}
+              </Link>
+            </p>
+          ) : null}
         </div>
       </main>
       <SiteFooter />

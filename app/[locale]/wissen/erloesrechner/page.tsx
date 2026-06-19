@@ -27,7 +27,6 @@ export function generateStaticParams() {
 export default async function ErloesrechnerPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations("common");
   const tWissen = await getTranslations("wissen");
   const c = await getLocaleContent(DE, EN);
 
@@ -36,8 +35,6 @@ export default async function ErloesrechnerPage({ params }: Props) {
       kicker={tWissen("kicker")}
       title={c.ERLOESRECHNER_SEO.h1}
       wide
-      backHref="/wissen"
-      backLabel={t("backToWissen")}
       breadcrumbs={await wissenBreadcrumbs(c.ERLOESRECHNER_SEO.h1)}
     >
       {c.ERLOESRECHNER_INTRO.map((paragraph, i) => (

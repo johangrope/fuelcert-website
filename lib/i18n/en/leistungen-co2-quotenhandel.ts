@@ -1,13 +1,13 @@
 export const CO2_QUOTENHANDEL_SEO = {
   title: "CO₂ and quota trading | FuelCert",
   metaDescription:
-    "FuelCert supports GHG quota, EU ETS I and nEHS – with market experience, a network of buyers and traders, and expert assessment of marketing and contract terms.",
-  h1: "Support with CO₂ and quota trading",
+    "FuelCert supports GHG quota, EU ETS I/II and nEHS – with market experience, a network of buyers and traders, and expert assessment of marketing and contract terms.",
+  h1: "Support with emissions and quota trading",
 } as const;
 
 export const CO2_QUOTENHANDEL_INTRO = [
-  "FuelCert helps companies understand and use regulatory CO₂ and quota markets – with a focus on the German GHG quota, EU ETS I and nEHS.",
-  "We combine regulatory expertise from certification and proof management with long-standing market experience and an established network of GHG quota buyers, traders and brokers.",
+  "FuelCert helps companies understand and use regulatory CO₂ and quota markets – with a focus on the German GHG quota, EU ETS I/II and nEHS.",
+  "We combine regulatory expertise from certification and proof management with long-standing market experience and an established network of buyers of GHG quota credits and emission allowances (EUAs), traders and brokers.",
 ] as const;
 
 export const CO2_QUOTENHANDEL_SERVICES_HEADING = "What we take on in CO₂ and quota trading";
@@ -16,12 +16,12 @@ export const CO2_QUOTENHANDEL_SERVICES_INTRO =
   "We support you where market logic, regulation and contract practice meet – from classifying markets to preparing concrete transactions.";
 
 export const CO2_QUOTENHANDEL_SERVICES = [
-  "Classification of GHG quota, EU ETS I and nEHS",
+  "Classification of GHG quota, EU ETS I/II and nEHS",
   "Assessment of marketing options and revenue potential",
   "Orientation on market mechanisms, rules and relevant players",
   "Assessment of current market movements and developments",
   "Use of our network of buyers, traders and brokers",
-  "Support in initiating and structuring trades",
+  "Support with market access as well as initiating and structuring trades",
   "Expert review of customary contract terms",
 ] as const;
 
@@ -29,7 +29,7 @@ export const CO2_QUOTENHANDEL_SECTIONS = [
   {
     heading: "Market access, network and experience",
     paragraphs: [
-      "FuelCert has many years of experience in CO₂ and quota markets – especially the GHG quota, EU ETS I and nEHS – and brings long-standing practice from earlier direct participation in quota markets. Through our network of GHG quota buyers, traders and brokers we can facilitate market access – directly or via suitable partners. FuelCert acts independently and is not a classic broker; we support classification, initiation and structuring without acting as a trading platform ourselves.",
+      "FuelCert has many years of experience in CO₂ and quota markets – especially the GHG quota, EU ETS I/II and nEHS – and brings long-standing practice from earlier direct participation in quota markets. Through our network of GHG quota buyers, traders and brokers we can facilitate market access – directly or via suitable partners. FuelCert acts independently and is not a classic broker; we support classification, initiation and structuring without acting as a trading platform ourselves.",
     ],
   },
   {

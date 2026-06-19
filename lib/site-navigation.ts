@@ -25,25 +25,15 @@ export const NAV_DROPDOWNS: NavDropdownConfig[] = filterNavDropdowns([
     id: "anwendungsbereiche",
     label: "Anwendungsbereiche",
     href: "/anwendungsbereiche",
-    variant: "grouped",
-    groups: [
-      {
-        groupLabel: "Regulatorische Bereiche",
-        items: [
-          { label: "THG-Quote", href: "/anwendungsbereiche/thg-quote" },
-          { label: "Emissionshandel (ETS I)", href: "/anwendungsbereiche/emissionshandel-ets-1" },
-          { label: "Nationaler Emissionshandel (nEHS)", href: "/anwendungsbereiche/emissionshandel-nehs" },
-          { label: "ESG und Nachhaltigkeitsnachweise", href: "/anwendungsbereiche/esg-und-nachhaltigkeitsnachweise" },
-        ],
-      },
-      {
-        groupLabel: "Produktbezogene Bereiche",
-        items: [
-          { label: "Wasserstoff und Derivate", href: "/anwendungsbereiche/wasserstoff-und-derivate" },
-          { label: "Biomethan und Bio-LNG", href: "/anwendungsbereiche/biomethan-und-bio-lng" },
-          { label: "RFNBO und E-Fuels", href: "/anwendungsbereiche/rfnbo" },
-        ],
-      },
+    variant: "flat",
+    items: [
+      { label: "THG-Quote", href: "/anwendungsbereiche/thg-quote" },
+      { label: "Emissionshandel (ETS I)", href: "/anwendungsbereiche/emissionshandel-ets-1" },
+      { label: "Nationaler Emissionshandel (nEHS)", href: "/anwendungsbereiche/emissionshandel-nehs" },
+      { label: "ESG und Nachhaltigkeitsnachweise", href: "/anwendungsbereiche/esg-und-nachhaltigkeitsnachweise" },
+      { label: "Wasserstoff und Derivate", href: "/anwendungsbereiche/wasserstoff-und-derivate" },
+      { label: "Biomethan und Bio-LNG", href: "/anwendungsbereiche/biomethan-und-bio-lng" },
+      { label: "RFNBO und E-Fuels", href: "/anwendungsbereiche/rfnbo" },
     ],
   },
   {

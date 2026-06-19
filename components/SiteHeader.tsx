@@ -105,19 +105,30 @@ export function SiteHeader() {
                 }`}
               >
                 <div className="nav__dropdown-head">
-                  <Link
-                    href={dd.href}
-                    className={`nav__link nav__dropdown-label${
-                      isDropdownActive(dd) ? " nav__link--active" : ""
-                    }`}
-                    onClick={(e) => {
-                      if (dd.href.includes("#")) scrollToSection(e, dd.href);
-                      if (mobile) closeMobileNav();
-                    }}
-                  >
-                    {dd.label}
-                    <span className="nav__chevron nav__chevron--label" aria-hidden="true" />
-                  </Link>
+                  {dd.linkToOverview === true ? (
+                    <Link
+                      href={dd.href}
+                      className={`nav__link nav__dropdown-label${
+                        isDropdownActive(dd) ? " nav__link--active" : ""
+                      }`}
+                      onClick={(e) => {
+                        if (dd.href.includes("#")) scrollToSection(e, dd.href);
+                        if (mobile) closeMobileNav();
+                      }}
+                    >
+                      {dd.label}
+                      <span className="nav__chevron nav__chevron--label" aria-hidden="true" />
+                    </Link>
+                  ) : (
+                    <span
+                      className={`nav__link nav__dropdown-label nav__dropdown-label--static${
+                        isDropdownActive(dd) ? " nav__link--active" : ""
+                      }`}
+                    >
+                      {dd.label}
+                      <span className="nav__chevron nav__chevron--label" aria-hidden="true" />
+                    </span>
+                  )}
                   <button
                     type="button"
                     className="nav__link nav__dropdown-toggle nav__dropdown-toggle--chevron"
@@ -147,9 +158,14 @@ export function SiteHeader() {
                       ))}
                     </ul>
                   ) : (
-                    dd.groups.map((group) => (
-                      <div key={group.groupLabel} className="nav__dropdown-group">
-                        <p className="nav__dropdown-group-label">{group.groupLabel}</p>
+                    dd.groups.map((group, groupIndex) => (
+                      <div
+                        key={group.groupLabel ?? group.items[0]?.href ?? groupIndex}
+                        className="nav__dropdown-group"
+                      >
+                        {group.groupLabel ? (
+                          <p className="nav__dropdown-group-label">{group.groupLabel}</p>
+                        ) : null}
                         <ul className="nav__dropdown">
                           {group.items.map((item) => (
                             <li key={item.href}>

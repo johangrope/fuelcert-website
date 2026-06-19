@@ -2,7 +2,7 @@ export const ERLOESRECHNER_SEO = {
   title: "Revenue calculator | FuelCert",
   metaDescription:
     "Estimate revenue potential of green hydrogen (RFNBO) under the German GHG quota – interactive, based on key market and regulatory parameters.",
-  h1: "Revenue calculator",
+  h1: "RFNBO revenue calculator",
 } as const;
 
 export const ERLOESRECHNER_INTRO = [
@@ -21,7 +21,7 @@ export const ERLOESRECHNER_ASSUMPTIONS_HEADING = "Assumptions and notes";
 export const ERLOESRECHNER_ASSUMPTIONS = [
   "Based on a fossil reference value of 94 gCO₂/MJ, a calorific value of 120 MJ/kg H₂, and the annual GHG quota and year factor under the applicable regulatory framework.",
   "For fuel cell vehicles an efficiency factor of 0.4 is applied; the RFNBO sub-quota is calculated independently of the chosen drivetrain.",
-  "Results are indicative. Actual market prices, proof management, certification and project-specific regulation may differ from achievable revenue.",
+  "Results are indicative. Actual achievable revenue may differ due to market prices.",
   "FuelCert supports detailed assessment of revenue potential, certification, proof management and implementation under the GHG quota system.",
 ] as const;
 

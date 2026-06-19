@@ -86,20 +86,22 @@ const messages = {
     addressLine2: "10627 Berlin",
   },
   home: {
-    metaTitle: "FuelCert – Certification for renewable fuels",
+    metaTitle: "FuelCert – Certification for renewable power and fuels",
     metaDescription:
       "FuelCert supports companies with certification, proof management and regulatory questions around RFNBO, green hydrogen, biomethane and compliance.",
     heroTitle:
-      "Your experts in certification and proof management for renewable fuels and emissions and quota trading",
+      "Your experts in certification of renewable power and fuels and in emissions and quota trading",
     heroLead:
-      "FuelCert supports producers, traders, fuel suppliers, energy utilities and emissions trading obligated companies in the regulatory implementation of certification, proof management, emissions reporting, filing processes, and CO₂ and quota trading.",
+      "FuelCert supports producers, traders, fuel suppliers, energy utilities and emissions trading obligated companies with certification, proof management, emissions reporting, and emissions and quota trading. FuelCert also provides advisory services on related compliance topics.",
     heroImageAlt:
       "Tanker truck with Renewable Fuel branding in front of a modern energy facility with wind turbine, solar panels and storage tanks",
     servicesTitle: "Our services",
     servicesIntro:
-      "FuelCert supports companies along the entire regulatory value chain – from preparing for and accompanying certification through proof management and registry administration to fulfilling obligations under national and European emissions trading.",
+      "Depending on where you sit along the value chain as our client and how intensively you want support in regulatory processes, FuelCert offers tailored services. This allows certification, proof management, reporting, filing processes and trading activities to be implemented efficiently, audit-ready and with as little internal effort as possible.",
     testimonialsTitle: "Client voices",
-    testimonialsIntro: "What clients say about working with FuelCert.",
+    testimonialsIntroPrefix: "More on our ",
+    testimonialsIntroLink: "About us",
+    testimonialsIntroSuffix: " page.",
     referencesIntro: "These clients and partners already rely on FuelCert.",
   },
   leistungen: {
@@ -184,7 +186,7 @@ const messages = {
     totalRevenue: "Total revenue",
   },
   calculatorBiomethan: {
-    scopeNote: "Currently only bio-CNG is calculated. Extensions for bio-LNG, RFNBO and electricity are planned.",
+    scopeNote: "Currently only bio-CNG is calculated. Extensions for bio-LNG and electricity are planned.",
     year: "Compliance year",
     yearHint: "Controls the GHG quota per regulation.",
     calorificVolume: "Calorific volume biomethane (kWh)",

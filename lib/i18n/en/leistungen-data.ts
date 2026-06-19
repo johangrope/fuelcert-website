@@ -4,7 +4,7 @@ import type { OverviewPageConfig, PageScaffold } from "@/lib/types";
 export const LEISTUNGEN_OVERVIEW: OverviewPageConfig = {
   title: "Services | FuelCert",
   metaDescription:
-    "Overview of pre-certification, certification, proof management, register operations, CO₂ and quota trading, and reporting obligations for renewable fuels.",
+    "Overview of pre-certification, certification, proof management, register operations, CO₂ and quota trading, and reporting obligations for renewable power and fuels.",
   kicker: "Services",
   h1: "Five service areas along regulatory implementation",
   intro:
@@ -59,7 +59,7 @@ const leistungen: Record<LeistungSlug, PageScaffold & { sectionId: string }> = {
     metaDescription:
       "FuelCert supports certification under REDcert, ISCC EU and CertifHy – from data preparation and GHG/mass balance to audit preparation, audit support and recertification.",
     intro:
-      "FuelCert supports certification under REDcert, ISCC EU and CertifHy – for biofuels, biomethane, bio-LNG, RFNBO, green hydrogen, derivatives and e-fuels, audit-ready and structured.",
+      "FuelCert supports certification under REDcert, ISCC EU and CertifHy – for biofuels, biomethane, bio-LNG, RFNBO, green hydrogen, derivatives and e-fuels, requirements-compliant and structured.",
     sections: [
       { heading: "Systems and scope", body: "Brief placeholder on REDcert, ISCC EU and CertifHy and typical use cases." },
       { heading: "Implementation", body: "Placeholder for approach from initial setup to recurring audit." },
@@ -69,7 +69,7 @@ const leistungen: Record<LeistungSlug, PageScaffold & { sectionId: string }> = {
     slug: "nachweisfuehrung-und-register",
     sectionId: "leistung-nachweisfuehrung",
     menuLabel: "Proof management and registers",
-    title: "Proof management and register operations for renewable fuels",
+    title: "Proof management and register operations for renewable power and fuels",
     metaDescription:
       "FuelCert supports mass and GHG balances, proof management, Nabisy and UDB register operations, and submissions to registers and authorities.",
     intro:
@@ -82,9 +82,9 @@ const leistungen: Record<LeistungSlug, PageScaffold & { sectionId: string }> = {
     menuLabel: "CO₂ and quota trading",
     title: "CO₂ and quota trading",
     metaDescription:
-      "FuelCert supports GHG quota, EU ETS I and nEHS – with market experience, buyer and trader networks, and expert assessment of marketing and contracts.",
+      "FuelCert supports GHG quota, EU ETS I/II and nEHS – with market experience, buyer and trader networks, and expert assessment of marketing and contracts.",
     intro:
-      "FuelCert supports classification and use of regulatory CO₂ and quota markets – in particular GHG quota, EU ETS I and nEHS.",
+      "FuelCert supports classification and use of regulatory CO₂ and quota markets – in particular GHG quota, EU ETS I/II and nEHS.",
     sections: [{ heading: "Service overview", body: "Details are on the CO₂ and quota trading page." }],
   },
   "berichterstattung-und-meldepflichten": {

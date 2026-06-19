@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { PlaceholderDetailLayout } from "@/components/PlaceholderDetailLayout";
-import { ALL_ANWENDUNG_SLUGS, type AnwendungSlug } from "@/lib/anwendungsbereiche";
+import { ALL_ANWENDUNG_SLUGS, type AnwendungSlug, anwendungPath } from "@/lib/anwendungsbereiche";
 import { routing } from "@/i18n/routing";
 import { anwendungenBreadcrumbs } from "@/lib/i18n/breadcrumbs";
 import { getLocalizedAnwendung } from "@/lib/i18n/content-access";
+import { isNavItemVisible } from "@/lib/nav-visibility";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -17,7 +18,9 @@ const DEDICATED_SLUGS = new Set<AnwendungSlug>([
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
-    ALL_ANWENDUNG_SLUGS.filter((slug) => !DEDICATED_SLUGS.has(slug)).map((slug) => ({
+    ALL_ANWENDUNG_SLUGS.filter(
+      (slug) => !DEDICATED_SLUGS.has(slug) && isNavItemVisible(anwendungPath(slug)),
+    ).map((slug) => ({
       locale,
       slug,
     })),
@@ -39,13 +42,13 @@ export default async function AnwendungDetailPage({ params }: Props) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
   const data = await getLocalizedAnwendung(slug, locale as "de" | "en");
-  const t = await getTranslations("common");
   const tApp = await getTranslations("anwendungsbereiche");
 
   if (
     !data ||
     !ALL_ANWENDUNG_SLUGS.includes(slug as AnwendungSlug) ||
-    DEDICATED_SLUGS.has(slug as AnwendungSlug)
+    DEDICATED_SLUGS.has(slug as AnwendungSlug) ||
+    !isNavItemVisible(anwendungPath(slug as AnwendungSlug))
   ) {
     notFound();
   }
@@ -57,8 +60,6 @@ export default async function AnwendungDetailPage({ params }: Props) {
       title={data.title}
       intro={data.intro}
       sections={data.sections}
-      backHref="/anwendungsbereiche"
-      backLabel={t("backToAnwendungsbereiche")}
     />
   );
 }

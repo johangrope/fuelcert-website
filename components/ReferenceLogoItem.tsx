@@ -10,7 +10,7 @@ export function ReferenceLogoItem({ item }: Props) {
         src={item.logo}
         alt={`Logo ${item.name}`}
         className="references__logo"
-        sizes="320px"
+        sizes="224px"
       />
     </li>
   );

@@ -50,7 +50,7 @@ export const BERICHTERSTATTUNG_SERVICE_GROUPS: readonly ServiceBulletGroup[] = [
       "Entry of emissions in the nEHS register",
       "Support with timely surrender of nEHS certificates",
       "Coordination with DEHSt and certification body",
-      "Compliant classification and consideration of deductible renewable fuels and biogenic fuel shares",
+      "Compliant classification and consideration of deductible renewable power and fuels and biogenic fuel shares",
       "Support with regulatory avoidance of double counting and delimitation from EU ETS I",
     ],
   },
@@ -61,7 +61,7 @@ export const BERICHTERSTATTUNG_IMPLEMENTATION_HEADING = "How we support implemen
 export const BERICHTERSTATTUNG_IMPLEMENTATION = [
   "Reporting and submission obligations in CO₂ and quota markets are formally demanding and bound to fixed deadlines. Depending on the system, volume, energy and emissions data must be prepared, monitoring plans created, emissions reports submitted, verifications prepared or certificates surrendered.",
   "FuelCert helps companies implement these obligations efficiently, on time and in an audit-ready way. We review relevant requirements, prepare required data, create reports and plans and support coordination with authorities, certification bodies and contract partners.",
-  "Clean delimitation between regulatory systems is particularly important. In practice, GHG quota, EU ETS I, nEHS and future EU ETS II can overlap – for example with fuel deliveries, biogenic shares, deduction issues or use of renewable fuels.",
+  "Clean delimitation between regulatory systems is particularly important. In practice, GHG quota, EU ETS I, nEHS and future EU ETS II can overlap – for example with fuel deliveries, biogenic fuel shares, deduction issues or use of renewable power and fuels.",
   "FuelCert helps identify these interfaces early and classify the respective reporting and surrender obligations correctly by system.",
 ] as const;
 

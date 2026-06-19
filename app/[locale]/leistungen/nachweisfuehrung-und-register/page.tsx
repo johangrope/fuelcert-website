@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { RelatedTopicsSection } from "@/components/RelatedTopicsSection";
 import { ServiceBulletList } from "@/components/ServiceBulletList";
 import { ServiceCtaSection } from "@/components/ServiceCtaSection";
 import { ServicePageLayout } from "@/components/ServicePageLayout";
@@ -54,23 +53,7 @@ export default async function NachweisfuehrungPage({ params }: Props) {
         </h2>
         <p className="subpage__text">{c.NACHWEISFUEHRUNG_SERVICES_INTRO}</p>
         <ServiceBulletList items={[...c.NACHWEISFUEHRUNG_SERVICES]} />
-        <ServiceCtaSection id="service-cta-mid" variant="subtle" heading={c.NACHWEISFUEHRUNG_CTA.heading} />
       </section>
-
-      {c.NACHWEISFUEHRUNG_SECTIONS.map((section, i) => (
-        <section
-          key={section.heading}
-          className="service-block"
-          aria-labelledby={`nachweis-section-${i}-heading`}
-        >
-          <h2 id={`nachweis-section-${i}-heading`} className="subpage__heading">
-            {section.heading}
-          </h2>
-          <p className="subpage__text">{section.text}</p>
-        </section>
-      ))}
-
-      <RelatedTopicsSection topics={[...c.NACHWEISFUEHRUNG_RELATED_TOPICS]} />
 
       <ServiceCtaSection id="service-cta-end" {...c.NACHWEISFUEHRUNG_CTA} />
     </ServicePageLayout>

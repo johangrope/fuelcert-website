@@ -17,13 +17,10 @@ export const NACHWEISFUEHRUNG_SERVICES_INTRO =
 
 export const NACHWEISFUEHRUNG_SERVICES = [
   "Preparation of monthly or quarterly mass and GHG balances",
-  "Definition and establishment of customer-specific data provision processes",
   "Review and validation of data for accuracy and system-compliant balancing",
-  "Adaptation and further development of balancing logic when projects or regulation change",
   "System-compliant documentation and data storage",
   "Issuance of sustainability proofs and booking of volumes in relevant registers",
-  "Transmission of data and proofs to competent authorities",
-  "Management of register accounts such as Nabisy and UDB",
+  "Management of register accounts such as Nabisy and UDB, or submission of the UBA form for RFNBO proof issuance",
   "Support with registration, volume reporting, bookings, deadline monitoring and regulatory updates",
 ] as const;
 

@@ -57,5 +57,4 @@ export const CO2_QUOTENHANDEL_RELATED_TOPICS = [
   { label: "GHG quota", href: "/anwendungsbereiche/thg-quote" },
   { label: "Emissions trading (EU ETS I)", href: "/anwendungsbereiche/emissionshandel-ets-1" },
   { label: "National emissions trading (nEHS)", href: "/anwendungsbereiche/emissionshandel-nehs" },
-  { label: "GHG and mass balance", href: "/wissen/thg-und-massenbilanz" },
 ] as const;

@@ -126,14 +126,14 @@ const messages = {
     metaDescription:
       "FuelCert unterstützt Unternehmen bei Zertifizierung, Nachweisführung und regulatorischen Fragen rund um RFNBO, grünen Wasserstoff, Biomethan und Compliance.",
     heroTitle:
-      "Zertifizierung und Nachweisführung erneuerbarer Kraft- und Brennstoffe\nsowie Emissions- und Quotenhandel",
+      "Ihre Experten für Zertifizierung erneuerbarer Kraft- und Brennstoffe sowie Emissions- und Quotenhandel",
     heroLead:
-      "FuelCert bietet Unterstützung und Beratung für Produzenten, Händler, Inverkehrbringer, Energieversorger und emissionshandelspflichtige Unternehmen bei der Umsetzung und bei strategischen Entscheidungen bezüglich Zertifizierung, Nachweisführung, Emissionsberichterstattung, Meldeprozessen sowie Emissions- und Quotenhandel.",
+      "FuelCert unterstützt Produzenten, Händler, Inverkehrbringer, Energieversorger und emissionshandelspflichtige Unternehmen bei der Zertifizierung, Nachweisführung, Emissionsberichterstattung sowie beim Emissions- und Quotenhandel. Darüber hinaus bietet FuelCert Beratungsleistungen zu den angrenzenden Compliance-Themen.",
     heroImageAlt:
       "Tankwagen mit Renewable-Fuel-Branding vor moderner Energieanlage mit Windrad, Solarpanels und Speichertanks",
     servicesTitle: "Unsere Leistungen",
     servicesIntro:
-      "Je nachdem, wo sich unsere Kunden entlang der Wertschöpfungskette einordnen und wie intensiv sie in regulatorischen Prozessen unterstützt werden möchten, bietet FuelCert passgenaue Dienstleistungen an. So können Zertifizierung, Nachweisführung, Berichterstattung, Meldeprozesse und Handelsaktivitäten effizient, prüfsicher und mit möglichst geringem internem Aufwand umgesetzt werden.",
+      "Je nachdem, wo Sie sich als unser Kunde entlang der Wertschöpfungskette einordnen und wie intensiv Sie in regulatorischen Prozessen unterstützt werden möchten, bietet FuelCert passgenaue Dienstleistungen an. So können Zertifizierung, Nachweisführung, Berichterstattung, Meldeprozesse und Handelsaktivitäten effizient, prüfsicher und mit möglichst geringem internem Aufwand umgesetzt werden.",
     testimonialsTitle: "Kundenstimmen",
     testimonialsIntro: "Was Kunden über die Zusammenarbeit mit FuelCert sagen.",
     referencesIntro: "Diese Kunden und Partner setzen bereits auf FuelCert.",

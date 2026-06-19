@@ -54,32 +54,7 @@ export default async function Co2QuotenhandelPage({ params }: Props) {
         </h2>
         <p className="subpage__text">{c.CO2_QUOTENHANDEL_SERVICES_INTRO}</p>
         <ServiceBulletList items={[...c.CO2_QUOTENHANDEL_SERVICES]} />
-        <ServiceCtaSection id="service-cta-mid" variant="subtle" heading={c.CO2_QUOTENHANDEL_CTA.heading} />
       </section>
-
-      {c.CO2_QUOTENHANDEL_SECTIONS.map((section, i) => (
-        <section
-          key={section.heading}
-          className="service-block"
-          aria-labelledby={`co2-section-${i}-heading`}
-        >
-          <h2 id={`co2-section-${i}-heading`} className="subpage__heading">
-            {section.heading}
-          </h2>
-          {section.paragraphs.map((paragraph, j) => (
-            <p
-              key={j}
-              className={
-                "mutedFromIndex" in section && section.mutedFromIndex === j
-                  ? "subpage__text subpage__text--muted"
-                  : "subpage__text"
-              }
-            >
-              {paragraph}
-            </p>
-          ))}
-        </section>
-      ))}
 
       <RelatedTopicsSection topics={[...c.CO2_QUOTENHANDEL_RELATED_TOPICS]} />
 

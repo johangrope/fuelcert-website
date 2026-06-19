@@ -47,18 +47,6 @@ export default async function BerichterstattungPage({ params }: Props) {
         </h2>
         <p className="subpage__text">{c.BERICHTERSTATTUNG_SERVICES_INTRO}</p>
         <ServiceBulletGroups groups={c.BERICHTERSTATTUNG_SERVICE_GROUPS} />
-        <ServiceCtaSection id="service-cta-mid" variant="subtle" heading={c.BERICHTERSTATTUNG_CTA_MID.heading} />
-      </section>
-
-      <section className="service-block" aria-labelledby="berichte-implementation-heading">
-        <h2 id="berichte-implementation-heading" className="subpage__heading">
-          {c.BERICHTERSTATTUNG_IMPLEMENTATION_HEADING}
-        </h2>
-        {c.BERICHTERSTATTUNG_IMPLEMENTATION.map((paragraph, i) => (
-          <p key={i} className="subpage__text">
-            {paragraph}
-          </p>
-        ))}
       </section>
 
       <RelatedTopicsSection topics={[...c.BERICHTERSTATTUNG_RELATED_TOPICS]} />

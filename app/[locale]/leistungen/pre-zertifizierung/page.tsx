@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { RelatedTopicsSection } from "@/components/RelatedTopicsSection";
 import { ServiceBulletList } from "@/components/ServiceBulletList";
 import { ServiceCtaSection } from "@/components/ServiceCtaSection";
 import { ServicePageLayout } from "@/components/ServicePageLayout";
@@ -55,7 +54,6 @@ export default async function PreZertifizierungPage({ params }: Props) {
         </h2>
         <p className="subpage__text">{c.PRE_ZERTIFIZIERUNG_SERVICES_INTRO}</p>
         <ServiceBulletList items={[...c.PRE_ZERTIFIZIERUNG_SERVICES]} />
-        <ServiceCtaSection id="pre-zert-cta-mid" variant="subtle" heading={c.PRE_ZERTIFIZIERUNG_CTA.heading} />
       </section>
 
       <section className="service-block" aria-labelledby="pre-zert-variants-heading">
@@ -71,8 +69,6 @@ export default async function PreZertifizierungPage({ params }: Props) {
           ))}
         </div>
       </section>
-
-      <RelatedTopicsSection topics={[...c.PRE_ZERTIFIZIERUNG_RELATED_TOPICS]} />
 
       <ServiceCtaSection id="pre-zert-cta" {...c.PRE_ZERTIFIZIERUNG_CTA} />
     </ServicePageLayout>

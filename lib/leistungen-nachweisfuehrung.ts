@@ -18,13 +18,10 @@ export const NACHWEISFUEHRUNG_SERVICES_INTRO =
 
 export const NACHWEISFUEHRUNG_SERVICES = [
   "Erstellung monatlicher bzw. quartalsweiser Massen- und THG-Bilanzen",
-  "Definition und Etablierung kundenspezifischer Prozesse zur Datenbereitstellung",
   "Prüfung und Validierung der Daten auf Richtigkeit und systemkonforme Bilanzierung",
-  "Anpassung und Weiterentwicklung der Bilanzierungslogiken bei Änderungen im Projekt oder in der Regulatorik",
   "Systemkonforme Dokumentation und Datenspeicherung",
   "Ausstellung von Nachhaltigkeitsnachweisen bzw. Buchung von Mengen in relevante Register",
-  "Übermittlung von Daten und Nachweisen an zuständige Behörden",
-  "Führung von Registerkonten wie Nabisy und UDB",
+  "Führung von Registerkonten wie Nabisy und UDB bzw. Einreichung des UBA Formulars zur Ausstellung von RFNBO-Nachweisen",
   "Unterstützung bei Registrierung, Mengenmeldungen, Buchungen, Fristenüberwachung und regulatorischen Neuerungen",
 ] as const;
 

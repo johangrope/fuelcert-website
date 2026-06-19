@@ -103,16 +103,24 @@ export const NEHS_FLOW = {
 
 export const NEHS_RELATED_HEADING = "Further topics";
 export const NEHS_RELATED_INTRO =
-  "Further context on services and knowledge – for implementation in national emissions trading.";
+  "Further context on services and other application areas – for implementation in national emissions trading.";
 
 export const NEHS_RELATED_GROUPS = [
   {
     heading: "Services",
     items: [
+      { label: "Pre-certification", href: "/leistungen/pre-zertifizierung" },
       { label: "Certification", href: "/leistungen/zertifizierung-redcert-iscc-certifhy" },
       { label: "Proof and register management", href: "/leistungen/nachweisfuehrung-und-register" },
       { label: "CO₂ and quota trading", href: "/leistungen/co2-und-quotenhandel" },
       { label: "Reporting and submission obligations", href: "/leistungen/berichterstattung-und-meldepflichten" },
+    ],
+  },
+  {
+    heading: "Further application areas",
+    items: [
+      { label: "GHG quota", href: "/anwendungsbereiche/thg-quote" },
+      { label: "EU ETS I", href: "/anwendungsbereiche/emissionshandel-ets-1" },
     ],
   },
 ] as const;

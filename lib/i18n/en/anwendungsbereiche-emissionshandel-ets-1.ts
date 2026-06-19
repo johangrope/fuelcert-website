@@ -108,12 +108,13 @@ export const ETS1_FLOW = {
 
 export const ETS1_RELATED_HEADING = "Further topics";
 export const ETS1_RELATED_INTRO =
-  "Further context on services and knowledge – for implementation in EU ETS I.";
+  "Further context on services and other application areas – for implementation in EU ETS I.";
 
 export const ETS1_RELATED_GROUPS = [
   {
     heading: "Services",
     items: [
+      { label: "Pre-certification", href: "/leistungen/pre-zertifizierung" },
       { label: "Certification", href: "/leistungen/zertifizierung-redcert-iscc-certifhy" },
       { label: "Proof and register management", href: "/leistungen/nachweisfuehrung-und-register" },
       { label: "CO₂ and quota trading", href: "/leistungen/co2-und-quotenhandel" },
@@ -121,14 +122,10 @@ export const ETS1_RELATED_GROUPS = [
     ],
   },
   {
-    heading: "Knowledge",
+    heading: "Further application areas",
     items: [
-      { label: "Monitoring plan in EU ETS I", href: "/wissen/ueberwachungsplan-im-eu-ets-1" },
-      { label: "Emissions report in EU ETS I", href: "/wissen/emissionsbericht-im-eu-ets-1" },
-      { label: "Union Registry in emissions trading", href: "/wissen/unionsregister-im-emissionshandel" },
-      { label: "Free allocation in EU ETS I", href: "/wissen/kostenlose-zuteilung-im-eu-ets-1" },
-      { label: "CBAM", href: "/wissen/cbam" },
-      { label: "Sustainable fuels in EU ETS I", href: "/wissen/nachhaltige-brennstoffe-im-eu-ets-1" },
+      { label: "GHG quota", href: "/anwendungsbereiche/thg-quote" },
+      { label: "nEHS", href: "/anwendungsbereiche/emissionshandel-nehs" },
     ],
   },
 ] as const;

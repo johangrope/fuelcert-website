@@ -179,8 +179,18 @@ export const THG_QUOTE_TABLE_COLUMNS = [
     suffix: "%" as const,
   },
   { key: "foodFeedCap" as const, label: "Obergrenze 1G-Biokraftstoffe", suffix: "%" as const },
+  {
+    key: "wasteBiofuelCap" as const,
+    label: "Obergrenze abfallbasierter Biokraftstoffe (Anlage 4)",
+    suffix: "%" as const,
+  },
   { key: "rfnboFactor" as const, label: "Anrechnungsfaktor RFNBO", suffix: "×" as const },
   { key: "electricityFactor" as const, label: "Anrechnungsfaktor Strom (Elektromobilität)", suffix: "×" as const },
+  {
+    key: "m3n3ElectricityFactor" as const,
+    label: "Anrechnungsfaktor Strom (Klassen M3 und N3)",
+    suffix: "×" as const,
+  },
 ] as const;
 
 export const THG_QUOTE_RELATED_HEADING = "Weiterführende Themen";
@@ -191,6 +201,7 @@ export const THG_QUOTE_RELATED_GROUPS = [
   {
     heading: "Leistungen",
     items: [
+      { label: "Pre-Zertifizierung", href: "/leistungen/pre-zertifizierung" },
       { label: "Zertifizierung nach REDcert, ISCC EU oder CertifHy", href: "/leistungen/zertifizierung-redcert-iscc-certifhy" },
       { label: "Nachweisführung und Registerführung", href: "/leistungen/nachweisfuehrung-und-register" },
       { label: "CO₂- und Quotenhandel", href: "/leistungen/co2-und-quotenhandel" },
@@ -198,12 +209,10 @@ export const THG_QUOTE_RELATED_GROUPS = [
     ],
   },
   {
-    heading: "Wissen",
+    heading: "Weitere Anwendungsbereiche",
     items: [
-      { label: "RFNBO-Zertifizierung", href: "/wissen/rfnbo-zertifizierung" },
-      { label: "THG- und Massenbilanz", href: "/wissen/thg-und-massenbilanz" },
-      { label: "REDcert, ISCC EU und CertifHy im Vergleich", href: "/wissen/redcert-iscc-certifhy-unterschiede" },
-      { label: "UDB, Nabisy und Registerführung", href: "/wissen/udb-nabisy-und-registerfuehrung" },
+      { label: "EU-ETS I", href: "/anwendungsbereiche/emissionshandel-ets-1" },
+      { label: "nEHS", href: "/anwendungsbereiche/emissionshandel-nehs" },
     ],
   },
 ] as const;

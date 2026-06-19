@@ -11,7 +11,7 @@ export const BIOMETHAN_ERLOESRECHNER_INTRO = [
 ] as const;
 
 export const BIOMETHAN_ERLOESRECHNER_SCOPE_NOTE =
-  "Aktuell wird nur Bio-CNG berechnet. Erweiterungen für Bio-LNG, RFNBO und Strom sind perspektivisch vorgesehen.";
+  "Aktuell wird nur Bio-CNG berechnet. Erweiterungen für Bio-LNG und Strom sind perspektivisch vorgesehen.";
 
 export const BIOMETHAN_ERLOESRECHNER_ASSUMPTIONS_HEADING = "Annahmen und Hinweise";
 

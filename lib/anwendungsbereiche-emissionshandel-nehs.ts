@@ -103,16 +103,24 @@ export const NEHS_FLOW = {
 
 export const NEHS_RELATED_HEADING = "Weiterführende Themen";
 export const NEHS_RELATED_INTRO =
-  "Vertiefende Einordnungen zu Leistungen und Wissen – für die Umsetzung im nationalen Emissionshandel.";
+  "Vertiefende Einordnungen zu Leistungen und weiteren Anwendungsbereichen – für die Umsetzung im nationalen Emissionshandel.";
 
 export const NEHS_RELATED_GROUPS = [
   {
     heading: "Leistungen",
     items: [
+      { label: "Pre-Zertifizierung", href: "/leistungen/pre-zertifizierung" },
       { label: "Zertifizierung", href: "/leistungen/zertifizierung-redcert-iscc-certifhy" },
       { label: "Nachweisführung und Registerführung", href: "/leistungen/nachweisfuehrung-und-register" },
       { label: "CO₂- und Quotenhandel", href: "/leistungen/co2-und-quotenhandel" },
       { label: "Berichte und Meldepflichten", href: "/leistungen/berichterstattung-und-meldepflichten" },
+    ],
+  },
+  {
+    heading: "Weitere Anwendungsbereiche",
+    items: [
+      { label: "THG-Quote", href: "/anwendungsbereiche/thg-quote" },
+      { label: "EU-ETS I", href: "/anwendungsbereiche/emissionshandel-ets-1" },
     ],
   },
 ] as const;

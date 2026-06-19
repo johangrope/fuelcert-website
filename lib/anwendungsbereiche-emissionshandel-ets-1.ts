@@ -7,7 +7,7 @@ export const ETS1_SEO = {
 
 export const ETS1_INTRO = [
   "Im europäischen Emissionshandel (EU-ETS I) müssen Betreiber emissionshandelspflichtiger Anlagen ihre Treibhausgasemissionen überwachen, jährlich berichten und Emissionsberechtigungen (EUA) abgeben. Für viele Unternehmen ist der EU-ETS I zugleich regulatorisches Pflichtthema und wesentlicher Kostenfaktor.",
-  "FuelCert unterstützt Unternehmen entlang des gesamten ETS-I-Prozesses – von Überwachungsplan und Emissionsbericht über Verifizierung und Unionsregister bis zur EUA-Beschaffung und fristgerechten Abgabe an die DEHSt. Darüber hinaus können Sonderthemen wie nachhaltige Brennstoffe, kostenlose Zuteilung und CBAM relevant sein.",
+  "FuelCert unterstützt Unternehmen entlang des gesamten ETS-I-Prozesses – von Überwachungsplan und Emissionsbericht über Verifizierung und Kontoverwaltung im Unionsregister bis zur EUA-Beschaffung und fristgerechten Abgabe an die DEHSt. Darüber hinaus können Sonderthemen wie nachhaltige Brennstoffe, kostenlose Zuteilung und CBAM relevant sein und von uns ebenfalls unterstützt werden.",
 ] as const;
 
 export const ETS1_INTRO_VISUAL = {
@@ -33,13 +33,12 @@ export const ETS1_SUPPORT = {
     "Datenerfassung und interne Prozesse",
     "Emissionsbericht – Erstellung und Strukturierung",
     "Verifizierung und Begleitung durch die Prüfstelle",
-    "Unionsregister – Prozesse und fachliche Einordnung",
-    "EUA-Beschaffung",
-    "EUA-Abgabe und Übertragung an die DEHSt",
+    "Kontoverwaltung im Unionsregister",
+    "Beschaffung und Abgabe von Emissionsberechtigungen (EUA)",
     "fachliche Klärungen mit der DEHSt",
-    "nachhaltige Brennstoffe und abzugsfähige Anteile",
-    "kostenlose Zuteilung",
-    "CBAM als angrenzendes Thema",
+    "Nachweisführung und Anerkennung der Abzugsfähigkeit nachhaltiger Brennstoffe bzw. deren Anteile",
+    "Abwicklung der kostenlosen Zuteilung",
+    "Unterstützung bei der Berichtserstattung rund um CBAM als angrenzendes Thema",
   ],
 } as const;
 
@@ -108,12 +107,13 @@ export const ETS1_FLOW = {
 
 export const ETS1_RELATED_HEADING = "Weiterführende Themen";
 export const ETS1_RELATED_INTRO =
-  "Vertiefende Einordnungen zu Leistungen und Wissen – für die Umsetzung im EU-ETS I.";
+  "Vertiefende Einordnungen zu Leistungen und weiteren Anwendungsbereichen – für die Umsetzung im EU-ETS I.";
 
 export const ETS1_RELATED_GROUPS = [
   {
     heading: "Leistungen",
     items: [
+      { label: "Pre-Zertifizierung", href: "/leistungen/pre-zertifizierung" },
       { label: "Zertifizierung", href: "/leistungen/zertifizierung-redcert-iscc-certifhy" },
       { label: "Nachweisführung und Registerführung", href: "/leistungen/nachweisfuehrung-und-register" },
       { label: "CO₂- und Quotenhandel", href: "/leistungen/co2-und-quotenhandel" },
@@ -121,14 +121,10 @@ export const ETS1_RELATED_GROUPS = [
     ],
   },
   {
-    heading: "Wissen",
+    heading: "Weitere Anwendungsbereiche",
     items: [
-      { label: "Überwachungsplan im EU-ETS I", href: "/wissen/ueberwachungsplan-im-eu-ets-1" },
-      { label: "Emissionsbericht im EU-ETS I", href: "/wissen/emissionsbericht-im-eu-ets-1" },
-      { label: "Unionsregister im Emissionshandel", href: "/wissen/unionsregister-im-emissionshandel" },
-      { label: "Kostenlose Zuteilung im EU-ETS I", href: "/wissen/kostenlose-zuteilung-im-eu-ets-1" },
-      { label: "CBAM", href: "/wissen/cbam" },
-      { label: "Nachhaltige Brennstoffe im EU-ETS I", href: "/wissen/nachhaltige-brennstoffe-im-eu-ets-1" },
+      { label: "THG-Quote", href: "/anwendungsbereiche/thg-quote" },
+      { label: "nEHS", href: "/anwendungsbereiche/emissionshandel-nehs" },
     ],
   },
 ] as const;

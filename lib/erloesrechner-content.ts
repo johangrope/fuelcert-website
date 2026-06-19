@@ -2,11 +2,11 @@ export const ERLOESRECHNER_SEO = {
   title: "Erlösrechner | FuelCert",
   metaDescription:
     "Schätzen Sie das Erlöspotenzial von grünem Wasserstoff (RFNBO) in der Treibhausgasminderungsquote – interaktiv und auf Basis zentraler Markt- und Regulierungsparameter.",
-  h1: "Erlösrechner",
+  h1: "Erlösrechner RFNBO",
 } as const;
 
 export const ERLOESRECHNER_INTRO = [
-  "Mit diesem Erlösrechner können Sie das potenzielle Erlöspotenzial von grünem, strombasiertem Wasserstoff (RFNBO) in der Treibhausgasminderungsquote (THG-Quote) auf Basis weniger Annahmen abschätzen.",
+  "Mit diesem Erlösrechner können Sie das Erlöspotenzial von grünem, strombasiertem Wasserstoff (RFNBO) in der Treibhausgasminderungsquote (THG-Quote) auf Basis weniger Annahmen abschätzen.",
   "Passen Sie Menge, Emissionsfaktor, Verpflichtungsjahr, Antriebsart und Preisannahmen an – die Ergebnisse aktualisieren sich sofort. Der Rechner dient der ersten Orientierung; eine verbindliche Bewertung erfordert die Einordnung Ihres konkreten Projekts.",
 ] as const;
 
@@ -20,8 +20,8 @@ export const ERLOESRECHNER_ASSUMPTIONS_HEADING = "Annahmen und Hinweise";
 export const ERLOESRECHNER_ASSUMPTIONS = [
   "Zugrunde liegen ein fossiler Referenzwert von 94 gCO₂/MJ, ein Heizwert von 120 MJ/kg H₂ sowie die jährliche THG-Quote und der jeweilige Jahresfaktor gemäß dem geltenden Regulierungsrahmen.",
   "Für Brennstoffzellenfahrzeuge wird ein Effizienzfaktor von 0,4 angesetzt; die RFNBO-Unterquote wird unabhängig von der gewählten Antriebsart berechnet.",
-  "Die Ergebnisse sind indikativ. Tatsächliche Marktpreise, Nachweisführung, Zertifizierung und projektspezifische Regulatorik können die real erzielbaren Erlöse abweichen lassen.",
-  "FuelCert unterstützt Sie bei der detaillierten Bewertung von Erlöspotenzialen, Zertifizierung, Nachweisführung und der Umsetzung im THG-Quotensystem.",
+  "Die Ergebnisse sind indikativ. Die real erzielbaren Erlöse können aufgrund tatsächlicher Marktpreise abweichen.",
+  "FuelCert unterstützt Sie bei der detaillierten Bewertung von Erlöspotenzialen, im Zertifizierungsprozess, der Nachweisführung und bei der Umsetzung im THG-Quotensystem.",
 ] as const;
 
 export const ERLOESRECHNER_CTA = {

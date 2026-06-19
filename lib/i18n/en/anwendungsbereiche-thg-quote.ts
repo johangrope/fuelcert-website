@@ -179,8 +179,18 @@ export const THG_QUOTE_TABLE_COLUMNS = [
     suffix: "%" as const,
   },
   { key: "foodFeedCap" as const, label: "Cap on 1G biofuels", suffix: "%" as const },
+  {
+    key: "wasteBiofuelCap" as const,
+    label: "Cap on waste-based biofuels (Annex 4)",
+    suffix: "%" as const,
+  },
   { key: "rfnboFactor" as const, label: "RFNBO crediting factor", suffix: "×" as const },
   { key: "electricityFactor" as const, label: "Electricity crediting factor (e-mobility)", suffix: "×" as const },
+  {
+    key: "m3n3ElectricityFactor" as const,
+    label: "Electricity crediting factor (vehicle classes M3 and N3)",
+    suffix: "×" as const,
+  },
 ] as const;
 
 export const THG_QUOTE_RELATED_HEADING = "Related topics";
@@ -191,6 +201,7 @@ export const THG_QUOTE_RELATED_GROUPS = [
   {
     heading: "Services",
     items: [
+      { label: "Pre-certification", href: "/leistungen/pre-zertifizierung" },
       { label: "Certification under REDcert, ISCC EU or CertifHy", href: "/leistungen/zertifizierung-redcert-iscc-certifhy" },
       { label: "Proof management and register operations", href: "/leistungen/nachweisfuehrung-und-register" },
       { label: "CO₂ and quota trading", href: "/leistungen/co2-und-quotenhandel" },
@@ -198,12 +209,10 @@ export const THG_QUOTE_RELATED_GROUPS = [
     ],
   },
   {
-    heading: "Knowledge",
+    heading: "Further application areas",
     items: [
-      { label: "RFNBO certification", href: "/wissen/rfnbo-zertifizierung" },
-      { label: "GHG and mass balance", href: "/wissen/thg-und-massenbilanz" },
-      { label: "REDcert, ISCC EU and CertifHy compared", href: "/wissen/redcert-iscc-certifhy-unterschiede" },
-      { label: "UDB, Nabisy and register operations", href: "/wissen/udb-nabisy-und-registerfuehrung" },
+      { label: "EU ETS I", href: "/anwendungsbereiche/emissionshandel-ets-1" },
+      { label: "nEHS", href: "/anwendungsbereiche/emissionshandel-nehs" },
     ],
   },
 ] as const;

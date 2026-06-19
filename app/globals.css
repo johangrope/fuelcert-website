@@ -2499,7 +2499,7 @@ img {
 
 .regulatory-table__table {
   width: 100%;
-  min-width: 52rem;
+  min-width: 68rem;
   border-collapse: collapse;
   font-size: 0.86rem;
 }
@@ -2925,6 +2925,8 @@ img {
   font-size: 0.92rem;
   font-weight: 700;
   color: var(--color-teal);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
 }
 
 .application-cta__actions {

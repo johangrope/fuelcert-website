@@ -7,25 +7,25 @@ export const UEBER_UNS_SEO = {
 
 export const UEBER_UNS_INTRO = [
   "FuelCert unterstützt Unternehmen bei der Zertifizierung, Nachweisführung und regulatorischen Umsetzung im Bereich erneuerbarer Kraft- und Brennstoffe. Wir begleiten Projekte rund um Biokraftstoffe, Biobrennstoffe, Biomethan, Bio-LNG, RFNBO, grünen Wasserstoff, Wasserstoffderivate und E-Fuels – von der ersten Einordnung über Bilanzierung und Dokumentation bis zur laufenden Umsetzung gegenüber Prüfstellen, Registern und Behörden.",
-  "Dabei verbinden wir regulatorische Tiefe mit praktischem Marktverständnis. Unsere Erfahrung aus mehr als 20 Jahren in den Bereichen Regulierung, Märkte und operative Umsetzung erneuerbarer Kraft- und Brennstoffe hilft unseren Kunden, komplexe Anforderungen effizient, prüfsicher und praxistauglich zu bewältigen.",
+  "Dabei verbinden wir regulatorische Tiefe mit praktischem Marktverständnis. Unsere Erfahrung aus mehr als 15 Jahren in den Bereichen Regulierung, Märkte und operative Umsetzung erneuerbarer Kraft- und Brennstoffe hilft unseren Kunden, komplexe Anforderungen effizient, prüfsicher und praxistauglich zu bewältigen.",
 ] as const;
 
 export const UEBER_UNS_HIGHLIGHTS = [
   {
-    title: "Regulatorische und marktbezogene Erfahrung",
-    text: "FuelCert vereint langjährige Erfahrung in der Regulatorik und in den Märkten für erneuerbare Kraft- und Brennstoffe. Wir kennen nicht nur die formalen Anforderungen, sondern auch die praktischen Herausforderungen in der Umsetzung.",
+    title: "Compliance, die sich rechnet",
+    text: "FuelCert verbindet regulatorische Expertise mit echter Markterfahrung für erneuerbare Kraft- und Brennstoffe. Wir wissen, welche regulatorischen Stellschrauben sich tatsächlich in wirtschaftliche Vorteile übersetzen lassen – statt Compliance nur als Pflichtübung zu behandeln.",
   },
   {
-    title: "Praxisnah statt starr",
-    text: "Nicht der Kunde muss sich unseren Tools oder Prozessen anpassen – wir richten unsere Unterstützung an den tatsächlichen Anforderungen, Datenstrukturen und Abläufen im Unternehmen aus.",
+    title: "Eure Prozesse, nicht unsere Schablone",
+    text: "Kein Standardtool, dem sich der Kunde unterwerfen muss. Wir bauen unsere Unterstützung um eure Daten, Strukturen und Abläufe – nicht umgekehrt.",
   },
   {
-    title: "Effizient und prüfsicher",
-    text: "Unsere Lösungen sollen im Alltag funktionieren und gleichzeitig regulatorisch und auditseitig belastbar sein. Ziel ist eine Umsetzung, die den Aufwand auf Kundenseite möglichst gering hält und dennoch verlässlich prüfbar bleibt.",
+    title: "Sorglos im Alltag, hart im Audit",
+    text: "Unsere Lösungen sind so gebaut, dass sie im Tagesgeschäft kaum auffallen – und genau dann ihre Stärke zeigen, wenn es zählt: im Audit. Minimaler Aufwand auf Kundenseite, maximale Sicherheit bei der Prüfung.",
   },
   {
-    title: "Fachlich fundiert, operativ umsetzbar",
-    text: "Wir denken regulatorische Anforderungen nicht isoliert, sondern im Zusammenhang mit Datenverfügbarkeit, internen Zuständigkeiten, Registerprozessen, Vermarktung und Berichtspflichten.",
+    title: "Das große Bild im Blick",
+    text: "Regulatorik existiert nicht im Vakuum. Wir denken Datenverfügbarkeit, Zuständigkeiten, Register und Vermarktung von Anfang an mit.",
   },
 ] as const;
 

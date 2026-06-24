@@ -9,7 +9,6 @@ import fuelcertLogo from "@/assets/fuelcert-logo.png";
 import { buildMainNavLinks, buildNavDropdowns, type NavMessageKey } from "@/lib/i18n/nav";
 import { isNavSectionActive } from "@/lib/site-navigation";
 import type { NavDropdownConfig } from "@/lib/types";
-import { WebinarAnnouncementBar } from "./WebinarAnnouncementBar";
 
 const MQ_MAX_MOBILE = "(max-width: 960px)";
 
@@ -80,7 +79,6 @@ export function SiteHeader() {
 
   return (
     <div className="site-header-stack">
-      <WebinarAnnouncementBar />
       <header className={`header${menuOpen ? " is-open" : ""}`}>
       <div className="header__inner container">
         <Link href="/" className="logo" onClick={() => mobile && closeMobileNav()}>

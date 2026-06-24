@@ -80,7 +80,7 @@ const messages = {
     imprint: "Imprint",
     privacy: "Privacy",
     bookCall: "Book initial consultation",
-    copyright: "Copyright © 2025 FuelCert Sailer & Grope GbR",
+    copyright: "Copyright © 2026 FuelCert Sailer & Grope GbR",
     company: "FuelCert Sailer & Grope GbR",
     addressLine1: "Bismarckstraße 65",
     addressLine2: "10627 Berlin",

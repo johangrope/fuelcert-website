@@ -166,7 +166,17 @@ export const DATENSCHUTZ_SECTIONS: readonly DatenschutzSection[] = [
     ],
   },
   {
-    heading: "6) FontAwesome",
+    heading: "6) Kunden-Datenraum / Nextcloud",
+    paragraphs: [
+      "Für den sicheren Austausch von Projektunterlagen, Nachweisen, Bilanzierungsdateien, Ergebnisdateien und sonstigen auftragsbezogenen Dokumenten stellen wir unseren Kunden einen geschützten Datenraum auf Basis von Nextcloud bereit. Der Datenraum ist unter https://cloud.fuelcert.com erreichbar.",
+      "Der Betrieb erfolgt durch die hosting.de GmbH, Franzstraße 51, 52064 Aachen, Deutschland, als Auftragsverarbeiter. Mit hosting.de besteht eine Vereinbarung zur Auftragsverarbeitung gemäß Art. 28 DSGVO. Die Verarbeitung erfolgt nach Maßgabe dieser Vereinbarung grundsätzlich innerhalb der EU bzw. des EWR.",
+      "Im Kunden-Datenraum können insbesondere Kontaktdaten, Projekt- und Vertragsdaten, technische Unterlagen, Zertifizierungs- und Nachweisdokumente, Bilanzierungs- und Berechnungsdateien sowie Ergebnisdateien verarbeitet werden. Die Nutzung erfolgt projektbezogen über geschützte Upload- bzw. Download-Links oder über persönliche Benutzerzugänge. Freigaben können mit Passwortschutz, Ablaufdatum und beschränkten Berechtigungen versehen werden.",
+      "Die Verarbeitung erfolgt zur Durchführung unserer Leistungen und zur sicheren Organisation der Projektbearbeitung. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, soweit die Verarbeitung zur Vertragserfüllung oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. Soweit die Verarbeitung der sicheren, nachvollziehbaren und effizienten Projektorganisation dient, erfolgt sie auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.",
+      "Die im Kunden-Datenraum gespeicherten Daten werden gelöscht, sobald sie für die jeweilige Projektbearbeitung nicht mehr erforderlich sind und keine gesetzlichen Aufbewahrungspflichten oder berechtigten Dokumentationsinteressen entgegenstehen.",
+    ],
+  },
+  {
+    heading: "7) FontAwesome",
     paragraphs: [
       "Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten sogenannte Web Fonts von „FontAwesome“, einem Dienst der Fonticons, Inc., 710 Blackhorn Dr, Carl Junction, 64834, MO, USA („FontAwesome“). Beim Aufruf einer Seite lädt Ihr Browser die benötigten Web Fonts in ihren Browser-Cache, um Texte und Schriftarten korrekt anzuzeigen.",
       "Zu diesem Zweck muss der von Ihnen verwendete Browser Verbindung zu den Servern von FontAwesome aufnehmen. Hierbei kann es auch zu einer Übermittlung von personenbezogenen Daten an die Server von FontAwesome in den USA kommen. Auf diese Weise erlangt FontAwesome Kenntnis darüber, dass über Ihre IP-Adresse unsere Website aufgerufen wurde. Die Nutzung von FontAwesome Fonts erfolgt im Interesse einer einheitlichen und ansprechenden Darstellung unserer Online-Angebote. Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar. Wenn Ihr Browser Web Fonts nicht unterstützt, wird eine Standardschrift von Ihrem Computer genutzt.",
@@ -179,7 +189,7 @@ export const DATENSCHUTZ_SECTIONS: readonly DatenschutzSection[] = [
     ],
   },
   {
-    heading: "7) Google Web Fonts",
+    heading: "8) Google Web Fonts",
     paragraphs: [
       "Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so genannte Web Fonts, die von der Google Ireland Limited, Gordon House, 4 Barrow St, Dublin, D04 E5W5, Irland („Google“) bereitgestellt werden. Mithilfe von Google Web Fonts können wir externe Schriftarten auf unserer Website laden und darstellen. Google Web Fonts ist auf unserer Seite lokal eingebunden. Dies bedeutet, dass die Schriftarten nicht von Google-Servern geladen werden.",
       "Im Rahmen der Verarbeitung über Google Web Fonts werden folgende personenbezogene Daten erhoben und verarbeitet:",
@@ -204,7 +214,7 @@ export const DATENSCHUTZ_SECTIONS: readonly DatenschutzSection[] = [
     ],
   },
   {
-    heading: "8) Google Kundenrezensionen",
+    heading: "9) Google Kundenrezensionen",
     paragraphs: [
       "(ehemals Google Zertifizierter-Händler-Programm)",
       "Wir arbeiten mit Google im Rahmen des Programms „Google Kundenrezensionen“ zusammen. Der Anbieter ist Google Ireland Limited, Gordon House, 4 Barrow St, Dublin, D04 E5W5, Irland („Google“). Dieses Programm gibt uns die Möglichkeit, Kundenrezensionen von Nutzern unserer Website einzuholen. Hierbei werden Sie nach einem Einkauf auf unserer Website gefragt, ob Sie an einer E-Mail-Umfrage von Google teilnehmen möchten. Wenn Sie Ihre Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO erteilen, übermitteln wir Ihre E-Mail-Adresse an Google. Sie erhalten eine E-Mail von Google Kundenrezensionen, in der Sie gebeten werden, die Kauferfahrung auf unserer Website zu bewerten. Die von Ihnen abgegebene Bewertung wird anschließend mit unseren anderen Bewertungen zusammengefasst und in unserem Logo Google Kundenrezensionen sowie in unserem Merchant Center-Dashboard angezeigt. Außerdem wird Ihre Bewertung für Google Verkäuferbewertungen genutzt. Im Rahmen der Nutzung von Google Kundenrezensionen kann es auch zu einer Übermittlung von personenbezogenen Daten an die Server der Google LLC. in den USA kommen.",
@@ -222,10 +232,10 @@ export const DATENSCHUTZ_SECTIONS: readonly DatenschutzSection[] = [
     ],
   },
   {
-    heading: "9) Rechte des Betroffenen",
+    heading: "10) Rechte des Betroffenen",
     subsections: [
       {
-        heading: "9.1",
+        heading: "10.1",
         paragraphs: [
           "Das geltende Datenschutzrecht gewährt Ihnen gegenüber dem Verantwortlichen hinsichtlich der Verarbeitung Ihrer personenbezogenen Daten umfassende Betroffenenrechte (Auskunfts- und Interventionsrechte), über die wir Sie nachstehend informieren:",
         ],
@@ -240,7 +250,7 @@ export const DATENSCHUTZ_SECTIONS: readonly DatenschutzSection[] = [
         ],
       },
       {
-        heading: "9.2 Widerspruchsrecht",
+        heading: "10.2 Widerspruchsrecht",
         paragraphs: [
           "Wenn wir im Rahmen einer Interessenabwägung Ihre personenbezogenen Daten aufgrund unseres überwiegenden berechtigten Interesses verarbeiten, haben Sie das jederzeitige Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, gegen diese Verarbeitung Widerspruch mit Wirkung für die Zukunft einzulegen.",
           "Machen Sie von Ihrem Widerspruchsrecht Gebrauch, beenden wir die Verarbeitung der betroffenen Daten. Eine Weiterverarbeitung bleibt aber vorbehalten, wenn wir zwingende schutzwürdige Gründe für die Verarbeitung nachweisen können, die Ihre Interessen, Grundrechte und Grundfreiheiten überwiegen, oder wenn die Verarbeitung der Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen dient.",
@@ -251,7 +261,7 @@ export const DATENSCHUTZ_SECTIONS: readonly DatenschutzSection[] = [
     ],
   },
   {
-    heading: "10) Dauer der Speicherung personenbezogener Daten",
+    heading: "11) Dauer der Speicherung personenbezogener Daten",
     paragraphs: [
       "Die Dauer der Speicherung von personenbezogenen Daten bemisst sich anhand der jeweiligen Rechtsgrundlage, am Verarbeitungszweck und – sofern einschlägig – zusätzlich anhand der jeweiligen gesetzlichen Aufbewahrungsfrist (z.B. handels- und steuerrechtliche Aufbewahrungsfristen).",
       "Bei der Verarbeitung von personenbezogenen Daten auf Grundlage einer ausdrücklichen Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO werden diese Daten so lange gespeichert, bis der Betroffene seine Einwilligung widerruft.",

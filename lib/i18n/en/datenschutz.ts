@@ -16,4 +16,4 @@ export const DATENSCHUTZ_SEO_EN = {
 } as const;
 
 export const DATENSCHUTZ_UPDATED_EN =
-  "This privacy policy was last updated on 13 June 2026. The legally binding version is currently available in German.";
+  "This privacy policy was last updated on 25 May 2026. The legally binding version is currently available in German.";

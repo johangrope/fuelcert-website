@@ -7,7 +7,7 @@ export const DATENSCHUTZ_SEO = {
   h1: "Datenschutz",
 } as const;
 
-export const DATENSCHUTZ_UPDATED = "Diese Datenschutzerklärung wurde zuletzt am 13.06.2026 aktualisiert.";
+export const DATENSCHUTZ_UPDATED = "Diese Datenschutzerklärung wurde zuletzt am 25.05.2026 aktualisiert.";
 
 export type DatenschutzLink = {
   label: string;
@@ -74,46 +74,17 @@ export const DATENSCHUTZ_SECTIONS: readonly DatenschutzSection[] = [
     ],
   },
   {
-    heading: "3) Cookies",
+    heading: "3) Cookies und ähnliche Technologien",
     paragraphs: [
-      "Um den Besuch unserer Website attraktiv zu gestalten und die Nutzung bestimmter Funktionen zu ermöglichen, verwenden wir auf verschiedenen Seiten sogenannte Cookies. Hierbei handelt es sich um kleine Textdateien, die auf Ihrem Endgerät abgelegt werden. Einige der von uns verwendeten Cookies werden nach dem Ende der Browser-Sitzung, also nach Schließen Ihres Browsers, wieder gelöscht (sog. Sitzungs-Cookies). Andere Cookies verbleiben auf Ihrem Endgerät und ermöglichen, Ihren Browser beim nächsten Besuch wiederzuerkennen (sog. persistente Cookies). Werden Cookies gesetzt, erheben und verarbeiten diese im individuellen Umfang bestimmte Nutzerinformationen wie Browser- und Standortdaten sowie IP-Adresswerte. Persistente Cookies werden automatisiert nach einer vorgegebenen Dauer gelöscht, die sich je nach Cookie unterscheiden kann. Die Dauer der jeweiligen Cookie-Speicherung können Sie der Übersicht zu den Cookie-Einstellungen Ihres Webbrowsers entnehmen.",
-      "Teilweise dienen die Cookies dazu, durch Speicherung von Einstellungen den Bestellprozess zu vereinfachen (z.B. Merken des Inhalts eines virtuellen Warenkorbs für einen späteren Besuch auf der Website). Sofern durch einzelne von uns eingesetzte Cookies auch personenbezogene Daten verarbeitet werden, erfolgt die Verarbeitung gemäß Art. 6 Abs. 1 lit. b DSGVO entweder zur Durchführung des Vertrages, gemäß Art. 6 Abs. 1 lit. a DSGVO im Falle einer erteilten Einwilligung oder gemäß Art. 6 Abs. 1 lit. f DSGVO zur Wahrung unserer berechtigten Interessen an der bestmöglichen Funktionalität der Website sowie einer kundenfreundlichen und effektiven Ausgestaltung des Seitenbesuchs.",
-      "Bitte beachten Sie, dass Sie Ihren Browser so einstellen können, dass Sie über das Setzen von Cookies informiert werden und einzeln über deren Annahme entscheiden oder die Annahme von Cookies für bestimmte Fälle oder generell ausschließen können. Jeder Browser unterscheidet sich in der Art, wie er die Cookie-Einstellungen verwaltet. Diese ist in dem Hilfemenü jedes Browsers beschrieben, welches Ihnen erläutert, wie Sie Ihre Cookie-Einstellungen ändern können. Diese finden Sie für die jeweiligen Browser unter den folgenden Links:",
-    ],
-    links: [
-      {
-        label: "Internet Explorer",
-        href: "https://support.microsoft.com/de-de/help/17442/windows-internet-explorer-delete-manage-cookies",
-      },
-      {
-        label: "Firefox",
-        href: "https://support.mozilla.org/de/kb/cookies-erlauben-und-ablehnen",
-      },
-      {
-        label: "Chrome",
-        href: "https://support.google.com/chrome/answer/95647?hl=de&hlrm=en",
-      },
-      {
-        label: "Safari",
-        href: "https://support.apple.com/de-de/guide/safari/sfri11471/mac",
-      },
-      {
-        label: "Opera",
-        href: "https://help.opera.com/de/latest/web-preferences/#cookies",
-      },
-    ],
-    subsections: [
-      {
-        paragraphs: [
-          "Bitte beachten Sie, dass bei Nichtannahme von Cookies die Funktionalität unserer Website eingeschränkt sein kann.",
-        ],
-      },
+      "Diese Website setzt keine Cookies zu Analyse-, Marketing- oder Trackingzwecken ein. Wir verwenden keine Dienste wie Google Analytics, Google Tag Manager, Meta Pixel, LinkedIn Insight Tags, HubSpot, Plausible, Matomo, Vercel Analytics oder vergleichbare Tracking-Tools.",
+      "Beim rein informatorischen Besuch unserer Website werden durch uns keine persistenten Cookies oder vergleichbare lokale Speichertechnologien (z. B. Local Storage zu Trackingzwecken) eingesetzt. Auf unserer Website sind keine eingebetteten Inhalte Dritter (z. B. YouTube-Videos, Google Maps, iFrames) eingebunden.",
+      "Wenn Sie über Links auf unserer Website externe Angebote aufrufen (z. B. Microsoft Bookings zur Terminbuchung oder LinkedIn-Profilseiten unseres Teams), können die jeweiligen Anbieter auf deren Websites eigene Cookies setzen. Darauf haben wir keinen Einfluss. Informationen dazu finden Sie in den Datenschutzhinweisen der jeweiligen Anbieter.",
     ],
   },
   {
     heading: "4) Kontaktaufnahme",
     paragraphs: [
-      "Im Rahmen der Kontaktaufnahme mit uns (z.B. per Kontaktformular oder E-Mail) werden personenbezogene Daten erhoben. Welche Daten im Falle eines Kontaktformulars erhoben werden, ist aus dem jeweiligen Kontaktformular ersichtlich. Diese Daten werden ausschließlich zum Zweck einer Terminbuchung, der Beantwortung Ihres Anliegens bzw. für die Kontaktaufnahme und die damit verbundene technische Administration gespeichert und verwendet. Rechtsgrundlage für die Verarbeitung dieser Daten ist unser berechtigtes Interesse an der Beantwortung Ihres Anliegens gemäß Art. 6 Abs. 1 lit. f DSGVO. Zielt Ihre Kontaktierung auf den Abschluss eines Vertrages ab, so ist zusätzliche Rechtsgrundlage für die Verarbeitung Art. 6 Abs. 1 lit. b DSGVO. Ihre Daten werden nach abschließender Bearbeitung Ihrer Anfrage gelöscht. Dies ist der Fall, wenn sich aus den Umständen entnehmen lässt, dass der betroffene Sachverhalt abschließend geklärt ist und sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.",
+      "Im Rahmen der Kontaktaufnahme mit uns (z. B. per E-Mail oder Telefon) werden personenbezogene Daten erhoben, soweit Sie uns diese mitteilen (z. B. Name, E-Mail-Adresse, Telefonnummer und Inhalt Ihrer Nachricht). Diese Daten werden ausschließlich zum Zweck der Beantwortung Ihres Anliegens bzw. für die Kontaktaufnahme und die damit verbundene technische Administration gespeichert und verwendet. Rechtsgrundlage für die Verarbeitung dieser Daten ist unser berechtigtes Interesse an der Beantwortung Ihres Anliegens gemäß Art. 6 Abs. 1 lit. f DSGVO. Zielt Ihre Kontaktierung auf den Abschluss eines Vertrages ab, so ist zusätzliche Rechtsgrundlage für die Verarbeitung Art. 6 Abs. 1 lit. b DSGVO. Ihre Daten werden nach abschließender Bearbeitung Ihrer Anfrage gelöscht. Dies ist der Fall, wenn sich aus den Umständen entnehmen lässt, dass der betroffene Sachverhalt abschließend geklärt ist und sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.",
     ],
   },
   {
@@ -147,7 +118,7 @@ export const DATENSCHUTZ_SECTIONS: readonly DatenschutzSection[] = [
       {
         heading: "Terminbuchung über Microsoft Bookings",
         paragraphs: [
-          "Zur Vereinfachung der Terminbuchung für Erstgespräche nutzen wir den Online-Buchungsdienst „Microsoft Bookings“, einen Bestandteil von Microsoft 365. Anbieter ist die Microsoft Ireland Operations Limited, One Microsoft Place, South County Business Park, Leopardstown, Dublin 18, D18 P521, Irland (im Folgenden „Microsoft“).",
+          "Zur Vereinfachung der Terminbuchung für Erstgespräche verlinken wir auf den Online-Buchungsdienst „Microsoft Bookings“, einen Bestandteil von Microsoft 365. Die Buchung erfolgt auf einer von Microsoft bereitgestellten Seite; auf unserer Website ist kein eingebettetes Buchungswidget eingebunden. Anbieter ist die Microsoft Ireland Operations Limited, One Microsoft Place, South County Business Park, Leopardstown, Dublin 18, D18 P521, Irland (im Folgenden „Microsoft“).",
           "Bei der Buchung eines Termins über Microsoft Bookings werden personenbezogene Daten wie Name, E-Mail-Adresse, ggf. Telefonnummer sowie Termininformationen erhoben und verarbeitet. Die Datenverarbeitung erfolgt zur Bearbeitung der Terminbuchung, zur Terminbestätigung sowie zur Vorbereitung und Durchführung des Erstgesprächs (z. B. Versand einer Kalendereinladung per Microsoft Teams).",
           "Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. b DSGVO. Microsoft handelt in diesem Zusammenhang als Auftragsverarbeiter; es besteht ein Vertrag zur Auftragsverarbeitung gemäß Art. 28 DSGVO auf Grundlage der von Microsoft bereitgestellten Standardvertragsklauseln bzw. des Microsoft-Produkte-und-Dienste-Datenschutz-Addendums (DPA).",
           "Im Rahmen der Nutzung von Microsoft Bookings kann es auch zu einer Übermittlung personenbezogener Daten an Server der Microsoft Corporation in den USA kommen. Microsoft stellt hierfür geeignete Garantien im Sinne von Art. 46 DSGVO bereit.",
@@ -176,66 +147,36 @@ export const DATENSCHUTZ_SECTIONS: readonly DatenschutzSection[] = [
     ],
   },
   {
-    heading: "7) FontAwesome",
+    heading: "7) Links zu externen Websites",
     paragraphs: [
-      "Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten sogenannte Web Fonts von „FontAwesome“, einem Dienst der Fonticons, Inc., 710 Blackhorn Dr, Carl Junction, 64834, MO, USA („FontAwesome“). Beim Aufruf einer Seite lädt Ihr Browser die benötigten Web Fonts in ihren Browser-Cache, um Texte und Schriftarten korrekt anzuzeigen.",
-      "Zu diesem Zweck muss der von Ihnen verwendete Browser Verbindung zu den Servern von FontAwesome aufnehmen. Hierbei kann es auch zu einer Übermittlung von personenbezogenen Daten an die Server von FontAwesome in den USA kommen. Auf diese Weise erlangt FontAwesome Kenntnis darüber, dass über Ihre IP-Adresse unsere Website aufgerufen wurde. Die Nutzung von FontAwesome Fonts erfolgt im Interesse einer einheitlichen und ansprechenden Darstellung unserer Online-Angebote. Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar. Wenn Ihr Browser Web Fonts nicht unterstützt, wird eine Standardschrift von Ihrem Computer genutzt.",
+      "Unsere Website enthält Links zu Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Dies betrifft insbesondere die Online-Terminbuchung über Microsoft Bookings (siehe Abschnitt 5) sowie LinkedIn-Profilseiten unserer Teammitglieder auf der Seite „Über uns“.",
+      "Beim Anklicken solcher Links verlassen Sie unsere Website. Für die Datenverarbeitung auf den Zielseiten ist allein der jeweilige Anbieter verantwortlich. Es werden keine LinkedIn-Tracking-Pixel oder vergleichbare Analyse-Tools auf unserer Website eingesetzt.",
     ],
     links: [
       {
-        label: "Weitere Informationen zu FontAwesome",
-        href: "https://fontawesome.com/privacy",
+        label: "Datenschutzerklärung von LinkedIn",
+        href: "https://de.linkedin.com/legal/privacy-policy",
       },
     ],
   },
   {
-    heading: "8) Google Web Fonts",
+    heading: "8) Schriftarten",
     paragraphs: [
-      "Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so genannte Web Fonts, die von der Google Ireland Limited, Gordon House, 4 Barrow St, Dublin, D04 E5W5, Irland („Google“) bereitgestellt werden. Mithilfe von Google Web Fonts können wir externe Schriftarten auf unserer Website laden und darstellen. Google Web Fonts ist auf unserer Seite lokal eingebunden. Dies bedeutet, dass die Schriftarten nicht von Google-Servern geladen werden.",
-      "Im Rahmen der Verarbeitung über Google Web Fonts werden folgende personenbezogene Daten erhoben und verarbeitet:",
-    ],
-    bullets: ["IP-Adresse"],
-    subsections: [
-      {
-        paragraphs: [
-          "Die Nutzung von Google Web Fonts erfolgt im Interesse einer einheitlichen und ansprechenden Darstellung unserer Online-Angebote. Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar. Durch das lokale Hosting ist sichergestellt, dass keine Daten an Google übermittelt werden, ein entsprechender Datentransfer findet nicht statt.",
-        ],
-      },
+      "Zur einheitlichen Darstellung nutzen wir die Schriftart „Inter“. Diese wird über das Framework Next.js (next/font) beim Erstellen der Website aus dem Angebot von Google Fonts bezogen und anschließend auf unserem Webserver lokal ausgeliefert.",
+      "Beim Besuch unserer Website werden durch diese Schriftart-Einbindung keine Verbindungen zu Servern von Google hergestellt und keine personenbezogenen Daten an Google übermittelt. Symbole und Icons auf der Website werden als eingebettete SVG-Grafiken ausgeliefert; es wird kein externer Icon-Dienst (z. B. FontAwesome) eingebunden.",
     ],
     links: [
       {
-        label: "Google Web Fonts FAQ",
+        label: "Google Fonts FAQ",
         href: "https://developers.google.com/fonts/faq",
       },
-      {
-        label: "Datenschutzerklärung von Google",
-        href: "https://www.google.com/policies/privacy/",
-      },
     ],
   },
   {
-    heading: "9) Google Kundenrezensionen",
-    paragraphs: [
-      "(ehemals Google Zertifizierter-Händler-Programm)",
-      "Wir arbeiten mit Google im Rahmen des Programms „Google Kundenrezensionen“ zusammen. Der Anbieter ist Google Ireland Limited, Gordon House, 4 Barrow St, Dublin, D04 E5W5, Irland („Google“). Dieses Programm gibt uns die Möglichkeit, Kundenrezensionen von Nutzern unserer Website einzuholen. Hierbei werden Sie nach einem Einkauf auf unserer Website gefragt, ob Sie an einer E-Mail-Umfrage von Google teilnehmen möchten. Wenn Sie Ihre Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO erteilen, übermitteln wir Ihre E-Mail-Adresse an Google. Sie erhalten eine E-Mail von Google Kundenrezensionen, in der Sie gebeten werden, die Kauferfahrung auf unserer Website zu bewerten. Die von Ihnen abgegebene Bewertung wird anschließend mit unseren anderen Bewertungen zusammengefasst und in unserem Logo Google Kundenrezensionen sowie in unserem Merchant Center-Dashboard angezeigt. Außerdem wird Ihre Bewertung für Google Verkäuferbewertungen genutzt. Im Rahmen der Nutzung von Google Kundenrezensionen kann es auch zu einer Übermittlung von personenbezogenen Daten an die Server der Google LLC. in den USA kommen.",
-      "Sie können Ihre Einwilligung jederzeit durch eine Nachricht an den für die Datenverarbeitung Verantwortlichen oder gegenüber Google widerrufen.",
-    ],
-    links: [
-      {
-        label: "Datenschutz – Google Kundenrezensionen",
-        href: "https://support.google.com/merchants/answer/7188525?hl=de",
-      },
-      {
-        label: "Datenschutz – Google Verkäuferbewertungen",
-        href: "https://support.google.com/google-ads/answer/2375474",
-      },
-    ],
-  },
-  {
-    heading: "10) Rechte des Betroffenen",
+    heading: "9) Rechte des Betroffenen",
     subsections: [
       {
-        heading: "10.1",
+        heading: "9.1",
         paragraphs: [
           "Das geltende Datenschutzrecht gewährt Ihnen gegenüber dem Verantwortlichen hinsichtlich der Verarbeitung Ihrer personenbezogenen Daten umfassende Betroffenenrechte (Auskunfts- und Interventionsrechte), über die wir Sie nachstehend informieren:",
         ],
@@ -250,7 +191,7 @@ export const DATENSCHUTZ_SECTIONS: readonly DatenschutzSection[] = [
         ],
       },
       {
-        heading: "10.2 Widerspruchsrecht",
+        heading: "9.2 Widerspruchsrecht",
         paragraphs: [
           "Wenn wir im Rahmen einer Interessenabwägung Ihre personenbezogenen Daten aufgrund unseres überwiegenden berechtigten Interesses verarbeiten, haben Sie das jederzeitige Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, gegen diese Verarbeitung Widerspruch mit Wirkung für die Zukunft einzulegen.",
           "Machen Sie von Ihrem Widerspruchsrecht Gebrauch, beenden wir die Verarbeitung der betroffenen Daten. Eine Weiterverarbeitung bleibt aber vorbehalten, wenn wir zwingende schutzwürdige Gründe für die Verarbeitung nachweisen können, die Ihre Interessen, Grundrechte und Grundfreiheiten überwiegen, oder wenn die Verarbeitung der Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen dient.",
@@ -261,7 +202,7 @@ export const DATENSCHUTZ_SECTIONS: readonly DatenschutzSection[] = [
     ],
   },
   {
-    heading: "11) Dauer der Speicherung personenbezogener Daten",
+    heading: "10) Dauer der Speicherung personenbezogener Daten",
     paragraphs: [
       "Die Dauer der Speicherung von personenbezogenen Daten bemisst sich anhand der jeweiligen Rechtsgrundlage, am Verarbeitungszweck und – sofern einschlägig – zusätzlich anhand der jeweiligen gesetzlichen Aufbewahrungsfrist (z.B. handels- und steuerrechtliche Aufbewahrungsfristen).",
       "Bei der Verarbeitung von personenbezogenen Daten auf Grundlage einer ausdrücklichen Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO werden diese Daten so lange gespeichert, bis der Betroffene seine Einwilligung widerruft.",

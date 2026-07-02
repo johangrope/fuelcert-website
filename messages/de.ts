@@ -86,7 +86,8 @@ const messages = {
     contact: "Kontakt",
     services: "Leistungen",
     applications: "Anwendungsbereiche",
-    knowledge: "Wissen",
+    knowledge: "Wissen & News",
+    news: "News",
     regulatoryAreas: "Regulatorische Bereiche",
     productAreas: "Produktbezogene Bereiche",
     preCertification: "Pre-Zertifizierung",
@@ -135,7 +136,7 @@ const messages = {
     servicesIntro:
       "Je nachdem, wo Sie sich als unser Kunde entlang der Wertschöpfungskette einordnen und wie intensiv Sie in regulatorischen Prozessen unterstützt werden möchten, bietet FuelCert passgenaue Dienstleistungen an. So können Zertifizierung, Nachweisführung, Berichterstattung, Meldeprozesse und Handelsaktivitäten effizient, prüfsicher und mit möglichst geringem internem Aufwand umgesetzt werden.",
     testimonialsTitle: "Ausgewählte Kundenstimmen",
-    testimonialsIntroPrefix: "Mehr auf ",
+    testimonialsIntroPrefix: "Mehr Kundenstimmen auf ",
     testimonialsIntroLink: "Über uns",
     testimonialsIntroSuffix: ".",
     referencesIntro: "Diese Kunden und Partner setzen bereits auf FuelCert.",

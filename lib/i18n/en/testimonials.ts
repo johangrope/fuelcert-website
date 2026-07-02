@@ -45,6 +45,13 @@ export const TESTIMONIALS_EN: Record<TestimonialId, TestimonialCopy> = {
     role: "Managing director of WUN H2 GmbH and Rießner-Gase GmbH",
     portraitAlt: "Portrait of Dr Thilo Rießner",
   },
+  horst: {
+    quote:
+      "Despite being commissioned at very short notice, FuelCert calculated the emissions value for our electrolyser in accordance with the delegated act for RFNBOs. The balance was prepared professionally and on time and gave us a robust figure. This allowed us to meet our deadlines without any problems.",
+    name: "Patrick Horst",
+    role: "Manager Site Development & Cooperation, GP JOULE Hydrogen GmbH",
+    portraitAlt: "Portrait of Patrick Horst",
+  },
 };
 
 export function localizeTestimonials(

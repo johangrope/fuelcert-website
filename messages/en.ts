@@ -50,7 +50,8 @@ const messages = {
     contact: "Contact",
     services: "Services",
     applications: "Application areas",
-    knowledge: "Knowledge",
+    knowledge: "Knowledge & News",
+    news: "News",
     regulatoryAreas: "Regulatory areas",
     productAreas: "Product-related areas",
     preCertification: "Pre-certification",
@@ -99,7 +100,7 @@ const messages = {
     servicesIntro:
       "Depending on where you sit along the value chain as our client and how intensively you want support in regulatory processes, FuelCert offers tailored services. This allows certification, proof management, reporting, filing processes and trading activities to be implemented efficiently, audit-ready and with as little internal effort as possible.",
     testimonialsTitle: "Client voices",
-    testimonialsIntroPrefix: "More on our ",
+    testimonialsIntroPrefix: "More client voices in our ",
     testimonialsIntroLink: "About us",
     testimonialsIntroSuffix: " page.",
     referencesIntro: "These clients and partners already rely on FuelCert.",

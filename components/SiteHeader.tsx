@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useEffect, useMemo, useState } from "react";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { NewsTicker } from "@/components/NewsTicker";
 import { Link, usePathname } from "@/i18n/navigation";
 import fuelcertLogo from "@/assets/fuelcert-logo.png";
 import { buildMainNavLinks, buildNavDropdowns, type NavMessageKey } from "@/lib/i18n/nav";
@@ -79,6 +80,7 @@ export function SiteHeader() {
 
   return (
     <div className="site-header-stack">
+      <NewsTicker />
       <header className={`header${menuOpen ? " is-open" : ""}`}>
       <div className="header__inner container">
         <Link href="/" className="logo" onClick={() => mobile && closeMobileNav()}>

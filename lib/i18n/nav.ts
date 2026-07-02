@@ -17,6 +17,7 @@ export type NavMessageKey =
   | "reporting"
   | "calculatorH2"
   | "calculatorBiomethan"
+  | "news"
   | "thgQuote"
   | "ets"
   | "nehs"
@@ -78,6 +79,7 @@ export function buildNavDropdowns(t: NavTranslate): NavDropdownConfig[] {
       items: [
         { label: t("calculatorH2"), href: "/wissen/erloesrechner" },
         { label: t("calculatorBiomethan"), href: "/wissen/erloesrechner-biomethan-bio-cng" },
+        { label: t("news"), href: "/news" },
         { label: t("rfnboCert"), href: "/wissen/rfnbo-zertifizierung" },
         { label: t("systemsCompare"), href: "/wissen/redcert-iscc-certifhy-unterschiede" },
         { label: t("thgMass"), href: "/wissen/thg-und-massenbilanz" },

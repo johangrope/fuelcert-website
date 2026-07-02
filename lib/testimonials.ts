@@ -5,6 +5,7 @@ import portraitMichalke from "@/assets/portrait-michalke.png";
 import portraitReinholz from "@/assets/portrait-reinholz.png";
 import portraitEffing from "@/assets/portrait-effing.png";
 import portraitRiessner from "@/assets/portrait-riessner.png";
+import portraitHorst from "@/assets/portrait-horst.png";
 
 export type TestimonialId =
   | "balling"
@@ -12,7 +13,8 @@ export type TestimonialId =
   | "michalke"
   | "reinholz"
   | "effing"
-  | "riessner";
+  | "riessner"
+  | "horst";
 
 export type Testimonial = {
   id: TestimonialId;
@@ -100,12 +102,40 @@ export const TESTIMONIALS: Testimonial[] = [
     showOnHome: true,
     showOnAbout: true,
   },
+  {
+    id: "horst",
+    quote:
+      "Trotz sehr kurzfristiger Beauftragung hat FuelCert für unseren Elektrolyseur den Emissionswert nach dem delegierten Rechtsakt für RFNBOs berechnet. Die Bilanz wurde professionell und termingerecht erstellt und lieferte uns einen belastbaren Wert. Damit konnten wir unsere Fristen problemlos einhalten.",
+    name: "Patrick Horst",
+    role: "Manager Standortentwicklung & Kooperation, GP JOULE Hydrogen GmbH",
+    portrait: portraitHorst,
+    portraitAlt: "Portrait von Patrick Horst",
+    approved: true,
+    showOnHome: false,
+    showOnAbout: true,
+  },
 ];
 
 export function getHomeTestimonials(items: Testimonial[]): Testimonial[] {
   return items.filter((item) => item.approved && item.showOnHome);
 }
 
+/** Explizite Reihenfolge im Testimonial-Carousel auf der Über-uns-Seite. */
+const ABOUT_ORDER: TestimonialId[] = [
+  "horst",
+  "heigl",
+  "riessner",
+  "balling",
+  "michalke",
+  "reinholz",
+];
+
 export function getAboutTestimonials(items: Testimonial[]): Testimonial[] {
-  return items.filter((item) => item.approved && item.showOnAbout);
+  return items
+    .filter((item) => item.approved && item.showOnAbout)
+    .sort((a, b) => {
+      const ai = ABOUT_ORDER.indexOf(a.id);
+      const bi = ABOUT_ORDER.indexOf(b.id);
+      return (ai === -1 ? Number.MAX_SAFE_INTEGER : ai) - (bi === -1 ? Number.MAX_SAFE_INTEGER : bi);
+    });
 }

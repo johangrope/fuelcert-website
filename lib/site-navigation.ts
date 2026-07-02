@@ -38,12 +38,13 @@ export const NAV_DROPDOWNS: NavDropdownConfig[] = filterNavDropdowns([
   },
   {
     id: "wissen",
-    label: "Wissen",
+    label: "Wissen & News",
     href: "/wissen",
     variant: "flat",
     items: [
       { label: "Erlösrechner Wasserstoff (RFNBO)", href: "/wissen/erloesrechner" },
       { label: "Erlösrechner Biomethan (Bio-CNG)", href: "/wissen/erloesrechner-biomethan-bio-cng" },
+      { label: "News", href: "/news" },
       { label: "RFNBO-Zertifizierung", href: "/wissen/rfnbo-zertifizierung" },
       { label: "REDcert, ISCC EU und CertifHy", href: "/wissen/redcert-iscc-certifhy-unterschiede" },
       { label: "THG- und Massenbilanz", href: "/wissen/thg-und-massenbilanz" },

@@ -31,3 +31,22 @@ export async function anwendungenBreadcrumbs(currentLabel: string) {
     { label: currentLabel },
   ];
 }
+
+export async function newsOverviewBreadcrumbs() {
+  const tNav = await getTranslations("nav");
+  return [
+    { label: tNav("home"), href: "/" },
+    { label: tNav("knowledge") },
+    { label: tNav("news") },
+  ];
+}
+
+export async function newsArticleBreadcrumbs(currentLabel: string) {
+  const tNav = await getTranslations("nav");
+  return [
+    { label: tNav("home"), href: "/" },
+    { label: tNav("knowledge") },
+    { label: tNav("news"), href: "/news" },
+    { label: currentLabel },
+  ];
+}

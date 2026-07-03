@@ -1,6 +1,7 @@
 import nehsAuktionImage from "@/assets/news-nehs-auktion-2026.png";
 import webinarRfnboImage from "@/assets/news-webinar-rfnbo-2026.png";
 import rfnboLaenderschreibenImage from "@/assets/news-rfnbo-laenderschreiben-2026.png";
+import h2SchienenverkehrImage from "@/assets/news-h2-schienenverkehr-2026.png";
 import type { NewsPost } from "@/lib/news";
 
 export type { NewsPost, NewsBlock, NewsInfobox } from "@/lib/news";
@@ -19,6 +20,65 @@ export const NEWS_SEO = {
 } as const;
 
 export const NEWS_POSTS: readonly NewsPost[] = [
+  {
+    slug: "rfnbo-wasserstoff-schienenverkehr-thg-quote",
+    title: "Clarity established: RFNBO hydrogen in rail transport is eligible for the GHG quota",
+    date: "2026-06-20",
+    dateLabel: "20 June 2026",
+    teaser:
+      "FuelCert has established clarity with the main customs office that RFNBO hydrogen in rail transport is eligible for the GHG quota – an important step for hydrogen projects in the transport sector.",
+    metaTitle:
+      "RFNBO hydrogen in rail transport: eligible for the GHG quota | FuelCert",
+    metaDescription:
+      "FuelCert has set out to the main customs office that the greenhouse gas reduction from RFNBO hydrogen in rail transport is eligible for the GHG quota. Legal basis, practical relevance and notes.",
+    intro:
+      "FuelCert has established clarity with the main customs office (Hauptzollamt) that the greenhouse gas reduction from using RFNBO hydrogen in rail transport is eligible for the GHG quota. This reassesses a previously apparently more restrictive view held by the authority.",
+    image: h2SchienenverkehrImage,
+    imageAlt:
+      "Infographic: hydrogen train in rail transport with icons for RFNBO hydrogen, rail transport and eligibility for the GHG quota",
+    imageCaption:
+      "FuelCert has set out to the main customs office how RFNBO hydrogen in rail transport is treated for eligibility under the GHG quota.",
+    paragraphs: [
+      "FuelCert has established clarity with the main customs office (Hauptzollamt) that the greenhouse gas reduction from using RFNBO hydrogen in rail transport is eligible for the GHG quota. This reassesses a previously apparently more restrictive view held by the authority.",
+      "The assessment is based on several regulatory texts. Particularly relevant are Section 3(3) of the 37th BImSchV, Section 37a(5) no. 4 BImSchG and the relevant FAQ answer from the Federal Ministry for the Environment on the draft of the second act to further develop the GHG quota.",
+      "The clarification is of high practical importance for projects in the field of hydrogen and rail transport. It improves the regulatory classification of RFNBO hydrogen as a compliance option within the GHG quota and thereby strengthens the economic outlook for such applications.",
+      "At the same time, it should be noted that the main customs office's information is not legally binding. A conclusive, binding clarification can only be achieved within the framework of a formal procedure.",
+      "Nevertheless, the clarification is an important step for the ramp-up of hydrogen in the transport sector and, in particular, for greater climate protection in rail transport.",
+    ],
+    blocks: [
+      {
+        type: "paragraph",
+        text: "FuelCert has established clarity with the main customs office (Hauptzollamt) that the greenhouse gas reduction from using RFNBO hydrogen in rail transport is eligible for the GHG quota. This reassesses a previously apparently more restrictive view held by the authority.",
+      },
+      { type: "heading", text: "Regulatory basis" },
+      {
+        type: "paragraph",
+        text: "The assessment is based on several regulatory texts. Particularly relevant are:",
+      },
+      {
+        type: "list",
+        items: [
+          "Section 3(3) of the 37th BImSchV, according to which the adjustment factor for drivetrain efficiency also applies where the renewable fuel of non-biological origin is demonstrably used in road or rail vehicles",
+          "Section 37a(5) no. 4 BImSchG, in which the limitation to road transport is formulated only for the “electricity” compliance option",
+          "the relevant FAQ answer from the Federal Ministry for the Environment on the draft of the second act to further develop the GHG quota",
+        ],
+      },
+      { type: "heading", text: "Practical relevance" },
+      {
+        type: "paragraph",
+        text: "The clarification is of high practical importance for projects in the field of hydrogen and rail transport. It improves the regulatory classification of RFNBO hydrogen as a compliance option within the GHG quota and thereby strengthens the economic outlook for such applications.",
+      },
+      { type: "heading", text: "Assessment and note of caution" },
+      {
+        type: "paragraph",
+        text: "At the same time, it should be noted that the main customs office's information is not legally binding. A conclusive, binding clarification can only be achieved within the framework of a formal procedure.",
+      },
+      {
+        type: "paragraph",
+        text: "Nevertheless, the clarification is an important step for the ramp-up of hydrogen in the transport sector and, in particular, for greater climate protection in rail transport.",
+      },
+    ],
+  },
   {
     slug: "erste-nehs-auktion-2026",
     title: "First nEHS auction 2026: clearing price at the upper end of the price corridor",

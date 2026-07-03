@@ -2,6 +2,7 @@ import type { StaticImageData } from "next/image";
 import nehsAuktionImage from "@/assets/news-nehs-auktion-2026.png";
 import webinarRfnboImage from "@/assets/news-webinar-rfnbo-2026.png";
 import rfnboLaenderschreibenImage from "@/assets/news-rfnbo-laenderschreiben-2026.png";
+import h2SchienenverkehrImage from "@/assets/news-h2-schienenverkehr-2026.png";
 
 export type NewsInfobox = {
   title: string;
@@ -51,6 +52,65 @@ export const NEWS_SEO = {
 } as const;
 
 export const NEWS_POSTS: readonly NewsPost[] = [
+  {
+    slug: "rfnbo-wasserstoff-schienenverkehr-thg-quote",
+    title: "Klarheit geschaffen: RFNBO-Wasserstoff im Schienenverkehr ist auf die THG-Quote anrechenbar",
+    date: "2026-06-20",
+    dateLabel: "20. Juni 2026",
+    teaser:
+      "FuelCert hat beim Hauptzollamt Klarheit dazu geschaffen, dass RFNBO-Wasserstoff im Schienenverkehr auf die THG-Quote anrechenbar ist – ein wichtiger Schritt für Wasserstoffprojekte im Verkehrssektor.",
+    metaTitle:
+      "RFNBO-Wasserstoff im Schienenverkehr: anrechenbar auf die THG-Quote | FuelCert",
+    metaDescription:
+      "FuelCert hat beim Hauptzollamt eingeordnet, dass die Treibhausgasminderung durch RFNBO-Wasserstoff im Schienenverkehr auf die THG-Quote anrechenbar ist. Grundlage, praktische Relevanz und Hinweise.",
+    intro:
+      "FuelCert hat beim Hauptzollamt Klarheit dazu geschaffen, dass die Treibhausgasminderung durch den Einsatz von RFNBO-Wasserstoff im Schienenverkehr auf die THG-Quote anrechenbar ist. Damit wurde eine bislang offenbar restriktivere behördliche Sichtweise neu eingeordnet.",
+    image: h2SchienenverkehrImage,
+    imageAlt:
+      "Infografik: Wasserstoffzug im Schienenverkehr mit Symbolen für RFNBO-Wasserstoff, Schienenverkehr und Anrechnung auf die THG-Quote",
+    imageCaption:
+      "FuelCert hat die regulatorische Anrechenbarkeit von RFNBO-Wasserstoff im Schienenverkehr auf die THG-Quote gegenüber dem Hauptzollamt eingeordnet.",
+    paragraphs: [
+      "FuelCert hat beim Hauptzollamt Klarheit dazu geschaffen, dass die Treibhausgasminderung durch den Einsatz von RFNBO-Wasserstoff im Schienenverkehr auf die THG-Quote anrechenbar ist. Damit wurde eine bislang offenbar restriktivere behördliche Sichtweise neu eingeordnet.",
+      "Die Einordnung stützt sich auf mehrere regulatorische Texte. Besonders relevant sind § 3 Absatz 3 der 37. BImSchV, § 37a Absatz 5 Nummer 4 BImSchG sowie die einschlägige FAQ-Antwort des Bundesumweltministeriums zum Entwurf des 2. Gesetzes zur Weiterentwicklung der THG-Quote.",
+      "Die Klärung ist für Projekte im Bereich Wasserstoff und Schienenverkehr von hoher praktischer Bedeutung. Sie verbessert die regulatorische Einordnung von RFNBO-Wasserstoff als Erfüllungsoption in der THG-Quote und stärkt damit die wirtschaftliche Perspektive entsprechender Anwendungen.",
+      "Einzuordnen ist zugleich, dass die Auskunft des Hauptzollamts rechtlich unverbindlich ist. Eine abschließende, verbindliche Klärung kann nur im Rahmen eines förmlichen Verfahrens erreicht werden.",
+      "Die Klarstellung ist dennoch ein wichtiger Schritt für den Hochlauf von Wasserstoff im Verkehrssektor und insbesondere für mehr Klimaschutz im Schienenverkehr.",
+    ],
+    blocks: [
+      {
+        type: "paragraph",
+        text: "FuelCert hat beim Hauptzollamt Klarheit dazu geschaffen, dass die Treibhausgasminderung durch den Einsatz von RFNBO-Wasserstoff im Schienenverkehr auf die THG-Quote anrechenbar ist. Damit wurde eine bislang offenbar restriktivere behördliche Sichtweise neu eingeordnet.",
+      },
+      { type: "heading", text: "Regulatorische Grundlage" },
+      {
+        type: "paragraph",
+        text: "Die Einordnung stützt sich auf mehrere regulatorische Texte. Besonders relevant sind:",
+      },
+      {
+        type: "list",
+        items: [
+          "§ 3 Absatz 3 der 37. BImSchV, wonach der Anpassungsfaktor für die Antriebseffizienz auch dann gilt, wenn der erneuerbare Kraftstoff nicht biogenen Ursprungs nachweislich in Straßen- oder Schienenfahrzeugen verwendet wird",
+          "§ 37a Absatz 5 Nummer 4 BImSchG, in dem die Begrenzung auf den Straßenverkehr nur für die Erfüllungsoption „Strom“ formuliert ist",
+          "die einschlägige FAQ-Antwort des Bundesumweltministeriums zum Entwurf des 2. Gesetzes zur Weiterentwicklung der THG-Quote",
+        ],
+      },
+      { type: "heading", text: "Praktische Relevanz" },
+      {
+        type: "paragraph",
+        text: "Die Klärung ist für Projekte im Bereich Wasserstoff und Schienenverkehr von hoher praktischer Bedeutung. Sie verbessert die regulatorische Einordnung von RFNBO-Wasserstoff als Erfüllungsoption in der THG-Quote und stärkt damit die wirtschaftliche Perspektive entsprechender Anwendungen.",
+      },
+      { type: "heading", text: "Einordnung und Vorsichtshinweis" },
+      {
+        type: "paragraph",
+        text: "Einzuordnen ist zugleich, dass die Auskunft des Hauptzollamts rechtlich unverbindlich ist. Eine abschließende, verbindliche Klärung kann nur im Rahmen eines förmlichen Verfahrens erreicht werden.",
+      },
+      {
+        type: "paragraph",
+        text: "Die Klarstellung ist dennoch ein wichtiger Schritt für den Hochlauf von Wasserstoff im Verkehrssektor und insbesondere für mehr Klimaschutz im Schienenverkehr.",
+      },
+    ],
+  },
   {
     slug: "erste-nehs-auktion-2026",
     title: "Erste nEHS-Auktion 2026: Zuschlagspreis am oberen Rand des Preiskorridors",

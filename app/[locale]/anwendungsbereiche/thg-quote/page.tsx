@@ -7,9 +7,10 @@ import { ServicePageLayout } from "@/components/ServicePageLayout";
 import { TextWithLinks } from "@/components/TextWithLinks";
 import { ThgQuoteIntroFigure } from "@/components/ThgQuoteIntroFigure";
 import { ThgQuoteRevenueSection } from "@/components/ThgQuoteRevenueSection";
-import { routing } from "@/i18n/routing";
+import { routing, type Locale } from "@/i18n/routing";
 import { anwendungenBreadcrumbs } from "@/lib/i18n/breadcrumbs";
 import { getLocaleContent } from "@/lib/i18n/resolve";
+import { pageMetadata } from "@/lib/seo";
 import * as DE from "@/lib/anwendungsbereiche-thg-quote";
 import * as EN from "@/lib/i18n/en/anwendungsbereiche-thg-quote";
 
@@ -19,10 +20,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
   const c = await getLocaleContent(DE, EN);
-  return {
+  return pageMetadata({
+    locale: locale as Locale,
+    path: "/anwendungsbereiche/thg-quote",
     title: c.THG_QUOTE_SEO.title,
     description: c.THG_QUOTE_SEO.metaDescription,
-  };
+  });
 }
 
 export function generateStaticParams() {

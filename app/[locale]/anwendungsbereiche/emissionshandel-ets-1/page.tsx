@@ -6,9 +6,10 @@ import { Ets1IntroFigure } from "@/components/Ets1IntroFigure";
 import { GroupedRelatedTopicsSection } from "@/components/GroupedRelatedTopicsSection";
 import { ServiceBulletList } from "@/components/ServiceBulletList";
 import { ServicePageLayout } from "@/components/ServicePageLayout";
-import { routing } from "@/i18n/routing";
+import { routing, type Locale } from "@/i18n/routing";
 import { anwendungenBreadcrumbs } from "@/lib/i18n/breadcrumbs";
 import { getLocaleContent } from "@/lib/i18n/resolve";
+import { pageMetadata } from "@/lib/seo";
 import * as DE from "@/lib/anwendungsbereiche-emissionshandel-ets-1";
 import * as EN from "@/lib/i18n/en/anwendungsbereiche-emissionshandel-ets-1";
 
@@ -18,10 +19,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
   const c = await getLocaleContent(DE, EN);
-  return {
+  return pageMetadata({
+    locale: locale as Locale,
+    path: "/anwendungsbereiche/emissionshandel-ets-1",
     title: c.ETS1_SEO.title,
     description: c.ETS1_SEO.metaDescription,
-  };
+  });
 }
 
 export function generateStaticParams() {

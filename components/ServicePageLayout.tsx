@@ -1,9 +1,12 @@
 import type { ReactNode } from "react";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import type { Locale } from "@/i18n/routing";
 import { Breadcrumbs, type Crumb } from "./Breadcrumbs";
+import { JsonLd } from "./JsonLd";
 import { SiteFooter } from "./SiteFooter";
 import { SiteHeader } from "./SiteHeader";
+import { serviceJsonLd } from "@/lib/structured-data";
 
 type Props = {
   breadcrumbs: Crumb[];
@@ -14,6 +17,10 @@ type Props = {
   backLabel?: string;
   /** Breiterer Inhaltsbereich für z. B. Tabellen und Rechner */
   wide?: boolean;
+  /** Wenn gesetzt, wird Service-JSON-LD (schema.org) ausgegeben. */
+  servicePath?: string;
+  /** Optionale Beschreibung für das Service-JSON-LD. */
+  serviceDescription?: string;
 };
 
 export async function ServicePageLayout({
@@ -24,8 +31,11 @@ export async function ServicePageLayout({
   backHref,
   backLabel,
   wide = false,
+  servicePath,
+  serviceDescription,
 }: Props) {
   const t = await getTranslations("common");
+  const locale = (await getLocale()) as Locale;
   const resolvedBackLabel = backLabel ?? t("backToServices");
   const innerClass = ["container", "subpage__inner", "service-page__inner", wide && "service-page__inner--wide"]
     .filter(Boolean)
@@ -33,6 +43,16 @@ export async function ServicePageLayout({
 
   return (
     <>
+      {servicePath ? (
+        <JsonLd
+          data={serviceJsonLd({
+            name: title,
+            description: serviceDescription,
+            path: servicePath,
+            locale,
+          })}
+        />
+      ) : null}
       <SiteHeader />
       <main className="subpage service-page">
         <div className={innerClass}>

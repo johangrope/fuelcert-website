@@ -4,11 +4,14 @@ import { RelatedTopicsSection } from "@/components/RelatedTopicsSection";
 import { ServiceBulletGroups } from "@/components/ServiceBulletGroups";
 import { ServiceCtaSection } from "@/components/ServiceCtaSection";
 import { ServicePageLayout } from "@/components/ServicePageLayout";
-import { routing } from "@/i18n/routing";
+import { routing, type Locale } from "@/i18n/routing";
 import { leistungenBreadcrumbs } from "@/lib/i18n/breadcrumbs";
 import { getLocaleContent } from "@/lib/i18n/resolve";
+import { pageMetadata } from "@/lib/seo";
 import * as DE from "@/lib/leistungen-berichterstattung";
 import * as EN from "@/lib/i18n/en/leistungen-berichterstattung";
+
+const SERVICE_PATH = "/leistungen/berichterstattung-und-meldepflichten";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -16,10 +19,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
   const c = await getLocaleContent(DE, EN);
-  return {
+  return pageMetadata({
+    locale: locale as Locale,
+    path: SERVICE_PATH,
     title: c.BERICHTERSTATTUNG_SEO.title,
     description: c.BERICHTERSTATTUNG_SEO.metaDescription,
-  };
+  });
 }
 
 export function generateStaticParams() {
@@ -38,6 +43,8 @@ export default async function BerichterstattungPage({ params }: Props) {
       kicker={tLeistungen("kicker")}
       title={c.BERICHTERSTATTUNG_SEO.h1}
       breadcrumbs={await leistungenBreadcrumbs(tNav("reporting"))}
+      servicePath={SERVICE_PATH}
+      serviceDescription={c.BERICHTERSTATTUNG_SEO.metaDescription}
     >
       <p className="subpage__lead service-page__intro">{c.BERICHTERSTATTUNG_INTRO}</p>
 

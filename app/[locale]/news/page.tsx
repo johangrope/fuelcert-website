@@ -2,20 +2,24 @@ import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import { NewsCard } from "@/components/NewsCard";
 import { OverviewPageLayout } from "@/components/OverviewPageLayout";
-import { routing } from "@/i18n/routing";
+import { routing, type Locale } from "@/i18n/routing";
 import { newsOverviewBreadcrumbs } from "@/lib/i18n/breadcrumbs";
-import { getLocaleContent } from "@/lib/i18n/resolve";
+import { getCurrentLocale, getLocaleContent } from "@/lib/i18n/resolve";
+import { pageMetadata } from "@/lib/seo";
 import * as DE from "@/lib/news";
 import * as EN from "@/lib/i18n/en/news";
 
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getCurrentLocale();
   const c = await getLocaleContent(DE, EN);
-  return {
+  return pageMetadata({
+    locale: locale as Locale,
+    path: "/news",
     title: c.NEWS_SEO.title,
     description: c.NEWS_SEO.metaDescription,
-  };
+  });
 }
 
 export function generateStaticParams() {

@@ -6,9 +6,12 @@ import { ServiceCtaSection } from "@/components/ServiceCtaSection";
 import { ServicePageLayout } from "@/components/ServicePageLayout";
 import { TeamSection } from "@/components/TeamSection";
 import { TestimonialsMarquee } from "@/components/TestimonialsMarquee";
-import { routing } from "@/i18n/routing";
+import { JsonLd } from "@/components/JsonLd";
+import { routing, type Locale } from "@/i18n/routing";
 import { homeCrumb } from "@/lib/i18n/breadcrumbs";
 import { getLocaleContent } from "@/lib/i18n/resolve";
+import { pageMetadata } from "@/lib/seo";
+import { foundersJsonLd } from "@/lib/structured-data";
 import * as DE from "@/lib/ueber-uns";
 import * as EN from "@/lib/i18n/en/ueber-uns";
 import * as DE_TEAM from "@/lib/ueber-uns-team";
@@ -19,10 +22,12 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const c = await getLocaleContent(DE, EN);
-  return {
+  return pageMetadata({
+    locale: locale as Locale,
+    path: "/ueber-uns",
     title: c.UEBER_UNS_SEO.title,
     description: c.UEBER_UNS_SEO.metaDescription,
-  };
+  });
 }
 
 export function generateStaticParams() {
@@ -46,6 +51,7 @@ export default async function UeberUnsPage({ params }: Props) {
       backLabel={tCommon("backToHome")}
       breadcrumbs={[home, { label: t("breadcrumb") }]}
     >
+      <JsonLd data={foundersJsonLd()} />
       {c.UEBER_UNS_INTRO.map((paragraph, i) => (
         <p
           key={i}

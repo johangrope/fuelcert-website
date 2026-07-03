@@ -7,17 +7,20 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { SiteHeader } from "@/components/SiteHeader";
 import heroImage from "@/assets/hero-startseite.png";
-import { routing } from "@/i18n/routing";
+import { routing, type Locale } from "@/i18n/routing";
+import { pageMetadata } from "@/lib/seo";
 
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "home" });
-  return {
+  return pageMetadata({
+    locale: locale as Locale,
+    path: "",
     title: t("metaTitle"),
     description: t("metaDescription"),
-  };
+  });
 }
 
 export function generateStaticParams() {

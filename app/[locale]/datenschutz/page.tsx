@@ -5,9 +5,10 @@ import { LegalDocumentSections } from "@/components/LegalDocumentSections";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Link } from "@/i18n/navigation";
-import { routing } from "@/i18n/routing";
+import { routing, type Locale } from "@/i18n/routing";
 import { homeCrumb } from "@/lib/i18n/breadcrumbs";
 import { getLocaleContent } from "@/lib/i18n/resolve";
+import { pageMetadata } from "@/lib/seo";
 import * as DE from "@/lib/datenschutz";
 import * as EN from "@/lib/i18n/en/datenschutz";
 
@@ -18,10 +19,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   setRequestLocale(locale);
   const isEn = locale === "en";
   const c = await getLocaleContent(DE, EN);
-  return {
+  return pageMetadata({
+    locale: locale as Locale,
+    path: "/datenschutz",
     title: isEn ? EN.DATENSCHUTZ_SEO_EN.title : c.DATENSCHUTZ_SEO.title,
     description: isEn ? EN.DATENSCHUTZ_SEO_EN.metaDescription : c.DATENSCHUTZ_SEO.metaDescription,
-  };
+  });
 }
 
 export function generateStaticParams() {

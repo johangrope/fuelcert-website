@@ -3,10 +3,11 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { PlaceholderDetailLayout } from "@/components/PlaceholderDetailLayout";
 import { ALL_ANWENDUNG_SLUGS, type AnwendungSlug, anwendungPath } from "@/lib/anwendungsbereiche";
-import { routing } from "@/i18n/routing";
+import { routing, type Locale } from "@/i18n/routing";
 import { anwendungenBreadcrumbs } from "@/lib/i18n/breadcrumbs";
 import { getLocalizedAnwendung } from "@/lib/i18n/content-access";
 import { isNavItemVisible } from "@/lib/nav-visibility";
+import { pageMetadata } from "@/lib/seo";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -32,10 +33,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const data = await getLocalizedAnwendung(slug, locale as "de" | "en");
   const t = await getTranslations({ locale, namespace: "common" });
   if (!data) return { title: t("notFound") };
-  return {
+  return pageMetadata({
+    locale: locale as Locale,
+    path: `/anwendungsbereiche/${slug}`,
     title: `${data.title} | FuelCert`,
     description: data.metaDescription,
-  };
+  });
 }
 
 export default async function AnwendungDetailPage({ params }: Props) {

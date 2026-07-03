@@ -3,9 +3,10 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ErloesrechnerBiomethanCalculator } from "@/components/ErloesrechnerBiomethanCalculator";
 import { ServiceCtaSection } from "@/components/ServiceCtaSection";
 import { ServicePageLayout } from "@/components/ServicePageLayout";
-import { routing } from "@/i18n/routing";
+import { routing, type Locale } from "@/i18n/routing";
 import { wissenBreadcrumbs } from "@/lib/i18n/breadcrumbs";
 import { getLocaleContent } from "@/lib/i18n/resolve";
+import { pageMetadata } from "@/lib/seo";
 import * as DE from "@/lib/erloesrechner-biomethan-content";
 import * as EN from "@/lib/i18n/en/erloesrechner-biomethan-content";
 
@@ -14,10 +15,12 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const c = await getLocaleContent(DE, EN);
-  return {
+  return pageMetadata({
+    locale: locale as Locale,
+    path: "/wissen/erloesrechner-biomethan-bio-cng",
     title: c.BIOMETHAN_ERLOESRECHNER_SEO.title,
     description: c.BIOMETHAN_ERLOESRECHNER_SEO.metaDescription,
-  };
+  });
 }
 
 export function generateStaticParams() {

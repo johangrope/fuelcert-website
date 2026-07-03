@@ -3,11 +3,14 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ServiceBulletList } from "@/components/ServiceBulletList";
 import { ServiceCtaSection } from "@/components/ServiceCtaSection";
 import { ServicePageLayout } from "@/components/ServicePageLayout";
-import { routing } from "@/i18n/routing";
+import { routing, type Locale } from "@/i18n/routing";
 import { leistungenBreadcrumbs } from "@/lib/i18n/breadcrumbs";
 import { getLocaleContent } from "@/lib/i18n/resolve";
+import { pageMetadata } from "@/lib/seo";
 import * as DE from "@/lib/leistungen-nachweisfuehrung";
 import * as EN from "@/lib/i18n/en/leistungen-nachweisfuehrung";
+
+const SERVICE_PATH = "/leistungen/nachweisfuehrung-und-register";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -15,10 +18,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
   const c = await getLocaleContent(DE, EN);
-  return {
+  return pageMetadata({
+    locale: locale as Locale,
+    path: SERVICE_PATH,
     title: c.NACHWEISFUEHRUNG_SEO.title,
     description: c.NACHWEISFUEHRUNG_SEO.metaDescription,
-  };
+  });
 }
 
 export function generateStaticParams() {
@@ -37,6 +42,8 @@ export default async function NachweisfuehrungPage({ params }: Props) {
       kicker={tLeistungen("kicker")}
       title={c.NACHWEISFUEHRUNG_SEO.h1}
       breadcrumbs={await leistungenBreadcrumbs(tNav("proofManagement"))}
+      servicePath={SERVICE_PATH}
+      serviceDescription={c.NACHWEISFUEHRUNG_SEO.metaDescription}
     >
       {c.NACHWEISFUEHRUNG_INTRO.map((paragraph, i) => (
         <p

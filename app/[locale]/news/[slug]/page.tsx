@@ -3,12 +3,15 @@ import Image from "next/image";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { JsonLd } from "@/components/JsonLd";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Link } from "@/i18n/navigation";
-import { routing } from "@/i18n/routing";
+import { routing, type Locale } from "@/i18n/routing";
 import { newsArticleBreadcrumbs } from "@/lib/i18n/breadcrumbs";
 import { getLocaleContent } from "@/lib/i18n/resolve";
+import { pageMetadata } from "@/lib/seo";
+import { articleJsonLd } from "@/lib/structured-data";
 import * as DE from "@/lib/news";
 import * as EN from "@/lib/i18n/en/news";
 
@@ -21,14 +24,18 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
+  const { locale, slug } = await params;
   const c = await getLocaleContent(DE, EN);
   const post = c.getNewsPost(slug);
   if (!post) return {};
-  return {
+  return pageMetadata({
+    locale: locale as Locale,
+    path: `/news/${post.slug}`,
     title: post.metaTitle,
     description: post.metaDescription,
-  };
+    images: post.image ? post.image.src : undefined,
+    type: "article",
+  });
 }
 
 export default async function NewsArticlePage({ params }: Props) {
@@ -41,6 +48,7 @@ export default async function NewsArticlePage({ params }: Props) {
 
   return (
     <>
+      <JsonLd data={articleJsonLd(post, locale as Locale)} />
       <SiteHeader />
       <main className="subpage">
         <div className="container subpage__inner subpage__inner--news-article">

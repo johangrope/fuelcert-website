@@ -4,10 +4,11 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Link } from "@/i18n/navigation";
-import { routing } from "@/i18n/routing";
+import { routing, type Locale } from "@/i18n/routing";
 import { homeCrumb } from "@/lib/i18n/breadcrumbs";
 import { INITIAL_CONSULTATION_BOOKING_URL } from "@/lib/booking";
 import { getLocaleContent } from "@/lib/i18n/resolve";
+import { pageMetadata } from "@/lib/seo";
 import { KONTAKT as KONTAKT_DE } from "@/lib/static-pages";
 import { KONTAKT as KONTAKT_EN } from "@/lib/i18n/en/static-pages";
 
@@ -16,10 +17,12 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const k = await getLocaleContent(KONTAKT_DE, KONTAKT_EN);
-  return {
+  return pageMetadata({
+    locale: locale as Locale,
+    path: "/kontakt",
     title: `${k.title} | FuelCert`,
     description: k.metaDescription,
-  };
+  });
 }
 
 export function generateStaticParams() {

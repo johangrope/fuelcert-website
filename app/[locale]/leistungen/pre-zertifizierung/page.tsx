@@ -3,21 +3,26 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ServiceBulletList } from "@/components/ServiceBulletList";
 import { ServiceCtaSection } from "@/components/ServiceCtaSection";
 import { ServicePageLayout } from "@/components/ServicePageLayout";
-import { routing } from "@/i18n/routing";
+import { routing, type Locale } from "@/i18n/routing";
 import { leistungenBreadcrumbs } from "@/lib/i18n/breadcrumbs";
 import { getLocaleContent } from "@/lib/i18n/resolve";
+import { pageMetadata } from "@/lib/seo";
 import * as DE from "@/lib/leistungen-pre-zertifizierung";
 import * as EN from "@/lib/i18n/en/leistungen-pre-zertifizierung";
+
+const SERVICE_PATH = "/leistungen/pre-zertifizierung";
 
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "preZert" });
-  return {
+  return pageMetadata({
+    locale: locale as Locale,
+    path: SERVICE_PATH,
     title: t("seo.title"),
     description: t("seo.metaDescription"),
-  };
+  });
 }
 
 export function generateStaticParams() {
@@ -36,6 +41,8 @@ export default async function PreZertifizierungPage({ params }: Props) {
       kicker={tLeistungen("kicker")}
       title={c.PRE_ZERTIFIZIERUNG_SEO.h1}
       breadcrumbs={await leistungenBreadcrumbs(t("breadcrumb"))}
+      servicePath={SERVICE_PATH}
+      serviceDescription={t("seo.metaDescription")}
     >
       {c.PRE_ZERTIFIZIERUNG_INTRO.map((paragraph, i) => (
         <p

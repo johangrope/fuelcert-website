@@ -27,6 +27,8 @@ export default async function NewsOverviewPage({ params }: Props) {
   setRequestLocale(locale);
   const c = await getLocaleContent(DE, EN);
 
+  const posts = [...c.NEWS_POSTS].sort((a, b) => b.date.localeCompare(a.date));
+
   return (
     <OverviewPageLayout
       breadcrumbs={await newsOverviewBreadcrumbs()}
@@ -38,7 +40,7 @@ export default async function NewsOverviewPage({ params }: Props) {
       innerClassName="subpage__inner--news"
     >
       <ul className="news-list" aria-label={c.NEWS_SEO.h1}>
-        {c.NEWS_POSTS.map((post) => (
+        {posts.map((post) => (
           <li key={post.slug} className="news-list__item">
             <NewsCard post={post} readMoreLabel={c.NEWS_SEO.readMore} />
           </li>

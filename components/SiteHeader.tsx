@@ -104,7 +104,23 @@ export function SiteHeader() {
                   dd.id === "wissen" ? " nav__item--wide-dropdown" : ""
                 }`}
               >
-                <div className="nav__dropdown-head">
+                <div
+                  className="nav__dropdown-head"
+                  onClick={mobile ? () => toggleDropdown(dd.id) : undefined}
+                  onKeyDown={
+                    mobile
+                      ? (e) => {
+                          if (e.key === "Enter" || e.key === " ") {
+                            e.preventDefault();
+                            toggleDropdown(dd.id);
+                          }
+                        }
+                      : undefined
+                  }
+                  role={mobile ? "button" : undefined}
+                  tabIndex={mobile ? 0 : undefined}
+                  aria-expanded={mobile ? openDropdownId === dd.id : undefined}
+                >
                   {dd.linkToOverview === true ? (
                     <Link
                       href={dd.href}
@@ -112,8 +128,12 @@ export function SiteHeader() {
                         isDropdownActive(dd) ? " nav__link--active" : ""
                       }`}
                       onClick={(e) => {
+                        if (mobile) {
+                          e.preventDefault();
+                          return;
+                        }
                         if (dd.href.includes("#")) scrollToSection(e, dd.href);
-                        if (mobile) closeMobileNav();
+                        closeMobileNav();
                       }}
                     >
                       {dd.label}
@@ -134,9 +154,8 @@ export function SiteHeader() {
                     className="nav__link nav__dropdown-toggle nav__dropdown-toggle--chevron"
                     aria-expanded={openDropdownId === dd.id}
                     aria-label={`${dd.label}`}
-                    onClick={() => {
-                      if (mobile) toggleDropdown(dd.id);
-                    }}
+                    tabIndex={-1}
+                    aria-hidden="true"
                   >
                     <span className="nav__chevron" aria-hidden="true" />
                   </button>

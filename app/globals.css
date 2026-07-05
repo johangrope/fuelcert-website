@@ -2256,8 +2256,8 @@ img {
     position: fixed;
     left: 0;
     right: 0;
-    /* Unterhalb des sticky Headers (enthält Ticker + Navbar) */
-    top: 100%;
+    top: var(--site-top-h);
+    z-index: 55;
     max-height: 0;
     overflow: hidden;
     background: var(--color-bg);
@@ -2266,7 +2266,7 @@ img {
   }
 
   .header.is-open .nav {
-    max-height: calc(100vh - var(--site-top-h));
+    max-height: calc(100dvh - var(--site-top-h));
     overflow-y: auto;
     border-bottom: 1px solid var(--color-border);
     box-shadow: 0 24px 40px rgba(42, 47, 51, 0.08);

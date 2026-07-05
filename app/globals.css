@@ -61,10 +61,12 @@ img {
 
 .site-header-stack:has(.webinar-bar) {
   --announcement-bar-h: 2.75rem;
+  --site-top-h: calc(var(--header-h) + var(--announcement-bar-h));
 }
 
 .site-header-stack:has(.news-ticker) {
   --announcement-bar-h: 2.5rem;
+  --site-top-h: calc(var(--header-h) + var(--announcement-bar-h));
 }
 
 .header {
@@ -2244,18 +2246,21 @@ img {
 
   .nav {
     position: fixed;
-    inset: 0 0 auto 0;
-    top: var(--site-top-h);
+    left: 0;
+    right: 0;
+    /* Unterhalb des sticky Headers (enthält Ticker + Navbar) */
+    top: 100%;
     max-height: 0;
     overflow: hidden;
     background: var(--color-bg);
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: none;
     transition: max-height 0.35s ease;
   }
 
   .header.is-open .nav {
     max-height: calc(100vh - var(--site-top-h));
     overflow-y: auto;
+    border-bottom: 1px solid var(--color-border);
     box-shadow: 0 24px 40px rgba(42, 47, 51, 0.08);
   }
 

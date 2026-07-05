@@ -181,7 +181,7 @@ export function ErloesrechnerBiomethanCalculator() {
           </h2>
 
           <div className="erloesrechner__results-table-wrap">
-            <table className="erloesrechner__results-table">
+            <table className="erloesrechner__results-table" data-mobile-layout="stacked">
               <caption className="erloesrechner__results-caption">
                 {t("resultsCaption", {
                   kwh: results.kwh.toLocaleString(numberLocale),
@@ -199,17 +199,19 @@ export function ErloesrechnerBiomethanCalculator() {
               <tbody>
                 <tr>
                   <th scope="row">{t("specificRevenue")}</th>
-                  <td>{formatSpecificRevenuePerMwh(results.specificNoCap)}</td>
-                  <td>{formatSpecificRevenuePerMwh(results.specificAdvancedSubquota)}</td>
-                  <td className="erloesrechner__highlight">
+                  <td data-label={t("colNoCap")}>{formatSpecificRevenuePerMwh(results.specificNoCap)}</td>
+                  <td data-label={t("colAdvanced")}>
+                    {formatSpecificRevenuePerMwh(results.specificAdvancedSubquota)}
+                  </td>
+                  <td className="erloesrechner__highlight" data-label={t("colTotal")}>
                     {formatSpecificRevenuePerMwh(results.specificTotal)}
                   </td>
                 </tr>
                 <tr>
                   <th scope="row">{t("totalRevenue")}</th>
-                  <td>{formatTotalRevenue(results.totalNoCap)}</td>
-                  <td>{formatTotalRevenue(results.totalAdvancedSubquota)}</td>
-                  <td className="erloesrechner__highlight">
+                  <td data-label={t("colNoCap")}>{formatTotalRevenue(results.totalNoCap)}</td>
+                  <td data-label={t("colAdvanced")}>{formatTotalRevenue(results.totalAdvancedSubquota)}</td>
+                  <td className="erloesrechner__highlight" data-label={t("colTotal")}>
                     {formatTotalRevenue(results.totalTotal)}
                   </td>
                 </tr>

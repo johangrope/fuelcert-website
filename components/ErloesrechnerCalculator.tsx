@@ -228,7 +228,7 @@ export function ErloesrechnerCalculator() {
           </h2>
 
           <div className="erloesrechner__results-table-wrap">
-            <table className="erloesrechner__results-table">
+            <table className="erloesrechner__results-table" data-mobile-layout="stacked">
               <caption className="erloesrechner__results-caption">
                 {t("resultsCaption", {
                   kg: input.hydrogenKg.toLocaleString(numberLocale),
@@ -246,15 +246,19 @@ export function ErloesrechnerCalculator() {
               <tbody>
                 <tr>
                   <th scope="row">{t("specificRevenue")}</th>
-                  <td>{formatSpecificRevenue(results.specificNoCap)}</td>
-                  <td>{formatSpecificRevenue(results.specificSubquota)}</td>
-                  <td className="erloesrechner__highlight">{formatSpecificRevenue(results.specificTotal)}</td>
+                  <td data-label={t("colNoCap")}>{formatSpecificRevenue(results.specificNoCap)}</td>
+                  <td data-label={t("colRfnbo")}>{formatSpecificRevenue(results.specificSubquota)}</td>
+                  <td className="erloesrechner__highlight" data-label={t("colTotal")}>
+                    {formatSpecificRevenue(results.specificTotal)}
+                  </td>
                 </tr>
                 <tr>
                   <th scope="row">{t("totalRevenue")}</th>
-                  <td>{formatTotalRevenue(results.totalNoCap)}</td>
-                  <td>{formatTotalRevenue(results.totalSubquota)}</td>
-                  <td className="erloesrechner__highlight">{formatTotalRevenue(results.totalTotal)}</td>
+                  <td data-label={t("colNoCap")}>{formatTotalRevenue(results.totalNoCap)}</td>
+                  <td data-label={t("colRfnbo")}>{formatTotalRevenue(results.totalSubquota)}</td>
+                  <td className="erloesrechner__highlight" data-label={t("colTotal")}>
+                    {formatTotalRevenue(results.totalTotal)}
+                  </td>
                 </tr>
               </tbody>
             </table>

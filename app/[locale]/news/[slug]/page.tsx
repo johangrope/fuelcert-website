@@ -7,6 +7,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Link } from "@/i18n/navigation";
+import { TextWithLinks } from "@/components/TextWithLinks";
 import { routing, type Locale } from "@/i18n/routing";
 import { newsArticleBreadcrumbs } from "@/lib/i18n/breadcrumbs";
 import { getLocaleContent } from "@/lib/i18n/resolve";
@@ -127,6 +128,9 @@ export default async function NewsArticlePage({ params }: Props) {
                         </a>
                       </p>
                     );
+                  }
+                  if (block.type === "paragraphWithLinks") {
+                    return <TextWithLinks key={i} segments={block.segments} />;
                   }
                   return (
                     <p key={i} className="subpage__text">

@@ -3,6 +3,7 @@ import webinarRfnboImage from "@/assets/news-webinar-rfnbo-2026.png";
 import rfnboLaenderschreibenImage from "@/assets/news-rfnbo-laenderschreiben-2026.png";
 import h2SchienenverkehrImage from "@/assets/news-h2-schienenverkehr-2026.png";
 import nehsPreiskorridor2027Image from "@/assets/news-nehs-preiskorridor-2027.png";
+import certifHyZertifizierungWunH2Image from "@/assets/news-certifhy-zertifizierung-wunh2-riessner-gase-2026.png";
 import type { NewsPost } from "@/lib/news";
 
 export type { NewsPost, NewsBlock, NewsInfobox } from "@/lib/news";
@@ -324,6 +325,122 @@ export const NEWS_POSTS: readonly NewsPost[] = [
           "Support with reporting and processes with DEHSt",
           "Procurement of national emissions allowances (nEZ)",
           "Early preparation for the transition from the nEHS to ETS 2",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "certifhy-zertifizierung-wunh2-riessner-gase",
+    title: "Two successful CertifHy certifications for the RFNBO hydrogen supply chain",
+    date: "2026-06-10",
+    dateLabel: "10 June 2026",
+    teaser:
+      "FuelCert supported WUN H2 GmbH and Riessner-Gase GmbH throughout the RFNBO certification process. This means that both production and the marketing and distribution of the renewable hydrogen are certified under CertifHy.",
+    metaTitle: "RFNBO certification for WUN H2 and Riessner-Gase | FuelCert",
+    metaDescription:
+      "WUN H2 and Riessner-Gase are successfully certified under CertifHy. FuelCert supported production and distribution through the RFNBO certification process.",
+    intro:
+      "FuelCert supported WUN H2 GmbH and Riessner-Gase GmbH throughout the RFNBO certification process. This means that both production and the marketing and distribution of the renewable hydrogen are certified under CertifHy.",
+    image: certifHyZertifizierungWunH2Image,
+    imageAlt:
+      "Vertreter von WUN H2, Riessner-Gase, TÜV SÜD und FuelCert am Wasserstoffstandort der WUN H2 GmbH",
+    imageCaption:
+      "Erfolgreiche RFNBO-Zertifizierung von WUN H2 und Riessner-Gase mit Unterstützung von FuelCert.",
+    paragraphs: [
+      "With the successful certification of WUN H2 GmbH and Riessner-Gase GmbH, two companies along a shared RFNBO hydrogen supply chain were successfully certified.",
+      "WUN H2 GmbH operates an electrolyser with an output of 8.75 MW, producing renewable hydrogen. As part of the certification, the regulatory requirements for the production of non-biogenic renewable fuels—so-called RFNBO—had to be implemented in the company's operational processes and proof management.",
+      "Riessner-Gase GmbH handles the marketing and transport of the produced hydrogen via trailer solutions. Certification was also carried out for this stage, ensuring that the required sustainability and RFNBO information can be passed on in a traceable manner along the supply chain.",
+      "The certifications also form the basis for the further development of the hydrogen site. WUN H2 GmbH plans to put its own hydrogen filling station into operation. In addition, industrial customers can be supplied in the medium term via an existing pipeline connection.",
+      "FuelCert supported WUN H2 GmbH and Riessner-Gase GmbH in preparing and implementing their RFNBO certification. Our services include in particular the review of regulatory requirements and the scope of certification, the creation of the required QM and documentation, the implementation of mass and greenhouse gas accounting, and preparation for the audit by the certification body.",
+      "After initial certification, we also support companies with ongoing proof management and the practical implementation of RFNBO requirements in day-to-day operations.",
+    ],
+    blocks: [
+      {
+        type: "paragraph",
+        text: "Mit der erfolgreichen Zertifizierung der WUN H2 GmbH und der Riessner-Gase GmbH wurden zwei Unternehmen entlang einer gemeinsamen RFNBO-Wasserstofflieferkette erfolgreich zertifiziert.",
+      },
+      { type: "heading", text: "Zertifizierte Erzeugung von RFNBO-Wasserstoff" },
+      {
+        type: "paragraph",
+        text: "Die WUN H2 GmbH betreibt einen Elektrolyseur mit einer Leistung von 8,75 MW und erzeugt damit erneuerbaren Wasserstoff.",
+      },
+      {
+        type: "paragraph",
+        text: "Im Rahmen der Zertifizierung mussten die regulatorischen Anforderungen an die Herstellung von erneuerbaren Kraftstoffen nicht biogenen Ursprungs – sogenannten RFNBO – in die betrieblichen Abläufe und die Nachweisführung des Unternehmens überführt werden.",
+      },
+      {
+        type: "list",
+        items: [
+          "Prüfung der eingesetzten Strombezugskonzepte",
+          "Dokumentation der RFNBO-Kriterien sowie Einrichtung geeigneter Prozesse für die Massen- und Treibhausgasbilanzierung",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Mit der erfolgreichen Zertifizierung kann die WUN H2 GmbH ihren entsprechend den regulatorischen Anforderungen erzeugten Wasserstoff als RFNBO-konform vermarkten.",
+      },
+      { type: "heading", text: "Auch die Distribution ist zertifiziert" },
+      {
+        type: "paragraph",
+        text: "Die Riessner-Gase GmbH übernimmt die Vermarktung und den Transport des erzeugten Wasserstoffs mittels Trailer-Lösungen.",
+      },
+      {
+        type: "paragraph",
+        text: "Auch für diese Stufe der Lieferkette wurde eine eigene Zertifizierung umgesetzt. Damit können die erforderlichen Nachhaltigkeits- und RFNBO-Informationen entlang der Lieferkette nachvollziehbar weitergegeben werden.",
+      },
+      {
+        type: "paragraph",
+        text: "Gerade bei mehrstufigen Lieferketten ist entscheidend, dass die Prozesse der beteiligten Unternehmen aufeinander abgestimmt sind und die erforderlichen Nachweise konsistent vom Produzenten bis zum Abnehmer weitergegeben werden.",
+      },
+      { type: "heading", text: "Weitere Nutzungsmöglichkeiten vor Ort" },
+      {
+        type: "paragraph",
+        text: "Die Zertifizierungen bilden zugleich die Grundlage für die weitere Entwicklung des Wasserstoffstandorts.",
+      },
+      {
+        type: "paragraphWithLinks",
+        segments: [
+          { text: "Eine eigene " },
+          { text: "Wasserstofftankstelle", href: "/anwendungsbereiche/wasserstoff-und-derivate" },
+          { text: " der WUN H2 GmbH soll in Betrieb gehen." },
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Darüber hinaus besteht vor Ort die Möglichkeit, industrielle Abnehmer perspektivisch über eine bestehende Pipeline-Anbindung mit Wasserstoff zu versorgen.",
+      },
+      {
+        type: "paragraph",
+        text: "Damit entstehen unterschiedliche Absatzwege für den zertifizierten erneuerbaren Wasserstoff – von der mobilen Distribution über Trailer bis zur direkten Versorgung von Industrie und Mobilität.",
+      },
+      {
+        type: "heading",
+        text: "FuelCert begleitet RFNBO-Projekte bis zur erfolgreichen Zertifizierung",
+      },
+      {
+        type: "paragraph",
+        text: "FuelCert hat die WUN H2 GmbH und die Riessner-Gase GmbH bei der Vorbereitung und Umsetzung ihrer RFNBO-Zertifizierung begleitet.",
+      },
+      {
+        type: "paragraphWithLinks",
+        segments: [
+          {
+            text: "Unsere Leistungen umfassen insbesondere die Prüfung der regulatorischen Anforderungen und des Zertifizierungsumfangs im Rahmen der ",
+          },
+          { text: "Zertifizierung nach CertifHy", href: "/leistungen/zertifizierung-redcert-iscc-certifhy" },
+          { text: ", die Erstellung der erforderlichen QM- und Nachweisdokumentation sowie die Umsetzung von Massen- und Treibhausgasbilanzierung." },
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Darüber hinaus unterstützen wir bei der Vorbereitung auf das Audit durch die Zertifizierungsstelle. Auch nach der Erstzertifizierung begleiten wir Unternehmen bei der laufenden Nachweisführung.",
+      },
+      {
+        type: "paragraphWithLinks",
+        segments: [
+          { text: "Dabei liegt der Fokus auf der praktischen Umsetzung der " },
+          { text: "RFNBO-Anforderungen", href: "/anwendungsbereiche/rfnbo" },
+          { text: " im operativen Betrieb." },
         ],
       },
     ],

@@ -2,6 +2,7 @@ import nehsAuktionImage from "@/assets/news-nehs-auktion-2026.png";
 import webinarRfnboImage from "@/assets/news-webinar-rfnbo-2026.png";
 import rfnboLaenderschreibenImage from "@/assets/news-rfnbo-laenderschreiben-2026.png";
 import h2SchienenverkehrImage from "@/assets/news-h2-schienenverkehr-2026.png";
+import nehsPreiskorridor2027Image from "@/assets/news-nehs-preiskorridor-2027.png";
 import type { NewsPost } from "@/lib/news";
 
 export type { NewsPost, NewsBlock, NewsInfobox } from "@/lib/news";
@@ -234,6 +235,96 @@ export const NEWS_POSTS: readonly NewsPost[] = [
       {
         type: "paragraph",
         text: "The letter is a strong industrial and energy policy signal: the ramp-up of the hydrogen economy is understood not as an isolated regional task, but as a shared European project. Particularly for industrial and port locations as well as regions with high renewable expansion potential, a pragmatic yet robust regulatory framework is decisive. The announced review of the RFNBO criteria could thus become a key lever for investment and the further market ramp-up of renewable hydrogen in Europe.",
+      },
+    ],
+  },
+  {
+    slug: "nehs-preiskorridor-2027",
+    title: "nEHS: 55 to 65 euro price corridor should also apply in 2027",
+    date: "2026-07-08",
+    dateLabel: "8 July 2026",
+    teaser:
+      "The Federal Ministry for the Environment has submitted a draft bill to amend the Fuel Emissions Trading Act. The CO₂ price corridor of 55 to 65 euros per tonne is therefore expected to apply in 2027 as well—extending the transition period to ETS 2.",
+    metaTitle: "nEHS: CO₂ price corridor extended to 2027 | FuelCert",
+    metaDescription:
+      "The CO₂ price corridor in the national emissions trading scheme is set to remain at 55 to 65 euros in 2027. What the BEHG draft means for companies and for the transition to ETS 2.",
+    intro:
+      "The Federal Ministry for the Environment has submitted a draft bill to amend the Fuel Emissions Trading Act. The CO₂ price corridor of 55 to 65 euros per tonne is therefore expected to apply in 2027 as well—extending the transition period to ETS 2.",
+    image: nehsPreiskorridor2027Image,
+    imageAlt:
+      "National emissions trading and transition to ETS 2 with a CO₂ price corridor of 55 to 65 euros",
+    paragraphs: [
+      "The Federal Ministry for the Environment, Nature Conservation, Nuclear Safety and Consumer Protection (BMUKN) has launched a consultation process with the Länder and associations for a draft third law amending the Fuel Emissions Trading Act (BEHG).",
+      "At the heart of the draft is the planned extension of the existing price corridor: in 2027 as well, national emissions allowances (nEZ) are to be sold at prices between 55 and 65 euros per tonne of CO₂.",
+      "The draft submitted now aims to extend price stability in national emissions trading by another year, giving companies in the nEHS greater planning security for procurement and surrender.",
+      "However, the draft has not yet been agreed within the Federal Government; further changes may therefore still be made during the legislative process.",
+    ],
+    blocks: [
+      {
+        type: "paragraph",
+        text: "The Federal Ministry for the Environment, Nature Conservation, Nuclear Safety and Consumer Protection (BMUKN) has launched a consultation process with the Länder and associations for a draft third law amending the Fuel Emissions Trading Act (BEHG).",
+      },
+      {
+        type: "paragraph",
+        text: "The core of the draft is the planned extension of the existing price corridor: in 2027 as well, national emissions allowances (nEZ) are to be sold at prices between 55 and 65 euros per tonne of CO₂. This is intended to implement the price stability agreed in the coalition committee for national emissions trading.",
+      },
+      { type: "heading", text: "Price stability for another transition year" },
+      {
+        type: "paragraph",
+        text: "Under the current legal situation, the 55 to 65 euro price corridor is initially planned for 2026. For 2027, the price would generally be oriented towards price developments in the European Emissions Trading Scheme.",
+      },
+      {
+        type: "paragraph",
+        text: "The draft submitted now aims to change this and extend the existing price corridor by another year. For companies in the nEHS, this would create additional planning security regarding procurement and surrender of national emissions allowances.",
+      },
+      {
+        type: "paragraph",
+        text: "However, the draft has not yet been agreed within the Federal Government. Further changes may therefore still occur during the legislative process.",
+      },
+      { type: "heading", text: "BEHV and BEDV are also to be adjusted" },
+      {
+        type: "paragraph",
+        text: "The planned change affects more than just the BEHG. The Fuel Emissions Trading Ordinance (BEHV) is also expected to be adjusted to the extended price corridor.",
+      },
+      {
+        type: "paragraph",
+        text: "In addition, amendments to the BEHG double-balancing ordinance (BEDV) are planned. The aim is in particular to ensure an appropriate approach to stored fuel quantities when transitioning between the emissions trading systems.",
+      },
+      {
+        type: "paragraph",
+        text: "Comments on the draft are due by 15 July 2026 at 12:00.",
+      },
+      { type: "heading", text: "The transition to ETS 2 is getting closer" },
+      {
+        type: "paragraph",
+        text: "The draft also shows how strongly the national emissions trading scheme is increasingly shaped by the upcoming transition to the European ETS 2.",
+      },
+      {
+        type: "paragraph",
+        text: "For affected companies, this is therefore no longer just about the current requirements of the nEHS. At the same time, the future requirements of ETS 2 are already gaining in importance. Even today, this involves preparation, monitoring and reporting obligations — as well as the question of how existing processes, data structures and responsibilities can be aligned to the European system.",
+      },
+      {
+        type: "paragraph",
+        text: "Companies that prepare their processes early can clarify interfaces between the nEHS and ETS 2 in good time and make later adjustments considerably easier.",
+      },
+      { type: "heading", text: "FuelCert supports you in the nEHS and ETS 2" },
+      {
+        type: "paragraph",
+        text: "FuelCert supports companies with the practical implementation of the requirements from both the national and the European emissions trading framework.",
+      },
+      {
+        type: "paragraph",
+        text: "This includes in particular:",
+      },
+      {
+        type: "list",
+        items: [
+          "Creating and further developing monitoring plans and emission reports",
+          "Proof management for fuels and energy sources for which an emission factor of zero is to be used",
+          "Support with reporting and processes with DEHSt",
+          "Procurement of national emissions allowances (nEZ)",
+          "Early preparation for the transition from the nEHS to ETS 2",
+        ],
       },
     ],
   },

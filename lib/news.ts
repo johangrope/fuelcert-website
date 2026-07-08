@@ -3,6 +3,7 @@ import nehsAuktionImage from "@/assets/news-nehs-auktion-2026.png";
 import webinarRfnboImage from "@/assets/news-webinar-rfnbo-2026.png";
 import rfnboLaenderschreibenImage from "@/assets/news-rfnbo-laenderschreiben-2026.png";
 import h2SchienenverkehrImage from "@/assets/news-h2-schienenverkehr-2026.png";
+import nehsPreiskorridor2027Image from "@/assets/news-nehs-preiskorridor-2027.png";
 
 export type NewsInfobox = {
   title: string;
@@ -266,6 +267,92 @@ export const NEWS_POSTS: readonly NewsPost[] = [
       {
         type: "paragraph",
         text: "Das Schreiben ist ein starkes industrie- und energiepolitisches Signal: Der Hochlauf der Wasserstoffwirtschaft wird nicht als regionale Einzelaufgabe verstanden, sondern als gemeinsames europäisches Projekt. Gerade für Industrie- und Hafenstandorte sowie Regionen mit hohem Ausbaupotenzial bei erneuerbaren Energien ist ein pragmatischer und zugleich belastbarer Regulierungsrahmen entscheidend. Die angekündigte Überprüfung der RFNBO-Kriterien könnte damit zu einem zentralen Hebel für Investitionen und den weiteren Markthochlauf von erneuerbarem Wasserstoff in Europa werden.",
+      },
+    ],
+  },
+  {
+    slug: "nehs-preiskorridor-2027",
+    title: "nEHS: Preiskorridor von 55 bis 65 Euro soll auch 2027 gelten",
+    date: "2026-07-08",
+    dateLabel: "8. Juli 2026",
+    teaser:
+      "Das Bundesumweltministerium hat einen Referentenentwurf zur Änderung des Brennstoffemissionshandelsgesetzes vorgelegt. Der CO₂-Preiskorridor von 55 bis 65 Euro pro Tonne soll demnach auch 2027 gelten – und damit die Übergangsphase zum ETS 2 verlängert werden.",
+    metaTitle: "nEHS: CO₂-Preiskorridor soll 2027 verlängert werden | FuelCert",
+    metaDescription:
+      "Der CO₂-Preiskorridor im nationalen Emissionshandel soll auch 2027 bei 55 bis 65 Euro liegen. Was der BEHG-Entwurf für Unternehmen und den Übergang zum ETS 2 bedeutet.",
+    intro:
+      "Das Bundesumweltministerium hat einen Referentenentwurf zur Änderung des Brennstoffemissionshandelsgesetzes vorgelegt. Der CO₂-Preiskorridor von 55 bis 65 Euro pro Tonne soll demnach auch 2027 gelten – und damit die Übergangsphase zum ETS 2 verlängert werden.",
+    image: nehsPreiskorridor2027Image,
+    imageAlt:
+      "Nationaler Emissionshandel und Übergang zum ETS 2 mit CO₂-Preiskorridor von 55 bis 65 Euro",
+    paragraphs: [
+      "Das Bundesministerium für Umwelt, Klimaschutz, Naturschutz und nukleare Sicherheit (BMUKN) hat die Länder- und Verbändeanhörung zum Entwurf eines Dritten Gesetzes zur Änderung des Brennstoffemissionshandelsgesetzes (BEHG) gestartet.",
+      "Kern des Entwurfs ist die geplante Verlängerung des bisherigen Preiskorridors: Auch im Jahr 2027 sollen nationale Emissionszertifikate (nEZ) zu Preisen zwischen 55 und 65 Euro pro Tonne CO₂ veräußert werden.",
+      "Der nun vorgelegte Referentenentwurf soll die Preisstabilität im nationalen Emissionshandel um ein weiteres Jahr verlängern, sodass Unternehmen im nEHS zusätzliche Planungssicherheit erhalten.",
+      "Der Entwurf ist allerdings noch nicht innerhalb der Bundesregierung abgestimmt; im weiteren Gesetzgebungsverfahren können sich daher noch Änderungen ergeben.",
+    ],
+    blocks: [
+      {
+        type: "paragraph",
+        text: "Das Bundesministerium für Umwelt, Klimaschutz, Naturschutz und nukleare Sicherheit (BMUKN) hat die Länder- und Verbändeanhörung zum Entwurf eines Dritten Gesetzes zur Änderung des Brennstoffemissionshandelsgesetzes (BEHG) gestartet.",
+      },
+      {
+        type: "paragraph",
+        text: "Kern des Entwurfs ist die geplante Verlängerung des bisherigen Preiskorridors: Auch im Jahr 2027 sollen nationale Emissionszertifikate (nEZ) zu Preisen zwischen 55 und 65 Euro pro Tonne CO₂ veräußert werden. Damit soll die im Koalitionsausschuss vereinbarte Preisstabilität im nationalen Emissionshandel umgesetzt werden.",
+      },
+      { type: "heading", text: "Preisstabilität für ein weiteres Übergangsjahr" },
+      {
+        type: "paragraph",
+        text: "Nach geltender Rechtslage ist der Preiskorridor von 55 bis 65 Euro zunächst für 2026 vorgesehen. Für 2027 würde sich der Preis im nationalen Emissionshandel grundsätzlich an der Preisentwicklung im europäischen Emissionshandel orientieren.",
+      },
+      {
+        type: "paragraph",
+        text: "Der nun vorgelegte Referentenentwurf soll dies ändern und den bestehenden Preiskorridor um ein weiteres Jahr verlängern. Für Unternehmen im nEHS würde dies zusätzliche Planungssicherheit bei der Beschaffung und Abgabe nationaler Emissionszertifikate schaffen.",
+      },
+      {
+        type: "paragraph",
+        text: "Der Entwurf ist allerdings noch nicht innerhalb der Bundesregierung abgestimmt. Im weiteren Gesetzgebungsverfahren können sich daher noch Änderungen ergeben.",
+      },
+      { type: "heading", text: "Auch BEHV und BEDV sollen angepasst werden" },
+      {
+        type: "paragraph",
+        text: "Die geplante Änderung betrifft nicht nur das BEHG. Auch die Brennstoffemissionshandelsverordnung (BEHV) soll an den verlängerten Preiskorridor angepasst werden.",
+      },
+      {
+        type: "paragraph",
+        text: "Darüber hinaus sind Änderungen der BEHG-Doppelbilanzierungsverordnung (BEDV) vorgesehen. Ziel ist insbesondere ein sachgerechter Umgang mit eingelagerten Brennstoffmengen beim Übergang zwischen den Emissionshandelssystemen.",
+      },
+      {
+        type: "paragraph",
+        text: "Stellungnahmen zum Referentenentwurf können bis zum 15. Juli 2026, 12:00 Uhr, eingereicht werden.",
+      },
+      { type: "heading", text: "Der Übergang zum ETS 2 rückt näher" },
+      {
+        type: "paragraph",
+        text: "Der Entwurf zeigt zugleich, wie stark das nationale Emissionshandelssystem inzwischen durch den bevorstehenden Übergang zum europäischen ETS 2 geprägt ist.",
+      },
+      {
+        type: "paragraph",
+        text: "Für betroffene Unternehmen geht es daher längst nicht mehr nur um die aktuellen Anforderungen des nEHS. Parallel gewinnen die künftigen Anforderungen des ETS 2 an Bedeutung. Dazu gehören bereits heute Vorbereitungs-, Überwachungs- und Berichtspflichten sowie die Frage, wie bestehende Prozesse, Datenstrukturen und Verantwortlichkeiten auf das europäische System ausgerichtet werden.",
+      },
+      {
+        type: "paragraph",
+        text: "Unternehmen, die ihre Prozesse frühzeitig auf den Übergang vorbereiten, können Schnittstellen zwischen nEHS und ETS 2 rechtzeitig klären und spätere Umstellungen deutlich vereinfachen.",
+      },
+      { type: "heading", text: "FuelCert unterstützt bei nEHS und ETS 2" },
+      {
+        type: "paragraph",
+        text: "FuelCert begleitet Unternehmen bei der praktischen Umsetzung der Anforderungen aus dem nationalen und europäischen Emissionshandel.",
+      },
+      {
+        type: "list",
+        items: [
+          "Erstellung und Weiterentwicklung von Überwachungsplänen und Emissionsberichten",
+          "Nachweisführung für Kraft- und Brennstoffe, die mit einem Emissionsfaktor von null angesetzt werden sollen",
+          "Unterstützung bei Meldungen und Prozessen gegenüber der DEHSt",
+          "Beschaffung nationaler Emissionszertifikate (nEZ)",
+          "Frühzeitige Vorbereitung auf den Übergang vom nEHS zum ETS 2",
+        ],
       },
     ],
   },

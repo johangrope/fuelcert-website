@@ -39,7 +39,7 @@ export const TESTIMONIALS: Testimonial[] = [
     portrait: portraitBalling,
     portraitAlt: "Portrait von Thomas Balling",
     approved: true,
-    showOnHome: true,
+    showOnHome: false,
     showOnAbout: true,
   },
   {
@@ -87,7 +87,7 @@ export const TESTIMONIALS: Testimonial[] = [
     portrait: portraitEffing,
     portraitAlt: "Portrait von Christian Effing",
     approved: true,
-    showOnHome: false,
+    showOnHome: true,
     showOnAbout: true,
   },
   {
@@ -122,13 +122,13 @@ export function getHomeTestimonials(items: Testimonial[]): Testimonial[] {
 
 /** Explizite Reihenfolge im Testimonial-Carousel auf der Über-uns-Seite. */
 const ABOUT_ORDER: TestimonialId[] = [
+  "effing",
   "horst",
   "heigl",
   "riessner",
   "balling",
   "michalke",
   "reinholz",
-  "effing",
 ];
 
 export function getAboutTestimonials(items: Testimonial[]): Testimonial[] {

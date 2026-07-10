@@ -81,14 +81,14 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: "effing",
     quote:
-      "Die Zertifizierung des ersten Kavernenspeichers für Wasserstoff nach REDcert war auch für uns Neuland. FuelCert hat uns in diesem innovativen und anspruchsvollen Projekt mit hoher fachlicher Kompetenz, klarem regulatorischem Verständnis und großer Verlässlichkeit begleitet. Wir können FuelCert uneingeschränkt weiterempfehlen.",
+      "Die Zertifizierung des ersten Kavernenspeichers für Wasserstoff nach REDcert war auch für uns Neuland. FuelCert hat uns in diesem innovativen und anspruchsvollen Projekt mit hoher fachlicher Kompetenz, klarem regulatorischem Verständnis und großer Verlässlichkeit begleitet.",
     name: "Christian Effing",
     role: "RWE Gas Storage West GmbH",
     portrait: portraitEffing,
     portraitAlt: "Portrait von Christian Effing",
-    approved: false,
+    approved: true,
     showOnHome: false,
-    showOnAbout: false,
+    showOnAbout: true,
   },
   {
     id: "riessner",
@@ -128,6 +128,7 @@ const ABOUT_ORDER: TestimonialId[] = [
   "balling",
   "michalke",
   "reinholz",
+  "effing",
 ];
 
 export function getAboutTestimonials(items: Testimonial[]): Testimonial[] {

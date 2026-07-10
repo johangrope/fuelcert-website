@@ -33,7 +33,7 @@ export const TESTIMONIALS_EN: Record<TestimonialId, TestimonialCopy> = {
   },
   effing: {
     quote:
-      "Certifying the first hydrogen cavern storage facility under REDcert was new territory for us too. FuelCert supported us in this innovative and demanding project with high technical expertise, clear regulatory understanding and great reliability. We can recommend FuelCert without reservation.",
+      "Certifying the first hydrogen cavern storage facility under REDcert was new territory for us too. FuelCert supported us in this innovative and demanding project with high technical expertise, clear regulatory understanding and great reliability.",
     name: "Christian Effing",
     role: "RWE Gas Storage West GmbH",
     portraitAlt: "Portrait of Christian Effing",

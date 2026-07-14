@@ -312,8 +312,15 @@ img {
   font-weight: 500;
   white-space: nowrap;
   color: var(--color-text);
+  text-decoration: none;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+}
+
+.news-ticker__text:hover {
+  color: var(--color-teal);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
 }
 
 .news-ticker__sep {

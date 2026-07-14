@@ -1,8 +1,16 @@
+export type NewsTickerItem = {
+  text: string;
+  href: string;
+};
+
 export const NEWS_TICKER = {
   enabled: true,
   label: "Aktuell",
   ariaLabel: "Aktuelle Meldungen",
   items: [
-    "Erste nEHS-Auktion 2026: Zuschlagspreis 65,00 EUR/nEZ bei einer Gesamtgebotsmenge von 291,71 Mio. nEZ und einer zugeteilten Menge von 21,34 Mio. nEZ (Zuteilungsrate: 7,32 %).",
+    {
+      text: "GModG endgültig beschlossen — Bundesrat verzichtet auf Vermittlungsverfahren · Grüngasquote und Bio-Treppe kommen · Neue Perspektiven für Biomethan und Wasserstoff",
+      href: "/news/gmodg-beschlossen-gruengasquote-biotreppe",
+    },
   ],
 } as const;

@@ -4,7 +4,9 @@ import { useLocale, useTranslations } from "next-intl";
 import { useMemo, useState } from "react";
 import {
   formatDecimalDraft,
+  formatIntegerDraft,
   isDecimalInputDraft,
+  isIntegerInputDraft,
   parseNumericInput,
   roundToSingleDecimal,
 } from "@/lib/calculator-common";
@@ -42,6 +44,9 @@ export function ErloesrechnerCalculator() {
     [t],
   );
   const [input, setInput] = useState<ErloesrechnerInput>(DEFAULT_ERLOESRECHNER_INPUT);
+  const [hydrogenKgDraft, setHydrogenKgDraft] = useState(
+    formatIntegerDraft(DEFAULT_ERLOESRECHNER_INPUT.hydrogenKg),
+  );
   const [emissionsFactorDraft, setEmissionsFactorDraft] = useState(
     formatDecimalDraft(DEFAULT_ERLOESRECHNER_INPUT.emissionsFactor),
   );
@@ -72,17 +77,31 @@ export function ErloesrechnerCalculator() {
               <input
                 id="hydrogen-kg"
                 className="erloesrechner__input"
-                type="number"
-                min={HYDROGEN_KG_MIN}
-                max={HYDROGEN_KG_MAX}
-                step={1}
-                value={input.hydrogenKg}
-                onChange={(e) =>
-                  update(
-                    "hydrogenKg",
-                    clamp(parseNumericInput(e.target.value, input.hydrogenKg), HYDROGEN_KG_MIN, HYDROGEN_KG_MAX),
-                  )
-                }
+                type="text"
+                inputMode="numeric"
+                autoComplete="off"
+                value={hydrogenKgDraft}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  if (!isIntegerInputDraft(value)) return;
+                  setHydrogenKgDraft(value);
+                  const parsed = parseNumericInput(value, NaN);
+                  if (Number.isFinite(parsed)) {
+                    update(
+                      "hydrogenKg",
+                      clamp(Math.round(parsed), HYDROGEN_KG_MIN, HYDROGEN_KG_MAX),
+                    );
+                  }
+                }}
+                onBlur={() => {
+                  const parsed = clamp(
+                    Math.round(parseNumericInput(hydrogenKgDraft, input.hydrogenKg)),
+                    HYDROGEN_KG_MIN,
+                    HYDROGEN_KG_MAX,
+                  );
+                  update("hydrogenKg", parsed);
+                  setHydrogenKgDraft(formatIntegerDraft(parsed));
+                }}
               />
               <p className="erloesrechner__hint">
                 {t("rangeHint", {

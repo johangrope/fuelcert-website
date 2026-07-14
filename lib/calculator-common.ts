@@ -25,6 +25,15 @@ export function parseNumericInput(value: string, fallback: number): number {
   return Number.isFinite(parsed) ? parsed : fallback;
 }
 
+/** Erlaubt Zwischenzustände beim Tippen ganzer Zahlen (z. B. leeres Feld, „10“ vor „1000“) */
+export function isIntegerInputDraft(value: string): boolean {
+  return /^\d*$/.test(value);
+}
+
+export function formatIntegerDraft(value: number): string {
+  return String(Math.round(value));
+}
+
 /** Erlaubt Zwischenzustände beim Tippen (z. B. „-“, „-0,“) – höchstens eine Nachkommastelle */
 export function isDecimalInputDraft(value: string): boolean {
   return /^-?\d*([.,]\d?)?$/.test(value);

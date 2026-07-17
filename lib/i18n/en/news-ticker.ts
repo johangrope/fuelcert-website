@@ -7,7 +7,7 @@ export const NEWS_TICKER = {
   items: [
     {
       text: "GModG finally passed — Federal Council waives mediation procedure · Green gas quota and bio ladder on the way · New perspectives for biomethane and hydrogen",
-      href: "/news/gmodg-beschlossen-gruengasquote-biotreppe",
+      href: "/news/gmodg-beschlossen-biomethan-wasserstoff-nachweisfuehrung",
     },
   ] satisfies readonly NewsTickerItem[],
 } as const;

@@ -4,6 +4,7 @@ import rfnboLaenderschreibenImage from "@/assets/news-rfnbo-laenderschreiben-202
 import h2SchienenverkehrImage from "@/assets/news-h2-schienenverkehr-2026.png";
 import nehsPreiskorridor2027Image from "@/assets/news-nehs-preiskorridor-2027.png";
 import certifHyZertifizierungWunH2Image from "@/assets/news-certifhy-zertifizierung-wunh2-riessner-gase-2026.png";
+import gmodgBeschlossenImage from "@/assets/news-gmodg-beschlossen-biomethan-wasserstoff-2026.jpg";
 import type { NewsPost } from "@/lib/news";
 
 export type { NewsPost, NewsBlock, NewsInfobox } from "@/lib/news";
@@ -22,6 +23,176 @@ export const NEWS_SEO = {
 } as const;
 
 export const NEWS_POSTS: readonly NewsPost[] = [
+  {
+    slug: "gmodg-beschlossen-biomethan-wasserstoff-nachweisfuehrung",
+    title: "GModG adopted: New perspectives for biomethane and hydrogen in the heating market",
+    date: "2026-07-15",
+    dateLabel: "15 July 2026",
+    teaser:
+      "The Building Modernisation Act has been adopted. The bio ladder and green gas quota create new perspectives for biomethane and hydrogen. At the same time, requirements for sustainability, mass balancing and proof management are being clarified.",
+    metaTitle: "GModG adopted: New rules for biomethane and hydrogen | FuelCert",
+    metaDescription:
+      "The Building Modernisation Act has been adopted. What the bio ladder, green gas quota and new proof obligations mean for biomethane, hydrogen and certification.",
+    intro:
+      "The German Bundestag adopted the Building Modernisation Act (Gebäudemodernisierungsgesetz, GModG) on 10 July 2026. On the same day, the Bundesrat decided not to call the mediation committee. The parliamentary process is therefore complete; promulgation of the Act is still pending.",
+    image: gmodgBeschlossenImage,
+    imageAlt:
+      "Illuminated residential building with biomethane pipeline and wind turbine as a symbol of the new rules under the Building Modernisation Act",
+    paragraphs: [
+      "The GModG realigns the previous Buildings Energy Act in key respects. The blanket requirement to use at least 65 percent renewable energy in newly installed heating systems is abolished. In future, new gas, oil and LPG heating systems may still be installed. The fuels used, however, must become progressively more climate-friendly.",
+      "The GModG creates new perspectives for renewable gases in the heating market. Whether these opportunities can be used economically depends largely on reliable certification and consistent proof management.",
+      "FuelCert helps companies translate the new requirements into robust processes at an early stage.",
+    ],
+    blocks: [
+      {
+        type: "paragraph",
+        text: "The GModG realigns the previous Buildings Energy Act in key respects. The blanket requirement to use at least 65 percent renewable energy in newly installed heating systems is abolished. In future, new gas, oil and LPG heating systems may still be installed. The fuels used, however, must become progressively more climate-friendly.",
+      },
+      { type: "heading", text: "Bio ladder replaces the blanket 65 percent requirement" },
+      {
+        type: "paragraph",
+        text: "For newly installed gas, oil and LPG heating systems in existing buildings, gradually increasing minimum shares of climate-friendly fuels will apply:",
+      },
+      {
+        type: "list",
+        items: [
+          "from 2029: at least 10 percent",
+          "from 2030: at least 15 percent",
+          "from 2035: at least 30 percent",
+          "from 2040: at least 60 percent",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "By 2045 at the latest, the fuels used must be fully climate-neutral.",
+      },
+      {
+        type: "paragraph",
+        text: "This so-called bio ladder is intended to give owners more choice in heating technology while securing a gradual transition to climate-friendly energy carriers.",
+      },
+      {
+        type: "heading",
+        text: "New market impulses for biomethane, bio-LPG, bio-oil and hydrogen",
+      },
+      {
+        type: "paragraphWithLinks",
+        segments: [
+          {
+            text: "The GModG expressly includes renewable and low-CO₂ gaseous and liquid fuels among the compliance options. These include in particular ",
+          },
+          { text: "biomethane", href: "/anwendungsbereiche/biomethan-und-bio-lng" },
+          { text: ", biogenic liquefied petroleum gas, bio-oil and various forms of " },
+          { text: "hydrogen", href: "/anwendungsbereiche/wasserstoff-und-derivate" },
+          { text: "." },
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "In addition, a green gas and green heating oil quota is to be introduced from 2028. It is to apply to the parties placing natural gas and heating oil on the market and create additional demand for climate-friendly fuels. The detailed design of the quota is to be regulated in a further Act.",
+      },
+      {
+        type: "paragraph",
+        text: "For producers, traders and suppliers of biomethane and hydrogen, this opens up new sales opportunities in the heating market. What will be decisive, however, is how the green gas quota is designed in detail and which fuels can be credited under which conditions.",
+      },
+      { type: "heading", text: "What changes for certification and proof management?" },
+      {
+        type: "paragraph",
+        text: "For biomethane, the familiar mass-balance logic remains essentially intact. At the same time, the GModG provides greater clarity on requirements for origin, sustainability and greenhouse gas reduction.",
+      },
+      {
+        type: "paragraph",
+        text: "Key points include:",
+      },
+      {
+        type: "list",
+        items: [
+          "stronger and explicit alignment with the sustainability requirements of RED III, the Biomass Electricity Sustainability Ordinance and the Biomass Electricity Ordinance, or the respective applicable sustainability rules",
+          "inclusion of different hydrogen categories and the associated greenhouse gas criteria",
+          "statutory supplier confirmations on the properties and shares of the fuels supplied",
+          "retention obligations for suppliers, owners and other parties involved",
+          "traceable documentation of quantities, properties and sustainability information along the supply chain",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "This clarifies which information building owners need, how suppliers must confirm fuel properties, and which documents must be available for checks.",
+      },
+      {
+        type: "paragraphWithLinks",
+        segments: [
+          {
+            text: "The requirements therefore do not only affect building owners. Producers, traders, balancing group managers, gas suppliers and other parties in the supply chain must also align their processes and evidence – from ",
+          },
+          {
+            text: "certification",
+            href: "/leistungen/zertifizierung-redcert-iscc-certifhy",
+          },
+          { text: " through to ongoing " },
+          {
+            text: "proof management and registry processes",
+            href: "/leistungen/nachweisfuehrung-und-register",
+          },
+          { text: "." },
+        ],
+      },
+      { type: "heading", text: "Practical implementation will be decisive" },
+      {
+        type: "paragraph",
+        text: "Despite the legislative decision in principle, not all practical questions have been finally clarified. This applies in particular to the detailed design of the green gas and green heating oil quota, the applicable proof formats, interfaces with existing certification systems, and the practical verification of supplier confirmations.",
+      },
+      {
+        type: "paragraph",
+        text: "Companies should therefore review at an early stage:",
+      },
+      {
+        type: "list",
+        items: [
+          "Which products can be marketed as compliance options in future?",
+          "Which sustainability and GHG criteria apply?",
+          "Which certification is required?",
+          "Which information must be passed on within the supply chain?",
+          "How must mass balances, delivery notes and supplier confirmations be structured?",
+          "Which documents must be retained, and for how long?",
+        ],
+      },
+      { type: "heading", text: "FuelCert supports implementation of the GModG" },
+      {
+        type: "paragraph",
+        text: "FuelCert supports producers, traders, suppliers and users of renewable fuels and energy carriers in classifying and practically implementing the new requirements.",
+      },
+      {
+        type: "paragraph",
+        text: "Our services include in particular:",
+      },
+      {
+        type: "list",
+        items: [
+          "Review of regulatory requirements and possible compliance options",
+          "Classification of biomethane and hydrogen products",
+          "Design and review of mass-balance and proof systems",
+          "Preparation and review of supplier confirmations",
+          "Assessment of sustainability and greenhouse gas evidence",
+          "Preparation for and support of certifications and audits",
+          "Development of practical documentation and compliance processes",
+          "Support with ongoing proof management along the supply chain",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "The GModG creates new perspectives for renewable gases in the heating market. Whether these opportunities can be used economically depends largely on reliable certification and consistent proof management.",
+      },
+      {
+        type: "paragraphWithLinks",
+        segments: [
+          {
+            text: "FuelCert helps companies translate the new requirements into robust processes at an early stage. We look forward to an initial ",
+          },
+          { text: "consultation", href: "/kontakt" },
+          { text: "." },
+        ],
+      },
+    ],
+  },
   {
     slug: "rfnbo-wasserstoff-schienenverkehr-thg-quote",
     title: "Clarity established: RFNBO hydrogen in rail transport is eligible for the GHG quota",

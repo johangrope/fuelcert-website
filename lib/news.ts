@@ -6,6 +6,7 @@ import rfnboLaenderschreibenImage from "@/assets/news-rfnbo-laenderschreiben-202
 import h2SchienenverkehrImage from "@/assets/news-h2-schienenverkehr-2026.png";
 import nehsPreiskorridor2027Image from "@/assets/news-nehs-preiskorridor-2027.png";
 import certifHyZertifizierungWunH2Image from "@/assets/news-certifhy-zertifizierung-wunh2-riessner-gase-2026.png";
+import gmodgBeschlossenImage from "@/assets/news-gmodg-beschlossen-biomethan-wasserstoff-2026.jpg";
 
 export type NewsInfobox = {
   title: string;
@@ -56,6 +57,174 @@ export const NEWS_SEO = {
 } as const;
 
 export const NEWS_POSTS: readonly NewsPost[] = [
+  {
+    slug: "gmodg-beschlossen-biomethan-wasserstoff-nachweisfuehrung",
+    title: "GModG beschlossen: Neue Perspektiven für Biomethan und Wasserstoff im Wärmemarkt",
+    date: "2026-07-15",
+    dateLabel: "15. Juli 2026",
+    teaser:
+      "Das Gebäudemodernisierungsgesetz ist beschlossen. Bio-Treppe und Grüngasquote schaffen neue Perspektiven für Biomethan und Wasserstoff. Zugleich werden die Anforderungen an Nachhaltigkeit, Massenbilanzierung und Nachweisführung klarer geregelt.",
+    metaTitle: "GModG beschlossen: Neue Regeln für Biomethan und Wasserstoff | FuelCert",
+    metaDescription:
+      "Das Gebäudemodernisierungsgesetz ist beschlossen. Was Bio-Treppe, Grüngasquote und neue Nachweispflichten für Biomethan, Wasserstoff und die Zertifizierung bedeuten.",
+    intro:
+      "Der Deutsche Bundestag hat das Gebäudemodernisierungsgesetz am 10. Juli 2026 beschlossen. Der Bundesrat hat noch am selben Tag darauf verzichtet, den Vermittlungsausschuss anzurufen. Damit ist das parlamentarische Verfahren abgeschlossen; Ausfertigung und Verkündung des Gesetzes stehen noch aus.",
+    image: gmodgBeschlossenImage,
+    imageAlt:
+      "Beleuchtetes Wohngebäude mit Biomethanleitung und Windrad als Symbol für die neuen Regelungen des Gebäudemodernisierungsgesetzes",
+    paragraphs: [
+      "Mit dem GModG wird das bisherige Gebäudeenergiegesetz in zentralen Punkten neu ausgerichtet. Die pauschale Vorgabe, bei neu eingebauten Heizungen mindestens 65 Prozent erneuerbare Energien einzusetzen, entfällt. Stattdessen können auch künftig neue Gas-, Öl- und LPG-Heizungen eingebaut werden. Die verwendeten Brennstoffe müssen jedoch schrittweise klimafreundlicher werden.",
+      "Das GModG schafft neue Perspektiven für erneuerbare Gase im Wärmemarkt. Ob diese Potenziale wirtschaftlich genutzt werden können, hängt wesentlich von einer verlässlichen Zertifizierung und einer konsistenten Nachweisführung ab.",
+      "FuelCert unterstützt Unternehmen dabei, die neuen Vorgaben frühzeitig in belastbare Prozesse zu übersetzen.",
+    ],
+    blocks: [
+      {
+        type: "paragraph",
+        text: "Mit dem GModG wird das bisherige Gebäudeenergiegesetz in zentralen Punkten neu ausgerichtet. Die pauschale Vorgabe, bei neu eingebauten Heizungen mindestens 65 Prozent erneuerbare Energien einzusetzen, entfällt. Stattdessen können auch künftig neue Gas-, Öl- und LPG-Heizungen eingebaut werden. Die verwendeten Brennstoffe müssen jedoch schrittweise klimafreundlicher werden.",
+      },
+      { type: "heading", text: "Bio-Treppe ersetzt die pauschale 65-Prozent-Vorgabe" },
+      {
+        type: "paragraph",
+        text: "Für neu eingebaute Gas-, Öl- und LPG-Heizungen in Bestandsgebäuden gelten künftig stufenweise steigende Mindestanteile klimafreundlicher Brennstoffe:",
+      },
+      {
+        type: "list",
+        items: [
+          "ab 2029: mindestens 10 Prozent",
+          "ab 2030: mindestens 15 Prozent",
+          "ab 2035: mindestens 30 Prozent",
+          "ab 2040: mindestens 60 Prozent",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Spätestens ab 2045 müssen die eingesetzten Brennstoffe vollständig klimaneutral sein.",
+      },
+      {
+        type: "paragraph",
+        text: "Diese sogenannte Bio-Treppe soll Eigentümern mehr Wahlfreiheit bei der Heiztechnik geben und gleichzeitig den schrittweisen Übergang zu klimafreundlichen Energieträgern absichern.",
+      },
+      {
+        type: "heading",
+        text: "Neue Marktimpulse für Biomethan, Bio-LPG, Bioöl und Wasserstoff",
+      },
+      {
+        type: "paragraphWithLinks",
+        segments: [
+          {
+            text: "Das GModG bezieht erneuerbare und CO₂-arme gasförmige und flüssige Brennstoffe ausdrücklich in die Erfüllungsoptionen ein. Dazu zählen insbesondere ",
+          },
+          { text: "Biomethan", href: "/anwendungsbereiche/biomethan-und-bio-lng" },
+          { text: ", biogenes Flüssiggas, Bioöl sowie verschiedene Formen von " },
+          { text: "Wasserstoff", href: "/anwendungsbereiche/wasserstoff-und-derivate" },
+          { text: "." },
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Zusätzlich soll ab 2028 eine Grüngas- und Grünheizölquote eingeführt werden. Diese soll bei den Inverkehrbringern von Erdgas und Heizöl ansetzen und zusätzliche Nachfrage nach klimafreundlichen Brennstoffen schaffen. Die konkrete Ausgestaltung der Quote soll in einem weiteren Gesetz geregelt werden.",
+      },
+      {
+        type: "paragraph",
+        text: "Für Produzenten, Händler und Lieferanten von Biomethan und Wasserstoff eröffnet das neue Absatzmöglichkeiten im Wärmemarkt. Entscheidend wird allerdings sein, wie die Grüngasquote im Detail ausgestaltet wird und welche Brennstoffe unter welchen Voraussetzungen anrechenbar sind.",
+      },
+      { type: "heading", text: "Was ändert sich bei Zertifizierung und Nachweisführung?" },
+      {
+        type: "paragraph",
+        text: "Für Biomethan bleibt die bekannte Massenbilanzlogik im Kern erhalten. Gleichzeitig schafft das GModG mehr Klarheit zu den Anforderungen an Herkunft, Nachhaltigkeit und Treibhausgasminderung.",
+      },
+      {
+        type: "paragraph",
+        text: "Wesentliche Punkte sind:",
+      },
+      {
+        type: "list",
+        items: [
+          "stärkere und ausdrückliche Anbindung an die Nachhaltigkeitsanforderungen der RED III, der Biomassestrom-Nachhaltigkeitsverordnung und der Biomassestromverordnung beziehungsweise der jeweils einschlägigen Nachhaltigkeitsregelungen",
+          "Einbeziehung verschiedener Wasserstoffkategorien und der jeweils zugehörigen Treibhausgaskriterien",
+          "gesetzlich vorgesehene Lieferanten-Bestätigungen zu den Eigenschaften und Anteilen der gelieferten Brennstoffe",
+          "Aufbewahrungspflichten für Lieferanten, Eigentümer und weitere Beteiligte",
+          "nachvollziehbare Dokumentation der Mengen, Eigenschaften und Nachhaltigkeitsinformationen entlang der Lieferkette",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Damit wird klarer geregelt, welche Angaben Gebäudeeigentümer benötigen, wie Lieferanten die Brennstoffeigenschaften bestätigen müssen und welche Unterlagen für Kontrollen verfügbar sein müssen.",
+      },
+      {
+        type: "paragraphWithLinks",
+        segments: [
+          {
+            text: "Die Anforderungen betreffen daher nicht nur den Gebäudeeigentümer. Auch Produzenten, Händler, Bilanzkreisverantwortliche, Gaslieferanten und weitere Beteiligte der Lieferkette müssen ihre Prozesse und Nachweise aufeinander abstimmen – von der ",
+          },
+          {
+            text: "Zertifizierung",
+            href: "/leistungen/zertifizierung-redcert-iscc-certifhy",
+          },
+          { text: " bis zur laufenden " },
+          {
+            text: "Nachweisführung und Registerführung",
+            href: "/leistungen/nachweisfuehrung-und-register",
+          },
+          { text: "." },
+        ],
+      },
+      { type: "heading", text: "Entscheidend ist die praktische Ausgestaltung" },
+      {
+        type: "paragraph",
+        text: "Trotz der gesetzlichen Grundsatzentscheidung sind noch nicht alle praktischen Fragen abschließend geklärt. Dies betrifft insbesondere die konkrete Ausgestaltung der Grüngas- und Grünheizölquote, die anzuwendenden Nachweisformate, die Schnittstellen zu bestehenden Zertifizierungssystemen und die praktische Kontrolle der Lieferanten-Bestätigungen.",
+      },
+      {
+        type: "paragraph",
+        text: "Unternehmen sollten deshalb frühzeitig prüfen:",
+      },
+      {
+        type: "list",
+        items: [
+          "Welche Produkte können künftig als Erfüllungsoption vermarktet werden?",
+          "Welche Nachhaltigkeits- und THG-Kriterien gelten?",
+          "Welche Zertifizierung wird benötigt?",
+          "Welche Informationen müssen innerhalb der Lieferkette weitergegeben werden?",
+          "Wie müssen Massenbilanz, Lieferscheine und Lieferanten-Bestätigungen aufgebaut sein?",
+          "Welche Unterlagen sind wie lange aufzubewahren?",
+        ],
+      },
+      { type: "heading", text: "FuelCert unterstützt bei der Umsetzung des GModG" },
+      {
+        type: "paragraph",
+        text: "FuelCert unterstützt Produzenten, Händler, Lieferanten und Nutzer erneuerbarer Kraft- und Brennstoffe bei der Einordnung und praktischen Umsetzung der neuen Anforderungen.",
+      },
+      {
+        type: "paragraph",
+        text: "Unsere Leistungen umfassen insbesondere:",
+      },
+      {
+        type: "list",
+        items: [
+          "Prüfung der regulatorischen Anforderungen und möglicher Erfüllungsoptionen",
+          "Einordnung von Biomethan- und Wasserstoffprodukten",
+          "Aufbau und Prüfung von Massenbilanz- und Nachweissystemen",
+          "Erstellung und Prüfung von Lieferanten-Bestätigungen",
+          "Bewertung von Nachhaltigkeits- und Treibhausgasnachweisen",
+          "Vorbereitung und Begleitung von Zertifizierungen und Audits",
+          "Entwicklung praxisgerechter Dokumentations- und Compliance-Prozesse",
+          "Unterstützung bei der laufenden Nachweisführung entlang der Lieferkette",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Das GModG schafft neue Perspektiven für erneuerbare Gase im Wärmemarkt. Ob diese Potenziale wirtschaftlich genutzt werden können, hängt wesentlich von einer verlässlichen Zertifizierung und einer konsistenten Nachweisführung ab.",
+      },
+      {
+        type: "paragraphWithLinks",
+        segments: [
+          { text: "FuelCert unterstützt Unternehmen dabei, die neuen Vorgaben frühzeitig in belastbare Prozesse zu übersetzen. Für eine erste Einordnung freuen wir uns über ein " },
+          { text: "Erstgespräch", href: "/kontakt" },
+          { text: "." },
+        ],
+      },
+    ],
+  },
   {
     slug: "rfnbo-wasserstoff-schienenverkehr-thg-quote",
     title: "Klarheit geschaffen: RFNBO-Wasserstoff im Schienenverkehr ist auf die THG-Quote anrechenbar",

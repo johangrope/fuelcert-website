@@ -10,7 +10,7 @@ export const NEWS_TICKER = {
   items: [
     {
       text: "GModG endgültig beschlossen — Bundesrat verzichtet auf Vermittlungsverfahren · Grüngasquote und Bio-Treppe kommen · Neue Perspektiven für Biomethan und Wasserstoff",
-      href: "/news/gmodg-beschlossen-gruengasquote-biotreppe",
+      href: "/news/gmodg-beschlossen-biomethan-wasserstoff-nachweisfuehrung",
     },
   ],
 } as const;

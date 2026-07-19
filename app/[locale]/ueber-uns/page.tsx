@@ -50,6 +50,7 @@ export default async function UeberUnsPage({ params }: Props) {
       backHref="/"
       backLabel={tCommon("backToHome")}
       breadcrumbs={[home, { label: t("breadcrumb") }]}
+      currentPath="/ueber-uns"
     >
       <JsonLd data={foundersJsonLd()} />
       {c.UEBER_UNS_INTRO.map((paragraph, i) => (

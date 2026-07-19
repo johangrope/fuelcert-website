@@ -43,7 +43,7 @@ export default async function KontaktPage({ params }: Props) {
       <SiteHeader />
       <main id="kontakt" className="subpage">
         <div className="container subpage__inner">
-          <Breadcrumbs items={[home, { label: t("breadcrumb") }]} />
+          <Breadcrumbs items={[home, { label: t("breadcrumb") }]} currentPath="/kontakt" />
           <p className="subpage__kicker">{t("kicker")}</p>
           <h1 className="subpage__title">{k.title}</h1>
           <p className="subpage__lead">{k.intro}</p>

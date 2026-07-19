@@ -43,6 +43,7 @@ export default async function BerichterstattungPage({ params }: Props) {
       kicker={tLeistungen("kicker")}
       title={c.BERICHTERSTATTUNG_SEO.h1}
       breadcrumbs={await leistungenBreadcrumbs(tNav("reporting"))}
+      currentPath={SERVICE_PATH}
       servicePath={SERVICE_PATH}
       serviceDescription={c.BERICHTERSTATTUNG_SEO.metaDescription}
     >

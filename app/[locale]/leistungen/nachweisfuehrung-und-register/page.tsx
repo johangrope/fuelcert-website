@@ -42,6 +42,7 @@ export default async function NachweisfuehrungPage({ params }: Props) {
       kicker={tLeistungen("kicker")}
       title={c.NACHWEISFUEHRUNG_SEO.h1}
       breadcrumbs={await leistungenBreadcrumbs(tNav("proofManagement"))}
+      currentPath={SERVICE_PATH}
       servicePath={SERVICE_PATH}
       serviceDescription={c.NACHWEISFUEHRUNG_SEO.metaDescription}
     >

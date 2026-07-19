@@ -43,6 +43,7 @@ export default async function NehsPage({ params }: Props) {
       kicker={tApp("kicker")}
       title={c.NEHS_SEO.h1}
       breadcrumbs={await anwendungenBreadcrumbs(tNav("nehs"))}
+      currentPath="/anwendungsbereiche/emissionshandel-nehs"
       wide
     >
       <div className="thg-quote-intro">

@@ -6,6 +6,8 @@ import type { ContentSection } from "@/lib/types";
 
 type Props = {
   breadcrumbs: Crumb[];
+  /** Kanonischer Pfad der aktuellen Seite für BreadcrumbList-JSON-LD */
+  currentPath: string;
   kicker: string;
   title: string;
   intro: string;
@@ -16,6 +18,7 @@ type Props = {
 
 export async function PlaceholderDetailLayout({
   breadcrumbs,
+  currentPath,
   kicker,
   title,
   intro,
@@ -28,7 +31,7 @@ export async function PlaceholderDetailLayout({
       <SiteHeader />
       <main className="subpage">
         <div className="container subpage__inner">
-          <Breadcrumbs items={breadcrumbs} />
+          <Breadcrumbs items={breadcrumbs} currentPath={currentPath} />
           <p className="subpage__kicker">{kicker}</p>
           <h1 className="subpage__title">{title}</h1>
           <p className="subpage__lead">{intro}</p>

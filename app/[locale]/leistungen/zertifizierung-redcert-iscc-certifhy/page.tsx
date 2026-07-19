@@ -41,6 +41,7 @@ export default async function ZertifizierungPage({ params }: Props) {
       kicker={tLeistungen("kicker")}
       title={c.ZERTIFIZIERUNG_SEO.h1}
       breadcrumbs={await leistungenBreadcrumbs(tNav("certification"))}
+      currentPath={SERVICE_PATH}
       servicePath={SERVICE_PATH}
       serviceDescription={c.ZERTIFIZIERUNG_SEO.metaDescription}
     >

@@ -50,6 +50,7 @@ export default async function WissenDetailPage({ params }: Props) {
   return (
     <PlaceholderDetailLayout
       breadcrumbs={await wissenBreadcrumbs(data.menuLabel)}
+      currentPath={`/wissen/${slug}`}
       kicker={tWissen("kicker")}
       title={data.title}
       intro={data.intro}

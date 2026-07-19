@@ -43,6 +43,7 @@ export default async function Co2QuotenhandelPage({ params }: Props) {
       kicker={tLeistungen("kicker")}
       title={c.CO2_QUOTENHANDEL_SEO.h1}
       breadcrumbs={await leistungenBreadcrumbs(tNav("co2Trading"))}
+      currentPath={SERVICE_PATH}
       servicePath={SERVICE_PATH}
       serviceDescription={c.CO2_QUOTENHANDEL_SEO.metaDescription}
     >

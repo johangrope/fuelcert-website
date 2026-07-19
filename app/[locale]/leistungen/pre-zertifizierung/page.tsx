@@ -41,6 +41,7 @@ export default async function PreZertifizierungPage({ params }: Props) {
       kicker={tLeistungen("kicker")}
       title={c.PRE_ZERTIFIZIERUNG_SEO.h1}
       breadcrumbs={await leistungenBreadcrumbs(t("breadcrumb"))}
+      currentPath={SERVICE_PATH}
       servicePath={SERVICE_PATH}
       serviceDescription={t("seo.metaDescription")}
     >

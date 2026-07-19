@@ -53,7 +53,10 @@ export default async function NewsArticlePage({ params }: Props) {
       <SiteHeader />
       <main className="subpage">
         <div className="container subpage__inner subpage__inner--news-article">
-          <Breadcrumbs items={await newsArticleBreadcrumbs(post.title)} />
+          <Breadcrumbs
+            items={await newsArticleBreadcrumbs(post.title)}
+            currentPath={`/news/${post.slug}`}
+          />
           <p className="subpage__kicker">{c.NEWS_SEO.kicker}</p>
           <h1 className="subpage__title">{post.title}</h1>
 

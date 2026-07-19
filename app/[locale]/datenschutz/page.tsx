@@ -45,7 +45,7 @@ export default async function DatenschutzPage({ params }: Props) {
       <SiteHeader />
       <main className="subpage legal-page">
         <div className="container subpage__inner legal-page__inner">
-          <Breadcrumbs items={[home, { label: tFooter("privacy") }]} />
+          <Breadcrumbs items={[home, { label: tFooter("privacy") }]} currentPath="/datenschutz" />
           <h1 className="subpage__title">
             {isEn ? EN.DATENSCHUTZ_SEO_EN.h1 : c.DATENSCHUTZ_SEO.h1}
           </h1>

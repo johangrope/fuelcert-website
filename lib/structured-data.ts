@@ -51,25 +51,38 @@ export function websiteJsonLd(locale: Locale): Record<string, unknown> {
 
 export type BreadcrumbItem = { label: string; href?: string };
 
-/** BreadcrumbList für Unterseiten. */
+/**
+ * BreadcrumbList für Unterseiten.
+ *
+ * Nur ListItems mit gültiger kanonischer URL (`item`) werden ausgegeben.
+ * Nicht verlinkbare Zwischenebenen (z. B. Redirect-Übersichten ohne HTTP 200)
+ * werden aus dem JSON-LD weggelassen. Die aktuelle Seite wird über
+ * `currentPath` als letztes Element mit `item` ergänzt.
+ */
 export function breadcrumbJsonLd(
   items: BreadcrumbItem[],
   locale: Locale,
+  currentPath?: string,
 ): Record<string, unknown> {
+  const listItems: Record<string, unknown>[] = [];
+
+  items.forEach((item, index) => {
+    const isLast = index === items.length - 1;
+    const href = item.href ?? (isLast ? currentPath : undefined);
+    if (!href) return;
+
+    listItems.push({
+      "@type": "ListItem",
+      position: listItems.length + 1,
+      name: item.label,
+      item: absoluteUrl(locale, href === "/" ? "" : href),
+    });
+  });
+
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: items.map((item, index) => {
-      const element: Record<string, unknown> = {
-        "@type": "ListItem",
-        position: index + 1,
-        name: item.label,
-      };
-      if (item.href) {
-        element.item = absoluteUrl(locale, item.href === "/" ? "" : item.href);
-      }
-      return element;
-    }),
+    itemListElement: listItems,
   };
 }
 

@@ -59,6 +59,7 @@ export default async function AnwendungDetailPage({ params }: Props) {
   return (
     <PlaceholderDetailLayout
       breadcrumbs={await anwendungenBreadcrumbs(data.menuLabel)}
+      currentPath={`/anwendungsbereiche/${slug}`}
       kicker={tApp("kicker")}
       title={data.title}
       intro={data.intro}

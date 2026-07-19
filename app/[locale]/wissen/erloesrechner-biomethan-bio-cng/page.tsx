@@ -39,6 +39,7 @@ export default async function ErloesrechnerBiomethanPage({ params }: Props) {
       title={c.BIOMETHAN_ERLOESRECHNER_SEO.h1}
       wide
       breadcrumbs={await wissenBreadcrumbs(c.BIOMETHAN_ERLOESRECHNER_SEO.h1)}
+      currentPath="/wissen/erloesrechner-biomethan-bio-cng"
     >
       {c.BIOMETHAN_ERLOESRECHNER_INTRO.map((paragraph, i) => (
         <p

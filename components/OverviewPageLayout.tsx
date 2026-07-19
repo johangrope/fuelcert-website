@@ -8,6 +8,8 @@ import type { OverviewPageConfig } from "@/lib/types";
 
 type Props = OverviewPageConfig & {
   breadcrumbs: Crumb[];
+  /** Kanonischer Pfad der aktuellen Seite für BreadcrumbList-JSON-LD */
+  currentPath: string;
   children: ReactNode;
   /** Extra class on inner container, e.g. subpage__inner--leistungen */
   innerClassName?: string;
@@ -17,6 +19,7 @@ type Props = OverviewPageConfig & {
 
 export async function OverviewPageLayout({
   breadcrumbs,
+  currentPath,
   kicker,
   h1,
   intro,
@@ -34,7 +37,7 @@ export async function OverviewPageLayout({
       <SiteHeader />
       <main className="subpage">
         <div className={innerClass}>
-          <Breadcrumbs items={breadcrumbs} />
+          <Breadcrumbs items={breadcrumbs} currentPath={currentPath} />
           <p className="subpage__kicker">{kicker}</p>
           <h1 className="subpage__title">{h1}</h1>
           <p className="subpage__lead">{intro}</p>

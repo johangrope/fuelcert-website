@@ -36,6 +36,7 @@ export default async function NewsOverviewPage({ params }: Props) {
   return (
     <OverviewPageLayout
       breadcrumbs={await newsOverviewBreadcrumbs()}
+      currentPath="/news"
       kicker={c.NEWS_SEO.kicker}
       title={c.NEWS_SEO.h1}
       h1={c.NEWS_SEO.h1}

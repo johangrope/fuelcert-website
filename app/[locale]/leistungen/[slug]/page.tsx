@@ -65,6 +65,7 @@ export default async function LeistungDetailPage({ params }: Props) {
       />
       <PlaceholderDetailLayout
         breadcrumbs={await leistungenBreadcrumbs(data.menuLabel)}
+        currentPath={`/leistungen/${slug}`}
         kicker={tLeistungen("kicker")}
         title={data.title}
         intro={data.intro}

@@ -10,6 +10,8 @@ import { serviceJsonLd } from "@/lib/structured-data";
 
 type Props = {
   breadcrumbs: Crumb[];
+  /** Kanonischer Pfad der aktuellen Seite für BreadcrumbList-JSON-LD */
+  currentPath: string;
   kicker: string;
   title: string;
   children: ReactNode;
@@ -25,6 +27,7 @@ type Props = {
 
 export async function ServicePageLayout({
   breadcrumbs,
+  currentPath,
   kicker,
   title,
   children,
@@ -56,7 +59,7 @@ export async function ServicePageLayout({
       <SiteHeader />
       <main className="subpage service-page">
         <div className={innerClass}>
-          <Breadcrumbs items={breadcrumbs} />
+          <Breadcrumbs items={breadcrumbs} currentPath={currentPath} />
           <p className="subpage__kicker">{kicker}</p>
           <h1 className="subpage__title">{title}</h1>
           {children}

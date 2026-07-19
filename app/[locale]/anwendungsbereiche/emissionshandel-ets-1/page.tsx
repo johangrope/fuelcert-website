@@ -43,6 +43,7 @@ export default async function Ets1Page({ params }: Props) {
       kicker={tApp("kicker")}
       title={c.ETS1_SEO.h1}
       breadcrumbs={await anwendungenBreadcrumbs(tNav("ets"))}
+      currentPath="/anwendungsbereiche/emissionshandel-ets-1"
       wide
     >
       <div className="thg-quote-intro">

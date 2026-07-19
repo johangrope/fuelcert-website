@@ -39,6 +39,7 @@ export default async function ErloesrechnerPage({ params }: Props) {
       title={c.ERLOESRECHNER_SEO.h1}
       wide
       breadcrumbs={await wissenBreadcrumbs(c.ERLOESRECHNER_SEO.h1)}
+      currentPath="/wissen/erloesrechner"
     >
       {c.ERLOESRECHNER_INTRO.map((paragraph, i) => (
         <p

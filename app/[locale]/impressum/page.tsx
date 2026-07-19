@@ -42,7 +42,7 @@ export default async function ImpressumPage({ params }: Props) {
       <SiteHeader />
       <main className="subpage legal-page">
         <div className="container subpage__inner legal-page__inner">
-          <Breadcrumbs items={[home, { label: tFooter("imprint") }]} />
+          <Breadcrumbs items={[home, { label: tFooter("imprint") }]} currentPath="/impressum" />
           <h1 className="subpage__title">{c.IMPRESSUM_SEO.h1}</h1>
           <p className="subpage__text legal-page__updated">{c.IMPRESSUM_UPDATED}</p>
 

@@ -21,15 +21,7 @@ export type NavMessageKey =
   | "thgQuote"
   | "ets"
   | "nehs"
-  | "esg"
-  | "hydrogen"
-  | "biomethan"
-  | "rfnbo"
-  | "rfnboCert"
-  | "systemsCompare"
-  | "thgMass"
-  | "udbNabisy"
-  | "redIII";
+  | "rfnbo";
 
 export type NavTranslate = (key: NavMessageKey) => string;
 
@@ -61,14 +53,11 @@ export function buildNavDropdowns(t: NavTranslate): NavDropdownConfig[] {
       label: t("applications"),
       href: "/anwendungsbereiche",
       variant: "flat",
+      // Geplante Anwendungsbereiche: siehe lib/planned-nav.ts (nicht live)
       items: [
         { label: t("thgQuote"), href: "/anwendungsbereiche/thg-quote" },
         { label: t("ets"), href: "/anwendungsbereiche/emissionshandel-ets-1" },
         { label: t("nehs"), href: "/anwendungsbereiche/emissionshandel-nehs" },
-        { label: t("esg"), href: "/anwendungsbereiche/esg-und-nachhaltigkeitsnachweise" },
-        { label: t("hydrogen"), href: "/anwendungsbereiche/wasserstoff-und-derivate" },
-        { label: t("biomethan"), href: "/anwendungsbereiche/biomethan-und-bio-lng" },
-        { label: t("rfnbo"), href: "/anwendungsbereiche/rfnbo" },
       ],
     },
     {
@@ -80,11 +69,7 @@ export function buildNavDropdowns(t: NavTranslate): NavDropdownConfig[] {
         { label: t("calculatorH2"), href: "/wissen/erloesrechner" },
         { label: t("calculatorBiomethan"), href: "/wissen/erloesrechner-biomethan-bio-cng" },
         { label: t("news"), href: "/news" },
-        { label: t("rfnboCert"), href: "/wissen/rfnbo-zertifizierung" },
-        { label: t("systemsCompare"), href: "/wissen/redcert-iscc-certifhy-unterschiede" },
-        { label: t("thgMass"), href: "/wissen/thg-und-massenbilanz" },
-        { label: t("udbNabisy"), href: "/wissen/udb-nabisy-und-registerfuehrung" },
-        { label: t("redIII"), href: "/wissen/rfnbo-anforderungen-red-iii" },
+        // Geplante Wissensartikel: siehe lib/planned-nav.ts (nicht live)
       ],
     },
   ]);

@@ -44,7 +44,6 @@ export const PRE_ZERTIFIZIERUNG_CTA = {
 
 export const PRE_ZERTIFIZIERUNG_RELATED_TOPICS = [
   { label: "Certification under REDcert, ISCC EU or CertifHy", href: "/leistungen/zertifizierung-redcert-iscc-certifhy" },
-  { label: "RFNBO certification", href: "/wissen/rfnbo-zertifizierung" },
-  { label: "RFNBO requirements under RED III", href: "/wissen/rfnbo-anforderungen-red-iii" },
+  { label: "Proof management and registry processes", href: "/leistungen/nachweisfuehrung-und-register" },
   { label: "Revenue calculator hydrogen (RFNBO)", href: "/wissen/erloesrechner" },
 ] as const;

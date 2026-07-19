@@ -1,41 +1,16 @@
 import type { NavDropdownConfig } from "./types";
+import { PLANNED_NAV_HREFS } from "./planned-nav";
 
 /** Category overview pages – not linked in navigation; redirect to home */
 export const NAV_OVERVIEW_HREFS = ["/leistungen", "/anwendungsbereiche", "/wissen"] as const;
 
 /**
- * Hrefs hidden from header navigation and overview teasers until ready for launch.
- * Pages remain routable; remove entries here to show them again.
+ * Hrefs that must not be exposed until the page is live.
+ * Source of truth for planned routes: lib/planned-nav.ts
+ * Dynamic routes using these paths return notFound() and are omitted from
+ * generateStaticParams / sitemap.
  */
-export const NAV_HIDDEN_HREFS = new Set<string>([
-  // Wissen – Fachartikel (Übersicht zeigt nur Erlösrechner)
-  "/wissen/rfnbo-zertifizierung",
-  "/wissen/redcert-iscc-certifhy-unterschiede",
-  "/wissen/thg-und-massenbilanz",
-  "/wissen/udb-nabisy-und-registerfuehrung",
-  "/wissen/rfnbo-anforderungen-red-iii",
-  "/wissen/ueberwachungsplan-im-eu-ets-1",
-  "/wissen/emissionsbericht-im-eu-ets-1",
-  "/wissen/unionsregister-im-emissionshandel",
-  "/wissen/nachhaltige-brennstoffe-im-eu-ets-1",
-  "/wissen/biomethan-im-emissionshandel",
-  "/wissen/rfnbo-im-emissionshandel",
-  "/wissen/kostenlose-zuteilung-im-eu-ets-1",
-  "/wissen/cbam",
-  "/wissen/ueberwachungsplan-im-nehs",
-  "/wissen/emissionsbericht-im-nehs",
-  "/wissen/nehs-register",
-  "/wissen/biomethan-im-nehs",
-  "/wissen/rfnbo-im-nehs",
-  "/wissen/zusammenwirken-nehs-und-eu-ets-1",
-  "/wissen/eu-ets-2",
-  // Anwendungsbereiche – regulatorisch
-  "/anwendungsbereiche/esg-und-nachhaltigkeitsnachweise",
-  // Anwendungsbereiche – produktbezogen
-  "/anwendungsbereiche/wasserstoff-und-derivate",
-  "/anwendungsbereiche/biomethan-und-bio-lng",
-  "/anwendungsbereiche/rfnbo",
-]);
+export const NAV_HIDDEN_HREFS = new Set<string>(PLANNED_NAV_HREFS);
 
 export function isNavItemVisible(href: string): boolean {
   return !NAV_HIDDEN_HREFS.has(href);

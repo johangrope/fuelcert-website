@@ -26,14 +26,11 @@ export const NAV_DROPDOWNS: NavDropdownConfig[] = filterNavDropdowns([
     label: "Anwendungsbereiche",
     href: "/anwendungsbereiche",
     variant: "flat",
+    // Geplante Anwendungsbereiche: siehe lib/planned-nav.ts (nicht live)
     items: [
       { label: "THG-Quote", href: "/anwendungsbereiche/thg-quote" },
       { label: "Emissionshandel (ETS I)", href: "/anwendungsbereiche/emissionshandel-ets-1" },
       { label: "Nationaler Emissionshandel (nEHS)", href: "/anwendungsbereiche/emissionshandel-nehs" },
-      { label: "ESG und Nachhaltigkeitsnachweise", href: "/anwendungsbereiche/esg-und-nachhaltigkeitsnachweise" },
-      { label: "Wasserstoff und Derivate", href: "/anwendungsbereiche/wasserstoff-und-derivate" },
-      { label: "Biomethan und Bio-LNG", href: "/anwendungsbereiche/biomethan-und-bio-lng" },
-      { label: "RFNBO und E-Fuels", href: "/anwendungsbereiche/rfnbo" },
     ],
   },
   {
@@ -45,11 +42,7 @@ export const NAV_DROPDOWNS: NavDropdownConfig[] = filterNavDropdowns([
       { label: "Erlösrechner Wasserstoff (RFNBO)", href: "/wissen/erloesrechner" },
       { label: "Erlösrechner Biomethan (Bio-CNG)", href: "/wissen/erloesrechner-biomethan-bio-cng" },
       { label: "News", href: "/news" },
-      { label: "RFNBO-Zertifizierung", href: "/wissen/rfnbo-zertifizierung" },
-      { label: "REDcert, ISCC EU und CertifHy", href: "/wissen/redcert-iscc-certifhy-unterschiede" },
-      { label: "THG- und Massenbilanz", href: "/wissen/thg-und-massenbilanz" },
-      { label: "UDB, Nabisy und Registerführung", href: "/wissen/udb-nabisy-und-registerfuehrung" },
-      { label: "RFNBO-Anforderungen nach RED III", href: "/wissen/rfnbo-anforderungen-red-iii" },
+      // Geplante Wissensartikel: siehe lib/planned-nav.ts (nicht live)
     ],
   },
 ]);

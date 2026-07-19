@@ -1,4 +1,5 @@
 import type { OverviewPageConfig, PageScaffold, TeaserItem } from "./types";
+import { isNavItemVisible } from "./nav-visibility";
 
 export type WissenSlug =
   | "rfnbo-zertifizierung"
@@ -206,7 +207,7 @@ export function wissenPath(slug: WissenSlug) {
 }
 
 export function getWissenOverviewTeasers(): TeaserItem[] {
-  return ALL_WISSEN_SLUGS.map((slug) => {
+  return ALL_WISSEN_SLUGS.filter((slug) => isNavItemVisible(wissenPath(slug))).map((slug) => {
     const a = articles[slug];
     return {
       slug: a.slug,

@@ -75,16 +75,8 @@ export const NEWS_POSTS: readonly NewsPost[] = [
         text: "New market impulses for biomethane, bio-LPG, bio-oil and hydrogen",
       },
       {
-        type: "paragraphWithLinks",
-        segments: [
-          {
-            text: "The GModG expressly includes renewable and low-CO₂ gaseous and liquid fuels among the compliance options. These include in particular ",
-          },
-          { text: "biomethane", href: "/anwendungsbereiche/biomethan-und-bio-lng" },
-          { text: ", biogenic liquefied petroleum gas, bio-oil and various forms of " },
-          { text: "hydrogen", href: "/anwendungsbereiche/wasserstoff-und-derivate" },
-          { text: "." },
-        ],
+        type: "paragraph",
+        text: "The GModG expressly includes renewable and low-CO₂ gaseous and liquid fuels among the compliance options. These include in particular biomethane, biogenic liquefied petroleum gas, bio-oil and various forms of hydrogen.",
       },
       {
         type: "paragraph",
@@ -569,12 +561,8 @@ export const NEWS_POSTS: readonly NewsPost[] = [
         text: "Die Zertifizierungen bilden zugleich die Grundlage für die weitere Entwicklung des Wasserstoffstandorts.",
       },
       {
-        type: "paragraphWithLinks",
-        segments: [
-          { text: "Eine eigene " },
-          { text: "Wasserstofftankstelle", href: "/anwendungsbereiche/wasserstoff-und-derivate" },
-          { text: " der WUN H2 GmbH soll in Betrieb gehen." },
-        ],
+        type: "paragraph",
+        text: "WUN H2 GmbH plans to put its own hydrogen filling station into operation.",
       },
       {
         type: "paragraph",
@@ -609,9 +597,12 @@ export const NEWS_POSTS: readonly NewsPost[] = [
       {
         type: "paragraphWithLinks",
         segments: [
-          { text: "Dabei liegt der Fokus auf der praktischen Umsetzung der " },
-          { text: "RFNBO-Anforderungen", href: "/anwendungsbereiche/rfnbo" },
-          { text: " im operativen Betrieb." },
+          { text: "The focus is on the practical implementation of " },
+          {
+            text: "RFNBO requirements",
+            href: "/leistungen/zertifizierung-redcert-iscc-certifhy",
+          },
+          { text: " in day-to-day operations." },
         ],
       },
     ],

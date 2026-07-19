@@ -109,16 +109,8 @@ export const NEWS_POSTS: readonly NewsPost[] = [
         text: "Neue Marktimpulse für Biomethan, Bio-LPG, Bioöl und Wasserstoff",
       },
       {
-        type: "paragraphWithLinks",
-        segments: [
-          {
-            text: "Das GModG bezieht erneuerbare und CO₂-arme gasförmige und flüssige Brennstoffe ausdrücklich in die Erfüllungsoptionen ein. Dazu zählen insbesondere ",
-          },
-          { text: "Biomethan", href: "/anwendungsbereiche/biomethan-und-bio-lng" },
-          { text: ", biogenes Flüssiggas, Bioöl sowie verschiedene Formen von " },
-          { text: "Wasserstoff", href: "/anwendungsbereiche/wasserstoff-und-derivate" },
-          { text: "." },
-        ],
+        type: "paragraph",
+        text: "Das GModG bezieht erneuerbare und CO₂-arme gasförmige und flüssige Brennstoffe ausdrücklich in die Erfüllungsoptionen ein. Dazu zählen insbesondere Biomethan, biogenes Flüssiggas, Bioöl sowie verschiedene Formen von Wasserstoff.",
       },
       {
         type: "paragraph",
@@ -597,12 +589,8 @@ export const NEWS_POSTS: readonly NewsPost[] = [
         text: "Die Zertifizierungen bilden zugleich die Grundlage für die weitere Entwicklung des Wasserstoffstandorts.",
       },
       {
-        type: "paragraphWithLinks",
-        segments: [
-          { text: "Eine eigene " },
-          { text: "Wasserstofftankstelle", href: "/anwendungsbereiche/wasserstoff-und-derivate" },
-          { text: " der WUN H2 GmbH soll in Betrieb gehen." },
-        ],
+        type: "paragraph",
+        text: "Eine eigene Wasserstofftankstelle der WUN H2 GmbH soll in Betrieb gehen.",
       },
       {
         type: "paragraph",
@@ -638,7 +626,10 @@ export const NEWS_POSTS: readonly NewsPost[] = [
         type: "paragraphWithLinks",
         segments: [
           { text: "Dabei liegt der Fokus auf der praktischen Umsetzung der " },
-          { text: "RFNBO-Anforderungen", href: "/anwendungsbereiche/rfnbo" },
+          {
+            text: "RFNBO-Anforderungen",
+            href: "/leistungen/zertifizierung-redcert-iscc-certifhy",
+          },
           { text: " im operativen Betrieb." },
         ],
       },

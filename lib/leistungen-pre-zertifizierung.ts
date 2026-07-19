@@ -44,7 +44,6 @@ export const PRE_ZERTIFIZIERUNG_CTA = {
 
 export const PRE_ZERTIFIZIERUNG_RELATED_TOPICS = [
   { label: "Zertifizierung nach REDcert, ISCC EU oder CertifHy", href: "/leistungen/zertifizierung-redcert-iscc-certifhy" },
-  { label: "RFNBO-Zertifizierung", href: "/wissen/rfnbo-zertifizierung" },
-  { label: "RFNBO-Anforderungen nach RED III", href: "/wissen/rfnbo-anforderungen-red-iii" },
+  { label: "Nachweisführung und Registerführung", href: "/leistungen/nachweisfuehrung-und-register" },
   { label: "Erlösrechner Wasserstoff (RFNBO)", href: "/wissen/erloesrechner" },
 ] as const;

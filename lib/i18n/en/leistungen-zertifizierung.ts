@@ -84,9 +84,7 @@ export const ZERTIFIZIERUNG_CTA = {
 } as const;
 
 export const ZERTIFIZIERUNG_RELATED_TOPICS = [
-  { label: "RFNBO certification", href: "/wissen/rfnbo-zertifizierung" },
-  { label: "REDcert, ISCC EU and CertifHy compared", href: "/wissen/redcert-iscc-certifhy-unterschiede" },
-  { label: "GHG and mass balance", href: "/wissen/thg-und-massenbilanz" },
-  { label: "UDB, Nabisy and register management", href: "/wissen/udb-nabisy-und-registerfuehrung" },
-  { label: "RFNBO requirements under RED III", href: "/wissen/rfnbo-anforderungen-red-iii" },
+  { label: "Pre-certification", href: "/leistungen/pre-zertifizierung" },
+  { label: "Proof management and registry processes", href: "/leistungen/nachweisfuehrung-und-register" },
+  { label: "Revenue calculator hydrogen (RFNBO)", href: "/wissen/erloesrechner" },
 ] as const;

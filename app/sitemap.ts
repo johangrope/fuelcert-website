@@ -1,17 +1,21 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 import { absoluteUrl } from "@/lib/seo";
-import { ALL_LEISTUNG_SLUGS } from "@/lib/leistungen";
-import { ALL_ANWENDUNG_SLUGS } from "@/lib/anwendungsbereiche";
-import { ALL_WISSEN_SLUGS } from "@/lib/wissen";
+import { ALL_LEISTUNG_SLUGS, leistungPath } from "@/lib/leistungen";
+import { ALL_ANWENDUNG_SLUGS, anwendungPath } from "@/lib/anwendungsbereiche";
+import { ALL_WISSEN_SLUGS, wissenPath } from "@/lib/wissen";
 import { NEWS_POSTS } from "@/lib/news";
+import { isNavItemVisible } from "@/lib/nav-visibility";
 
 /** Locale-unabhängige Pfade mit optionalem letzten Änderungsdatum. */
 type Entry = { path: string; lastModified?: string; priority?: number };
 
+/**
+ * Nur kanonische, tatsächlich erreichbare Seiten (HTTP 200).
+ * Übersichts-Redirects (/leistungen, /anwendungsbereiche, /wissen) und
+ * per nav-visibility ausgeblendete Placeholder-Routen (notFound) sind ausgeschlossen.
+ */
 function buildEntries(): Entry[] {
-  // Hinweis: /leistungen, /anwendungsbereiche und /wissen sind Redirects
-  // auf die Startseite und daher bewusst nicht in der Sitemap enthalten.
   const staticPaths: Entry[] = [
     { path: "", priority: 1 },
     { path: "/news", priority: 0.7 },
@@ -22,20 +26,28 @@ function buildEntries(): Entry[] {
   ];
 
   const leistungen: Entry[] = ALL_LEISTUNG_SLUGS.map((slug) => ({
-    path: `/leistungen/${slug}`,
+    path: leistungPath(slug),
     priority: 0.7,
   }));
 
-  const anwendungen: Entry[] = ALL_ANWENDUNG_SLUGS.map((slug) => ({
-    path: `/anwendungsbereiche/${slug}`,
+  const anwendungen: Entry[] = ALL_ANWENDUNG_SLUGS.filter((slug) =>
+    isNavItemVisible(anwendungPath(slug)),
+  ).map((slug) => ({
+    path: anwendungPath(slug),
     priority: 0.7,
   }));
 
-  const wissen: Entry[] = [
+  const wissenCalculators: Entry[] = [
     { path: "/wissen/erloesrechner", priority: 0.6 },
     { path: "/wissen/erloesrechner-biomethan-bio-cng", priority: 0.6 },
-    ...ALL_WISSEN_SLUGS.map((slug) => ({ path: `/wissen/${slug}`, priority: 0.5 })),
   ];
+
+  const wissenArticles: Entry[] = ALL_WISSEN_SLUGS.filter((slug) =>
+    isNavItemVisible(wissenPath(slug)),
+  ).map((slug) => ({
+    path: wissenPath(slug),
+    priority: 0.5,
+  }));
 
   const news: Entry[] = NEWS_POSTS.map((post) => ({
     path: `/news/${post.slug}`,
@@ -43,7 +55,14 @@ function buildEntries(): Entry[] {
     priority: 0.6,
   }));
 
-  return [...staticPaths, ...leistungen, ...anwendungen, ...wissen, ...news];
+  return [
+    ...staticPaths,
+    ...leistungen,
+    ...anwendungen,
+    ...wissenCalculators,
+    ...wissenArticles,
+    ...news,
+  ];
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {

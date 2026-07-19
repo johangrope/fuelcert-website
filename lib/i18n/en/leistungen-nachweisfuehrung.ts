@@ -53,8 +53,7 @@ export const NACHWEISFUEHRUNG_CTA = {
 } as const;
 
 export const NACHWEISFUEHRUNG_RELATED_TOPICS = [
-  { label: "GHG and mass balance", href: "/wissen/thg-und-massenbilanz" },
-  { label: "UDB, Nabisy and register management", href: "/wissen/udb-nabisy-und-registerfuehrung" },
-  { label: "RFNBO certification", href: "/wissen/rfnbo-zertifizierung" },
-  { label: "REDcert, ISCC EU and CertifHy compared", href: "/wissen/redcert-iscc-certifhy-unterschiede" },
+  { label: "Certification under REDcert, ISCC EU or CertifHy", href: "/leistungen/zertifizierung-redcert-iscc-certifhy" },
+  { label: "Pre-certification", href: "/leistungen/pre-zertifizierung" },
+  { label: "Reporting and submission obligations", href: "/leistungen/berichterstattung-und-meldepflichten" },
 ] as const;
